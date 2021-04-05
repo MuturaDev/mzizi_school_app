@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:background="@drawable/attendance_item_bg"
+    android:id="@+id/manage_attendance_layout_ID">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/label_student_number"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:inputType="date"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/label_confirmation_message"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:inputType="date"
+        android:textColor="@color/confirmation_failure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "/>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:layout_marginTop="5dp"
+        android:textColorHint="#000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_studentName_ID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Student Name (Registration number)"
+            android:enabled="false"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:background="@drawable/spinner_background">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="Status   :"
+                android:textColor="#000000"
+                />
+
+            <RadioGroup
+
+                android:id="@+id/radioGroup"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_present_ID"
+                    android:text="Present"
+                    android:textSize="12sp"/>
+                <RadioButton
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_absent_ID"
+                    android:text="Absent"
+                    android:textSize="12sp"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lateby_label"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="Late By (Min)   :"
+                android:textColor="#000000"
+                />
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/edit_late_by"
+                android:layout_toRightOf="@+id/lateby_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/reason_layout_ID"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/offence_bg"
+        android:paddingBottom="20dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#000"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_reason_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Reason"
+                android:text=""
+                android:inputType="textMultiLine"
+                android:textSize="12sp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

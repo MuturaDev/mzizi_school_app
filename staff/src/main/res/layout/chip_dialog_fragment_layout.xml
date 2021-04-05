@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/ll_classStream_session_ID"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/chip_bg_outline"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp">
+        <TextView
+            android:paddingTop="5dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:id="@+id/txt_session_ID"
+            android:layout_gravity="center_horizontal"
+            android:text="Mid Morning Session"
+            android:textSize="10sp"
+            android:textColor="@color/chip_not_saved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/txt_classStream_ID"
+            android:paddingBottom="5dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="CLASS 5 BLUE"
+            android:textSize="12sp"
+            android:textColor="@color/chip_not_saved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

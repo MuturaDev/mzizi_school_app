@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="#0FD9C8"
+    android:layout_height="170dp">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/mzizi_app_icon"/>
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:text="Mzizi School App"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:textAlignment="center"
+            android:text="Please copy the Meeting ID and Passcode values to join meeting."
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textAlignment="center"
+            android:text="You can drag the window to any location on the screen."
+            android:textColor="@color/danger_red"
+            android:layout_width="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:text="Meeting ID: "
+                android:textSize="13sp"
+                android:textColor="#505098"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:textIsSelectable="true"
+                android:id="@+id/meeting_id_tv"
+                android:textColor="@color/black"
+                android:textAlignment="textStart"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="0.9"
+                android:textSize="13sp"
+                android:textColor="#505098"
+                android:textStyle="bold"
+                android:text="Passcode: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_weight="1.1"
+                android:text=""
+                android:textColor="@color/black"
+                android:textAlignment="textStart"
+                android:textIsSelectable="true"
+                android:id="@+id/password_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:text="After copying, drag the window to the bottom, under the 'X' that appears, to remove it. "
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

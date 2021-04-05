@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:id="@+id/the_restof_timetable_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="@dimen/top_header_time"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/start_time_rest"
+                            android:text="8:00 am"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/homeText"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/timetable_text_size"
+                            android:padding="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/end_time_rest"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginBottom="1dp"
+                            android:text=":45"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/homeText"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/timetable_text_size"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/monday_rest"
+                            android:layout_margin="1dp"
+
+                            android:background="@color/white"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/timetable_value_color"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/timetable_text_size"
+                            android:padding="10dp"
+                            android:layout_width="@dimen/weekday_value_width_dim"
+                            android:layout_height="@dimen/weekday_value_height_dim"/>
+
+                        <TextView
+                            android:id="@+id/tuesday_rest"
+                            android:textSize="@dimen/timetable_text_size"
+                            android:layout_margin="1dp"
+
+                            android:background="@color/white"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/timetable_value_color"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:layout_width="@dimen/weekday_value_width_dim"
+                            android:layout_height="@dimen/weekday_value_height_dim"/>
+
+                        <TextView
+                            android:id="@+id/wednesday_rest"
+                            android:textSize="@dimen/timetable_text_size"
+                            android:background="@color/white"
+                            android:layout_margin="1dp"
+
+                            android:textAlignment="textStart"
+                            android:textColor="@color/timetable_value_color"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:layout_width="@dimen/weekday_value_width_dim"
+                            android:layout_height="@dimen/weekday_value_height_dim"/>
+
+                        <TextView
+                            android:id="@+id/thursday_rest"
+                            android:textSize="@dimen/timetable_text_size"
+                            android:layout_margin="1dp"
+                            android:background="@color/white"
+
+                            android:textAlignment="textStart"
+                            android:textColor="@color/timetable_value_color"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:layout_width="@dimen/weekday_value_width_dim"
+                            android:layout_height="@dimen/weekday_value_height_dim"/>
+                        <!--                            https://www.google.com/search?rlz=1C5CHFA_enKE875KE875&sxsrf=ALeKk02QDQmY8ZB0XI05LoRB1iICShw7ig%3A1593702083279&ei=w_b9Xv3VELzlgwftzbe4Ag&q=xml+reserved+characters&oq=how+to+write+this+in+xml+%26&gs_lcp=CgZwc3ktYWIQARgAMgQIABBHMgQIABBHMgQIABBHMgQIABBHMgQIABBHMgQIABBHMgQIABBHMgQIABBHUABYAGDuGWgAcAJ4AIABAIgBAJIBAJgBAKoBB2d3cy13aXo&sclient=psy-ab-->
+                        <TextView
+                            android:id="@+id/friday_rest"
+                            android:textSize="@dimen/timetable_text_size"
+                            android:layout_margin="1dp"
+                            android:background="@color/white"
+
+                            android:textAlignment="textStart"
+                            android:textColor="@color/timetable_value_color"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:layout_width="@dimen/weekday_value_width_dim"
+                            android:layout_height="@dimen/weekday_value_height_dim"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/monday_break"
+                            android:layout_margin="1dp"
+                            android:text="15"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textColor="@color/homeText"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/timetable_text_size"
+                            android:padding="10dp"
+                            android:layout_width="@dimen/break_with"
+                            android:layout_height="@dimen/weekday_value_height_dim"/>
+
+                        <TextView
+                            android:id="@+id/tuesday_break"
+                            android:layout_margin="1dp"
+                            android:text="15"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textColor="@color/homeText"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/timetable_text_size"
+                            android:padding="10dp"
+                            android:layout_width="@dimen/break_with"
+                            android:layout_height="@dimen/weekday_value_height_dim"/>
+
+                        <TextView
+                            android:id="@+id/wednesday_break"
+                            android:layout_margin="1dp"
+                            android:text="15"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textColor="@color/homeText"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/timetable_text_size"
+                            android:padding="10dp"
+                            android:layout_width="@dimen/break_with"
+                            android:layout_height="@dimen/weekday_value_height_dim"/>
+
+                        <TextView
+                            android:id="@+id/thursday_break"
+                            android:layout_margin="1dp"
+                            android:text="15"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textColor="@color/homeText"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/timetable_text_size"
+                            android:padding="10dp"
+                            android:layout_width="@dimen/break_with"
+                            android:layout_height="@dimen/weekday_value_height_dim"/>
+                        <TextView
+                            android:id="@+id/friday_break"
+                            android:layout_margin="1dp"
+                            android:text="15"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textColor="@color/homeText"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/timetable_text_size"
+                            android:padding="10dp"
+                            android:layout_width="@dimen/break_with"
+                            android:layout_height="@dimen/weekday_value_height_dim"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:id="@+id/timetable_last_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="172dp"
+
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/start_time_last"
+                        android:layout_marginTop="5dp"
+                        android:text="6:00 pm"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/homeText"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/timetable_text_size"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/end_time_last"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="1dp"
+                        android:text=":45"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/homeText"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/timetable_text_size"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/monday_last"
+                        android:layout_margin="1dp"
+
+                        android:background="@color/white"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/timetable_value_color"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/timetable_text_size"
+                        android:padding="10dp"
+                        android:layout_width="@dimen/weekday_value_width_dim"
+                        android:layout_height="@dimen/weekday_value_height_dim"/>
+
+                    <TextView
+                        android:id="@+id/tuesday_last"
+                        android:textSize="@dimen/timetable_text_size"
+                        android:layout_margin="1dp"
+
+                        android:background="@color/white"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/timetable_value_color"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:layout_width="@dimen/weekday_value_width_dim"
+                        android:layout_height="@dimen/weekday_value_height_dim"/>
+
+                    <TextView
+                        android:id="@+id/wednesday_last"
+                        android:textSize="@dimen/timetable_text_size"
+                        android:background="@color/white"
+                        android:layout_margin="1dp"
+
+                        android:textAlignment="textStart"
+                        android:textColor="@color/timetable_value_color"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:layout_width="@dimen/weekday_value_width_dim"
+                        android:layout_height="@dimen/weekday_value_height_dim"/>
+
+                    <TextView
+                        android:id="@+id/thursday_last"
+                        android:textSize="@dimen/timetable_text_size"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+
+                        android:textAlignment="textStart"
+                        android:textColor="@color/timetable_value_color"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:layout_width="@dimen/weekday_value_width_dim"
+                        android:layout_height="@dimen/weekday_value_height_dim"/>
+                    <!--                            https://www.google.com/search?rlz=1C5CHFA_enKE875KE875&sxsrf=ALeKk02QDQmY8ZB0XI05LoRB1iICShw7ig%3A1593702083279&ei=w_b9Xv3VELzlgwftzbe4Ag&q=xml+reserved+characters&oq=how+to+write+this+in+xml+%26&gs_lcp=CgZwc3ktYWIQARgAMgQIABBHMgQIABBHMgQIABBHMgQIABBHMgQIABBHMgQIABBHMgQIABBHMgQIABBHUABYAGDuGWgAcAJ4AIABAIgBAJIBAJgBAKoBB2d3cy13aXo&sclient=psy-ab-->
+                    <TextView
+                        android:id="@+id/friday_last"
+                        android:textSize="@dimen/timetable_text_size"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/timetable_value_color"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:layout_width="@dimen/weekday_value_width_dim"
+                        android:layout_height="@dimen/weekday_value_height_dim"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

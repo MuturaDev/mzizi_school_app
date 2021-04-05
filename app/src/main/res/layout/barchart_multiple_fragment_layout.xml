@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="350dp">
+
+    <TextView
+        android:visibility="gone"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/y_axis_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="-90"
+        android:padding="0dp"
+        android:text=" Score  "
+        android:textSize="12sp" />
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+             />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/x_axis_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Period "
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

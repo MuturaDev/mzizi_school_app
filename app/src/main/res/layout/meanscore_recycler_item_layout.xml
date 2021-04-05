@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:padding="3dp"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    >
+
+        <androidx.cardview.widget.CardView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           app:cardElevation="20dp"
+            app:cardCornerRadius="5dp"
+           android:id="@+id/mean_score_card"
+
+                >
+
+        <LinearLayout
+            android:background="@drawable/logo_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="3dp">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/homeText"
+                android:layout_marginLeft="2dp"
+                android:text=""
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary" />
+
+            <!--android:collapseColumns="*"-->
+
+            <LinearLayout
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_gravity="center_horizontal"
+                android:paddingStart="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/home_expandable_bg"
+                android:id="@+id/inner_linearLayout"
+                android:orientation="horizontal"
+                android:weightSum="8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/subjects_ID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:text="Subjects "
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:textAlignment="textStart"
+                    android:id="@+id/scores_ID"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="Score "
+                    android:layout_weight="1.5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/white"
+                    android:textAlignment="textStart"
+                    android:id="@+id/grade_ID"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="Grade "
+                    android:layout_weight="1.5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/white"
+                    android:textAlignment="textStart"
+                    android:id="@+id/remarks_ID"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="Remarks "
+                    android:layout_weight="2.5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/inner_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp"
+                android:background="#ffffff"
+
+                android:orientation="vertical"
+                android:stretchColumns="*"
+                android:visibility="visible">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@color/colorPrimary" />
+
+
+            <!--this should be enclosed in a linearlayout-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp">
+
+
+                <TextView
+                    android:id="@+id/totalmarks_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Total Marks: "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/totalmarks_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/totalmarks_label"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@color/homeText"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/meanscore_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="180dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Mean Score: "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/meanscore_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/meanscore_label"
+                    android:layout_marginLeft="195dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@color/homeText"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+
+
+                    />
+
+                <TextView
+                    android:id="@+id/meangrade_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/totalmarks_text"
+                    android:text="Mean Grade: "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/meangrade_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/meangrade_label"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@color/homeText"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/streamposition_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/meanscore_text"
+                    android:layout_marginLeft="180dp"
+                    android:text="Stream Position: "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp" />
+
+                <TextView
+
+                    android:id="@+id/streamposition_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/streamposition_label"
+                    android:layout_marginLeft="195dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@color/homeText"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/overalposition_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/streamposition_label"
+                    android:layout_marginTop="30dp"
+
+                    android:text="Overall Position: "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/overalposition_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/overalposition_label"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@color/homeText"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+
+                    />
+
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/comments_section_layout_ID"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/label_grade_facilitator_comment"
+                        android:text="Class Teacher Comment"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:visibility="gone"
+                        android:textColor="@color/homeText"
+                        android:textSize="12sp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:textAlignment="center"
+                        android:id="@+id/txt_grade_facilitator_comment"
+                        android:text="experience."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/label_head_teacher_comment"
+                        android:textAlignment="center"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginTop="5dp"
+                        android:textStyle="bold"
+                        android:text="Head Teacher Comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:visibility="gone"
+                        android:textColor="@color/homeText"
+                        android:textSize="12sp"
+                        android:textAlignment="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:id="@+id/txt_head_teacher_comment_ID"
+                        android:text=" experience."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

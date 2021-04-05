@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffffff"
+    android:id="@+id/activity_message_list_ID"
+    android:animateLayoutChanges="true"
+
+    >
+
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/top_key"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_width="320dp"
+            android:background="@drawable/key_bg_icon"
+            android:layout_height="40dp"
+
+            />
+    </LinearLayout>
+
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/top_key"
+        android:padding="10dp"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/reclerview_massage_list"
+        android:layout_marginBottom="40dp"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:id="@+id/message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        >
+
+        <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="8"-->
+        <!--android:background="@drawable/send_message_section_bg"-->
+        <!--android:id="@+id/textmessagelayout"-->
+        <!--&gt;-->
+
+        <!--<EditText-->
+        <!--android:paddingStart="5dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="Enter message"-->
+        <!--android:textSize="12sp"-->
+        <!--android:lines="300"-->
+        <!--android:textColor="@color/homeText"-->
+        <!--android:textColorHint="@color/homeText"-->
+        <!--android:background="@null"-->
+        <!--android:id="@+id/edittext_chatbox"/>-->
+        <!--</android.support.design.widget.TextInputLayout>-->
+        <EditText
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:background="@drawable/send_message_section_bg"
+            android:paddingStart="5dp"
+            android:hint="Enter message"
+            android:text=""
+            android:textSize="15sp"
+            android:lines="300"
+            android:textColor="#00C0EF"
+            android:textColorHint="#00C0EF"
+            android:id="@+id/edittext_chatbox"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:background="@drawable/send_message_section_bg"
+            android:orientation="horizontal"
+            android:layout_marginRight="0dp">
+
+            <TextView
+
+                android:gravity="center"
+                android:textAlignment="center"
+                android:id="@+id/button_chatbox_send"
+                android:clickable="true"
+                android:textSize="12sp"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.4"
+                android:text="Send"
+                android:padding="5dp"
+                android:background="@color/colorPrimary"
+                android:foreground="?android:attr/selectableItemBackground"
+                />
+            <View
+                android:background="@color/white"
+                android:layout_width="1dp"
+                android:layout_height="40dp"/>
+
+            <ToggleButton
+
+                android:id="@+id/pop_up_department"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                style="@style/toggleButton"
+                android:background="@drawable/chat_enquiry_toggle_btn_bg"
+                android:foreground="?android:attr/selectableItemBackground"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

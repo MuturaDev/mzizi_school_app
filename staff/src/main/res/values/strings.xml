@@ -1,0 +1,396 @@
+<resources>
+    <string name="app_name">Mzizi School App</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+
+    <string name="action_settings">Settings</string>
+
+
+
+    <!--More-->
+    <!--<string daysEntitled="app_name">UltraBus</string>-->
+    <string name="board_bus">Board Bus</string>
+    <string name="alight_bus">Alight Bus</string>
+    <string name="ok">OK</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission. The application will now exit</string>
+    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage.</string>
+    <string name="barcode_header">Click on &quot;Send Data&quot;  to  send data</string>
+    <string name="read_barcode">Read Barcode</string>
+    <string name="auto_focus">Auto Focus</string>
+    <string name="use_flash">Use Flash</string>
+    <string name="barcode_success">Barcode read successfully</string>
+    <string name="barcode_failure">No barcode captured</string>
+    <string name="barcode_error">"Error reading barcode: %1$s"</string>
+
+
+    <string name="successful_login">Sign Up successful</string>
+    <string name="failed_login">Please check your internet connection! Try again</string>
+    <string name="title_activity_home_screen">HomeScreenActivity</string>
+
+    <!--<string daysEntitled="navigation_drawer_open">Open navigation drawer</string>-->
+    <!--<string daysEntitled="navigation_drawer_close">Close navigation drawer</string>-->
+
+    <!--<string daysEntitled="action_settings">Settings</string>-->
+
+    <string name="start_trip_journey">Start Trip Journey</string>
+    <string name="end_trip_journey">End Trip Journey</string>
+
+    <string name="start_trip_instructions">Selecting &quot;Start Trip Journey&quot;, will allow to track the bus from Departure time to Arrival time. This process is repeated on your journey back to school.</string>
+    <string name="end_trip_instructions">Selecting &quot;End Trip Journey&quot; will stop gps tracking of the bus.</string>
+    <string name="how_to_use_app">Its advisable to leave this screen on until you arrive at your destination.</string>
+    <string name="inform_for_notification">Please check the notification sent to you&#8230;after tapping on Start Trip Journey</string>
+
+    <!--Disciplinary Cases -->
+    <string name="offence_text">Symbolically abused Mr. Newton the Headteacher Primary section on 26th October 2018 while the said teacher was addressing closing assembly.</string>
+    <string name="penaulty_text">The misbehaviour should attract expulsion as the Student had been pardoned on various indiscipline cases before.</string>
+
+
+
+
+
+
+
+        <!--//QUESTIONS-->
+    <string name="leave_q_1">I need help on how to apply for leave.</string>
+    <string name="class_attendance_q_1">I need help on how to mark the class attendance.</string>
+    <string name="fuel_consumption_q_1">I need help on how to record fuel consumption when fueling the vehicle at the Petrol Station.</string>
+    <string name="academic_performance_q_1">I need help on how to enquire academic performance history of a specific student.</string>
+    <string name="discipline_cases_q_1">I need help on how to view disciplinary cases of a specific student.</string>
+    <string name="view_attendance_q_1">I need help on how to view attendance history of a specific student.</string>
+    <string name="fleet_servicing_q_1">I need help on how to record servicing details of the school vehicle.</string>
+    <string name="daily_transport_q_1">I need help on how to capture the barcode from the pupils/students card on Daily transport</string>
+    <string name="trip_tranport_q_1">I need help on how to activate the MziziApp to track the bus on a School trip.</string>
+    <string name="disciplinary_case_q_1">I need help on how to record student/pupil indiscipline case.</string>
+    <string name="dutyroster_q_1">I need help on how to view the Duty Roster.</string>
+
+
+
+
+    <!--MZIZI APP TUTORIAL HELP DESCRIPTIONS-->
+
+    <!--DUTY ROSTER-->
+    <!--Description-->
+    <string name="duty_step_1">On the staff section, tap on the \"Duty Roster\" where you will get the details of the staff member who\'s on duty.</string>
+    <string name="duty_step_2">Tap on the highlighted section in blue, to make a call to the number displayed.</string>
+    <!--Images-->
+    <!--step images-->
+    <string name="duty_step_1_img_1">duty_step_1_img_1</string>
+    <string name="duty_step_2_img_2">duty_step_2_img_2</string>
+
+
+    <!--FUEL CONSUMPTION-->
+    <string name="consump_step_1">On the fleet section, tap on the "Fuel Consumption" which leads to the fuel consumption page</string>
+    <string name="consump_step_2">Select vehicle plate.</string>
+    <string name="consump_step_3">Specify the \"Quantity(litres)\", \"Mileage at fueling\", \"Price per litre\", and Pick the date the vehicle was fueled.</string>
+    <string name="consump_step_4">After all fields are filled, tap the save button to save your records.Incase of any errors follow the instructions in red or repeat the steps.</string>
+    <string name="consump_step_5">Please check if the record was saved successfully. In case of an error repeat the previous steps.</string>
+    <string name="consump_step_1_img_1">consump_step_1_img_1</string>
+    <string name="consump_step_2_img_2">consump_step_2_img_2</string>
+    <string name="consump_step_3_img_3">consump_step_3_img_3</string>
+    <string name="consump_step_4_img_4">consump_step_4_img_4</string>
+    <string name="consump_step_5_img_5">consump_step_5_img_5</string>
+
+    <!--DISCIPLINARY CASE-->
+    <string name="disci_step_1">On the Student section, tap on the \"Disciplanary Case\".</string>
+    <string name="disci_step_2">Select the class stream to filter the students according to class, in order to select a student and record an indiscipline case.</string>
+    <string name="disci_step_3">Specify the offence and penalty of the disciplinary action for the selected student. </string>
+    <string name="disci_step_4">Then tap on the save button, to record the disciplinary action taken for the student.</string>
+    <string name="disci_step_5"> Please check if the operation was a success, and if not please follow the instruction in red or repeat the previous steps.</string>
+    <string name="disci_step_1_img_1">disci_step_1_img_1</string>
+    <string name="disci_step_2_img_2">disci_step_2_img_2</string>
+    <string name="disci_step_3_img_3">disci_step_3_img_3</string>
+    <string name="disci_step_4_img_4">disci_step_4_img_4</string>
+    <string name="disci_step_5_img_5">disci_step_5_img_5</string>
+
+    <!--MARK CLASS ATTENDANCE-->
+    <string name="at_step_1">On your Mzizi App Home screen, tap on \"Mark Class  Attendance\".Here you can mark, as a Teacher Staff, the classes you are assigned to teach.</string>
+    <string name="at_step_2">You just need to select a class session and class stream from the drop downs highlighted in blue above. (You will need to select session then class stream.)</string>
+    <string name="at_step_3">then you will have all the students in that class displayed as a list. You can scroll up and down. The class stream drop down list, specifies the classes you teach. Within the list, you will notice all students\' attendance status is marked \"Present\". At this point, you can save the Attendance register if and only if all students are present.</string>
+    <string name="at_step_4">You can use the highlighted icons to maximize or minimize the student display list.</string>
+    <string name="at_step_5">If not all students are present, mark those absent as absent, and with a reason (if you know of any).</string>
+    <string name="at_step_6">If at the moment you dont have a reason, why this student did not  attend class, you are instructed, (the text in red), to hold down the \"Save \" Button to save.</string>
+    <string name="at_step_7">If you tap at the \"Save Button\" the highlighted area will show you the student you have not specified reason for. If you tap the save button again it will show the second student without reason for absence. This will be repeated until all students specified absent have reason and then you can save.(By just tapping on the save button.)</string>
+    <string name="at_step_8">This records are only sent to your school servers or cloud only when you have access to the internet.(make sure you have access to the internet either via WiFi /data bundles) Make sure that you make any changes to the class register before connecting to the internet. The highlighted above, shows the classes you just marked their class registers. You can tap to make any changes.</string>
+    <string name="at_step_9">Check if the records were saved successfully or an error occurred when saving the \"new attendance register\" or \"updating attendance register\".</string>
+    <string name="at_step_1_img_1">at_step_1_img_1</string>
+    <string name="at_step_2_img_2">at_step_2_img_2</string>
+    <string name="at_step_3_img_3">at_step_3_img_3</string>
+    <string name="at_step_4_img_4">at_step_4_img_4</string>
+    <string name="at_step_5_img_5">at_step_5_img_5</string>
+    <string name="at_step_6_img_6">at_step_6_img_6</string>
+    <string name="at_step_7_img_7">at_step_7_img_7</string>
+    <string name="at_step_8_img_8">at_step_8_img_8</string>
+    <string name="at_step_9_img_9">at_step_9_img_9</string>
+
+
+    <!--STUDENT ENQUIRY-->
+    <!--ATTENDANCE-->
+    <string name="enq_atte_step_1">On the student section, tap on \"Student Enquiry\".</string>
+    <string name="enq_atte_step_2">Select the Class Stream and Student Name from the dropdowns highlighted in blue.</string>
+    <string name="enq_atte_step_3">You can tap on the actions below, based on what you want to enquire about the student you selected.</string>
+    <string name="enq_atte_step_4">Tap on the \"Attendance History\".</string>
+    <string name="enq_atte_step_5">Please wait until the Year dropdown loading is complete, found in the next step</string>
+    <string name="enq_atte_step_6">Select the year from the dropdown. This automatically enables you to select the term.</string>
+    <string name="enq_atte_step_7">Wait for loading to be complete, found in the next step</string>
+    <string name="enq_atte_step_8">After loading is complete, you will have the student\'s attendance records displayed as a grid.</string>
+    <string name="enq_atte_step_9">You can tap on any grid item, marked present or absent as shown the key above.The dialog highlighted in blue above is displayed.</string>
+    <!--IMAGES FOR STUDENT ENQUIRY ATTENDANCE.-->
+    <string name="enq_atte_step_1_img_1">enq_atte_step_1_img_1</string>
+    <string name="enq_atte_step_2_img_2">enq_atte_step_2_img_2</string>
+    <string name="enq_atte_step_3_img_3">enq_atte_step_3_img_3</string>
+    <string name="enq_atte_step_4_img_4">enq_atte_step_4_img_4</string>
+    <string name="enq_atte_step_5_img_5">enq_atte_step_5_img_5</string>
+    <string name="enq_atte_step_6_img_6">enq_atte_step_6_img_6</string>
+    <string name="enq_atte_step_7_img_7">enq_atte_step_7_img_7</string>
+    <string name="enq_atte_step_8_img_8">enq_atte_step_8_img_8</string>
+    <string name="enq_atte_step_9_img_9">enq_atte_step_9_img_9</string>
+
+    <!--STUDENT ENQUIRY-->
+    <!--DISPLINARY CASES-->
+    <string name="enq_disci_step_1">On the student section, tap on \"Student Enquiry\".</string>
+    <string name="enq_disci_step_2">Select the Class Stream and Student Name from the dropdowns highlighted in blue.</string>
+    <string name="enq_disci_step_3">You can tap on the actions below, based on what you want to enquire about the student you selected.</string>
+    <string name="enq_disci_step_4">Tap on the \"Disciplinary Cases\".</string>
+    <string name="enq_disci_step_5">Please wait until the Year dropdown loading is complete, found in the next step</string>
+    <string name="enq_disci_step_6">Select the year from the dropdown. This automatically enables you to select the term.</string>
+    <string name="enq_disci_step_7">Please wait for loading to be complete, found in the next step</string>
+    <string name="enq_disci_step_8">After loading is complete, you will have the student\'s disciplinary cases displayed as a list.</string>
+    <!--IMAGES FOR STUDENT ENQUIRY DISCIPLINARY CASES-->
+    <string name="enq_disci_step_1_img_1">enq_disci_step_1_img_1</string>
+    <string name="enq_disci_step_2_img_2">enq_disci_step_2_img_2</string>
+    <string name="enq_disci_step_3_img_3">enq_disci_step_3_img_3</string>
+    <string name="enq_disci_step_4_img_4">enq_disci_step_4_img_4</string>
+    <string name="enq_disci_step_5_img_5">enq_disci_step_5_img_5</string>
+    <string name="enq_disci_step_6_img_6">enq_disci_step_6_img_6</string>
+    <string name="enq_disci_step_7_img_7">enq_disci_step_7_img_7</string>
+    <string name="enq_disci_step_8_img_8">enq_disci_step_8_img_8</string>
+
+    <!--STUDENT ENQUIRY-->
+    <!--EXAM HISTORY-->
+    <string name="enq_exam_hist_step_1">On the student section, tap on \"Student Enquiry\".</string>
+    <string name="enq_exam_hist_step_2">Select the Class Stream and Student Name from the dropdowns highlighted in blue.</string>
+    <string name="enq_exam_hist_step_3">You can tap on the actions below, based on what you want to enquire about the student you selected.</string>
+    <string name="enq_exam_hist_step_4">Tap on the \"Exam History\".</string>
+    <string name="enq_exam_hist_step_5">Please wait for loading to be complete. After loading is complete,results of a particular year are displayed.</string>
+    <string name="enq_exam_hist_step_6">select the year you want to view results for, from the \"Display results of year:\" dropdown.</string>
+
+    <!--IMAGES FOR STUDENT ENQUIRY EXAM HISTORY.-->
+    <string name="enq_exam_hist_step_1_img_1">enq_exam_hist_step_1_img_1</string>
+    <string name="enq_exam_hist_step_2_img_2">enq_exam_hist_step_2_img_2</string>
+    <string name="enq_exam_hist_step_3_img_3">enq_exam_hist_step_3_img_3</string>
+    <string name="enq_exam_hist_step_4_img_4">enq_exam_hist_step_4_img_4</string>
+    <string name="enq_exam_hist_step_5_img_5">enq_exam_hist_step_5_img_5</string>
+    <string name="enq_exam_hist_step_6_img_6">enq_exam_hist_step_6_img_6</string>
+
+
+
+    <!--SCHOOL TRANSPORT-->
+    <!--DAILY TRANSPORT-->
+    <string name="tran_daily_step_1">On the fleet section tap on \"School Transport\". This takes you to the fleet location page.</string>
+    <string name="tran_daily_step_2">Here you are required to select an action, either \"Daily Transport\" or \"Trip Transport\".</string>
+    <string name="tran_daily_step_3">Tap on \"Daily Transport\". The app will prompt you to grant it several permissions, all for the purpose of finding your GPS location and scanning barcodes. Tap on \"allow\" on all requests.</string>
+    <string name="tran_daily_step_4">Then you are prompted to enable devices Location from your settings on your phone.</string>
+    <string name="tran_daily_step_5">While enabling GPS location on, Tap on \"Mode\", and select \"High accuracy\" to get GPS location fast and accurate.</string>
+    <string name="tran_daily_step_6">Your device will start searching for GPS signal as inidicated above, \"Searching GPS Signal&#8230;\".</string>
+    <string name="tran_daily_step_7">Select the vehicle plate number for the route you are using. This vehicle plate will be remembered after every scan, but you can change accordingly.</string>
+    <string name="tran_daily_step_8">You are then supposed to scan the barcode which is located in the student ID. The results of the scan show you the necessary information make will help you in deciding whether the student will board the bus, or whether the student uses the route specified and whether the student is morning picked or evening picked.</string>
+    <string name="tran_daily_step_9">This records are only sent to your school servers or cloud only when you have access to the internet.(make sure you have access to the internet either via WiFi /data bundles) Make sure that you make any changes to the class register before connecting to the internet.</string>
+
+    <!--images for school transport-->
+    <string name="tran_daily_step_1_img_1">tran_daily_step_1_img_1</string>
+    <string name="tran_daily_step_2_img_2">tran_daily_step_2_img_2</string>
+    <string name="tran_daily_step_3_img_3">tran_daily_step_3_img_3</string>
+    <string name="tran_daily_step_4_img_4">tran_daily_step_4_img_4</string>
+    <string name="tran_daily_step_5_img_5">tran_daily_step_5_img_5</string>
+    <string name="tran_daily_step_6_img_6">tran_daily_step_6_img_6</string>
+    <string name="tran_daily_step_7_img_7">tran_daily_step_7_img_7</string>
+    <string name="tran_daily_step_8_img_8">tran_daily_step_8_img_8</string>
+    <string name="tran_daily_step_9_img_9">tran_daily_step_9_img_9</string>
+
+
+    <!--TRIP TRANSPORT-->
+    <string name="tran_trip_step_1">On the fleet section tap on the \"School Transport\". It takes you to the fleet location page.</string>
+    <string name="tran_trip_step_2">Here you are required to select an action, either \"Daily Transport\" or \"Trip Transport\".</string>
+    <string name="tran_trip_step_3">Tap on the \"Trip Transport\", your first prompted to enable \"GPS\" from your settings on your phone.</string>
+    <string name="tran_trip_step_4">While enabling GPS location on, Tap on \"Mode\", and select \"High accuracy\" to get GPS location fast and accurate.</string>
+    <string name="tran_trip_step_5">Later the app will prompt you to grant it permissions to access your device location services. Tap on \"allow on all requests\".</string>
+    <string name="tran_trip_step_7">After tapping on \"Start Trip Journey\" you will receive a notification.</string>
+    <string name="tran_trip_step_6">Here you are prompted to select the vehicle plate number from the \"Select Vehicle\" dropdown. Here you can choose to either \"Start Trip journey\" or \"End Trip Journey\".</string>
+    <!--IMAGES FOR TRIP TRANSPORT-->
+    <string name="tran_trip_step_1_img_1">tran_trip_step_1_img_1</string>
+    <string name="tran_trip_step_2_img_2">tran_trip_step_2_img_2</string>
+    <string name="tran_trip_step_3_img_3">tran_trip_step_3_img_3</string>
+    <string name="tran_trip_step_4_img_4">tran_trip_step_4_img_4</string>
+    <string name="tran_trip_step_5_img_5">tran_trip_step_5_img_5</string>
+    <string name="tran_trip_step_6_img_6">tran_trip_step_6_img_6</string>
+    <string name="tran_trip_step_7_img_7">tran_trip_step_7_img_7</string>
+
+    <!--FLEET SERVICE-->
+    <!--Description-->
+    <string name="service_step_1">On the fleet section, tap on the \"Fleet service\" which leads to the fleet servicing page.</string>
+    <string name="service_step_2">Select the vehicle plate and service type.</string>
+    <string name="service_step_3">Specify the \"Mileage at service\", "\Next service mileage\", \"Service cost\" and Pick the date the vehicle is serviced, later specify the service report (this is the status of the vehicle after servicing.)</string>
+    <string name="service_step_4">After all fields are filled, tap on the save button to save your record.</string>
+    <string name="service_step_5">Incase of an error, repeat the previous steps again.</string>
+    <string name="service_step_6">Note if the record was successfully saved or an error occurred. Incase of any errors repeat the previous steps.</string>
+    <!--step images-->
+    <string name="service_step_1_img_1">service_step_1_img_1</string>
+    <string name="service_step_2_img_2">service_step_2_img_2</string>
+    <string name="service_step_3_img_3">service_step_3_img_3</string>
+    <string name="service_step_4_img_4">service_step_4_img_4</string>
+    <string name="service_step_5_img_5">service_step_5_img_5</string>
+    <string name="service_step_6_img_6">service_step_6_img_6</string>
+
+    <!--APPLY LEAVE-->
+    <string name="leave_step_1">On the staff section, tap on the \"Apply Leave\".</string>
+    <string name="leave_step_2">Make sure you have access to the internet either via WIFI/ Data Bundles. If not, then the screen above shall appear. Tap on \"Try Again\" when you get access to the internet.</string>
+    <string name="leave_step_3">Please do wait until your leave entitlement details are loaded. Found in the next step.</string>
+    <string name="leave_step_4">After loading is complete, your leave entitlements are displayed hence you can decide on your \"leave days\" options.</string>
+    <string name="leave_step_5">Select the \"Leave type\" and \"Delegate To\" from the drop downs highlighted in blue. On \"Delegate To\" dropdown,you select the staff member you want to delegate duties to.</string>
+    <string name="leave_step_6">Specify the delegate\'s \"Contact Name\", \"Contact Phone\", \"Contact Email\" and select \"Contact Relation\" on the drop down.</string>
+    <string name="leave_step_7">Specify the days applied. Pick a \"Date From\". \"Date To\" will be filled automatically. After all fields are filled correctly, tap on the apply button to apply for leave and wait for confirmation. </string>
+    <string name="leave_step_8">Note if the leave application is successful or an error occurred. Incase of any errors repeat the previous steps.</string>
+    <string name="leave_step_9">If you get the above error, please wait until your previous request is done being processed.</string>
+    <string name="leave_step_1_img_1">leave_step_1_img_1</string>
+    <string name="leave_step_2_img_2">leave_step_2_img_2</string>
+    <string name="leave_step_3_img_3">leave_step_3_img_3</string>
+    <string name="leave_step_4_img_4">leave_step_4_img_4</string>
+    <string name="leave_step_5_img_5">leave_step_5_img_5</string>
+    <string name="leave_step_6_img_6">leave_step_6_img_6</string>
+    <string name="leave_step_7_img_7">leave_step_7_img_7</string>
+    <string name="leave_step_8_img_8">leave_step_8_img_8</string>
+    <string name="leave_step_9_img_9">leave_step_9_img_9</string>
+
+
+
+    <!--    Catcho-->
+    <string name="catcho_report_title1">Mzizi School App</string>
+    <string name="catcho_report_title2">\t\t\tCrash Reporter</string>
+    <string name="catcho_title">Title</string>
+    <string name="catcho_description">Description</string>
+    <string name="catcho_device_info">Device info</string>
+    <string name="catcho_email">Email</string>
+    <string name="catcho_send_email">Send Email...</string>
+    <string name="catcho_no_email_clients">There are no email clients installed.</string>
+    <string name="catcho_err_send_msg">There\'s an error during send the msg, please try again later.</string>
+
+
+    <string name="short_random_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</string>
+    <string name="long_random_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+
+    <string-array name="asset_tracking_scan">
+        <item>Select Asset Type</item>
+        <item>GENERAL ASSET</item>
+        <item>LIBRARY</item>
+    </string-array>
+
+    <string-array name="daily_transport_session">
+        <item>Select Session</item>
+        <item>Morning</item>
+        <item>Afternoon</item>
+        <item>Evening</item>
+    </string-array>
+
+    <string-array name="daily_transport_bus_trips">
+        <item>Select Trips</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+
+
+<!--    APP RATING STRINGS-->
+    <string name="text_example_note_app_reset">Note: Use the reset button below or restart the app to clear all settings.</string>
+    <string name="button_example_reset">Reset</string>
+    <string name="text_example_google_in_app_review">This example uses the Google in-app review instead of the library
+        dialog. Debug is enabled. (note: this example doesn\'t work at the moment because the example app hasn\'t been uploaded
+        to the Google Play Store)</string>
+    <string name="button_example_google_in_app_review">Google In-App Review</string>
+    <string name="text_example_default">This example has no customizations. Debug is enabled.</string>
+    <string name="button_example_default">Default</string>
+    <string name="text_example_custom_icon">In this example the default icon (app icon) has been replaced with a cusom icon.
+        Debug is enabled.</string>
+    <string name="button_example_custom_icon">Custom Icon</string>
+    <string name="text_example_mail_feedback">This example uses a configured mail feedback dialog. Rate below the threshold
+        to check it out.Debug is enabled.</string>
+    <string name="button_example_mail_feedback">Mail Feedback</string>
+    <string name="text_example_custom_feedback">This example uses the custom feedback dialog instead of the mail feedback
+        dialog. Debug is enabled.</string>
+    <string name="button_example_custom_feedback">Custom Feedback</string>
+    <string name="text_example_show_never">In this example the show never button will be displayed. Debug is enabled.</string>
+    <string name="button_example_show_never">Show \"Never\" button</string>
+    <string name="text_example_show_never_after_three_times">In this example the show never button will be displayed after three
+        times. This means you have to click the later button for at least 3 times (other examples included). Debug is enabled.</string>
+    <string name="button_example_show_never_after_three_times">Show \"Never\" button after 3 times</string>
+    <string name="text_example_show_on_third_click">In this example debug is disabled. The dialog will show on the third
+        click. If the \"Later\" button has been clicked, the dialog will show again after 5 more clicks. You can also use
+        the \"Never\" button.
+        \nAttention: If you have already clicked the never button or the feedback button of another example, this dialog will
+        not show up until you click \"reset\" or restart the app.
+    </string>
+    <string name="button_example_show_on_third_click">Show on third click</string>
+    <string name="text_example_rating_threshold_4_and_a_half">In this example the rating threshold was set to 4.5. So you
+        need to rate at least 4.5 stars to see the store rating dialog. Debug is enabled.</string>
+    <string name="button_example_rating_threshold_4_and_a_half">Rating threshold 4.5</string>
+    <string name="text_example_full_star_rating">In this example full star rating is enabled. So you can\'t set half stars
+        in the rating dialog. Debug is enabled.</string>
+    <string name="button_example_full_star_rating">Full star rating</string>
+    <string name="text_example_custom_texts">In this example the default texts has been replaced with dummy texts. Debug
+        is enabled.</string>
+    <string name="button_example_custom_texts">Custom texts</string>
+    <string name="text_example_cancelable">In this example the dialog is cancelable. A dialogCancelListener was set to show a toast. Debug
+        is enabled.</string>
+    <string name="button_example_cancelable">Cancelable</string>
+
+    <!-- Custom Button Texts -->
+    <string name="button_rate_now">Foo</string>
+    <string name="button_rate_never">Doe</string>
+    <string name="button_rate_later">Bar</string>
+
+    <string name="title_overview">Another Title</string>
+    <string name="message_overview">This is an additional message, which is hidden by default.</string>
+    <string name="button_confirm">Go on!</string>
+
+    <string name="title_store">Custom Title</string>
+    <string name="message_store">The answer to life, the universe and everything is 42.</string>
+
+    <string name="title_feedback">Wow!</string>
+    <string name="message_feedback">I am so blue I\'m greener than purple.</string>
+    <string name="button_mail_feedback">Foo</string>
+    <string name="button_no_feedback">John</string>
+
+    <!-- Other -->
+    <string name="toast_reset">All settings got cleared. Have fun!</string>
+
+    <!--    Customer Feedback-->
+    <string name="complaints">Complaints</string>
+    <string name="suggestions">Suggestions</string>
+    <string name="feedback">Feedback</string>
+    <string name="description">Description…</string>
+    <string name="title">Title</string>
+    <string name="add_image">Add Image</string>
+    <string name="message">Message</string>
+    <string name="type_message_here">Type message here…</string>
+    <string name="update_status">Choose Status : </string>
+    <string name="save">Save</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="update">Update</string>
+    <string name="mobile">Mobile :</string>
+    <string name="from">From :</string>
+    <string name="contact_support">Contact Support</string>
+    <string name="admin">Admin</string>
+
+</resources>

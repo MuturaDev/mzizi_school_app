@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:requestLegacyExternalStorage="true"
+    package="ultratude.com.mzizi">
+
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- Foreground Service permission(API level 28 or higher) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+
+
+    <!--<meta-data-->
+        <!--android:name="interswitch-kenya-limited.mobpay.base_url"-->
+        <!--android:value="https://testids.interswitch.co.ke:18082/api/v1/" />-->
+    <!--<meta-data-->
+        <!--android:name="interswitch-kenya-limited.mobpay.mqtt_url"-->
+        <!--android:value="tcp://testmerchant.interswitch-ke.com:1883" />-->
+    <!--<meta-data-->
+        <!--android:name="interswitch-kenya-limited.mobpay.cardinal_url"-->
+        <!--android:value="https://testmerchant.interswitch-ke.com/sdkcardinal" />-->
+    <!--<meta-data-->
+        <!--android:name="interswitch-kenya-limited.mobpay.modulus"-->
+        <!--android:value="9c7b3ba621a26c4b02f48cfc07ef6ee0aed8e12b4bd11c5cc0abf80d5206be69e1891e60fc88e2d565e2fabe4d0cf630e318a6c721c3ded718d0c530cdf050387ad0a30a336899bbda877d0ec7c7c3ffe693988bfae0ffbab71b25468c7814924f022cb5fda36e0d2c30a7161fa1c6fb5fbd7d05adbef7e68d48f8b6c5f511827c4b1c5ed15b6f20555affc4d0857ef7ab2b5c18ba22bea5d3a79bd1834badb5878d8c7a4b19da20c1f62340b1f7fbf01d2f2e97c9714a9df376ac0ea58072b2b77aeb7872b54a89667519de44d0fc73540beeaec4cb778a45eebfbefe2d817a8a8319b2bc6d9fa714f5289ec7c0dbc43496d71cf2a642cb679b0fc4072fd2cf" />-->
+    <!--<meta-data-->
+        <!--android:name="interswitch-kenya-limited.mobpay.exponent"-->
+        <!--android:value="010001" />-->
+
+    <application
+        android:name=".MziziSchoolApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/mzizi_app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/mzizi_app_icon"
+        android:supportsRtl="true"
+        tools:ignore="GoogleAppIndexingWarning"
+       >
+
+        <meta-data android:name="com.codewaves.youtubethumbnailview.ApiKey"
+            android:value="AIzaSyBbWgO-VM5Z8D4gaMi3P1Ro1k1Q0s06VqY" />
+
+        <provider
+            android:name=".filepicker.utils.FilePickerProvider"
+            android:authorities="${applicationId}.filepicker.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/com_jaiselrahman_filepicker_provider_paths" />
+        </provider>
+
+        <service android:name=".firebasenotificationhandler.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.flipkart.youtubeview.activity.YouTubeActivity" />
+
+        <activity
+            android:name=".filepicker.test_activity.FilePickerActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".tableviewimplementation.tableviewexample.SampleTableViewActivity"
+            android:theme="@style/AppTheme"/>
+
+        <activity
+            android:name=".firebasenotificationhandler.MyMainActivity"
+            android:theme="@style/AppTheme"/>
+
+        <activity
+            android:name=".videoimagefragments.videoimageutil.ImageSliderDemo"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".videoimagefragments.videoimageutil.VideoSliderDemo"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity
+            android:name=".videoimagefragments.videoimageutil.TestingMedia"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+
+                <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".filepicker.FilesActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".sectionrecyclerview.SectionRecyclerExample"
+            android:theme="@style/Theme.AppCompat"/>
+        <activity
+            android:name=".uiactivities.GalleryActivity"
+            android:label="@string/title_activity_gallery"
+            android:theme="@style/ResultsVisualizationTheme"/>
+
+        <activity android:name=".crashreport.CatchoReportActivity"
+            android:label="MziziApp Crash Reporter"
+            android:theme="@style/CatchoAppTheme"/>
+
+        <activity
+            android:name=".uiactivities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".uiactivities.BootUpTest"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <!-- <action android:name="android.intent.action.MAIN" /> -->
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".tests.BootDeviceReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".firebasejobdispatch.MziziJobService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".tests.RunAfterBootService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name=".tests.AutoStart">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+<!--        <service-->
+<!--            android:name="tests.ServiceTest"-->
+<!--            android:enabled="true" /> -->
+
+        <!-- just for test purposes only -->
+<!--        <activity-->
+<!--            android:name=".trialandtestclasses.PortalChatsFragment"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@style/AppTheme.NoActionBar">-->
+<!--            <intent-filter>-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+        <activity
+            android:name=".uiactivities.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".uiactivities.MziziParentWebPortal"
+            android:label="Parent Web Portal"
+            android:screenOrientation="landscape"
+            android:theme="@style/CatchoAppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+
+        <activity
+            android:name=".uiactivities.ResultsVisualization"
+            android:label="Performance Trends"
+            android:theme="@style/ResultsVisualizationTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".uiactivities.TimeTableActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreen">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+
+        <receiver android:name=".notificationpg.NotificationBroadcast.NotificationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- <receiver android:daysEntitled=".HelperActivityClasses.BroadCastReceiver"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:daysEntitled="android.net.conn.CONNECTIVITY_CHANGE"/> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+<!--        <receiver android:name=".notificationpg.NotificationBroadcast.NotificationAlarmBroadcast">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.ultratude.ACTION_ALARM" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
+        <receiver
+            android:name=".notificationpg.NotificationBroadcast.BootUpBroadCastReceiver"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+<!--        <service android:name=".notificationpg.NotificationBroadcast.NotificationService">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="ultratude.com.mzizi.NotificationPG.NotificationBroadcast.NotificationService" />-->
+<!--            </intent-filter>-->
+<!--        </service>-->
+
+        <activity
+            android:name=".uiactivities.LoginActivity"
+            android:label="Login"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="ultratude.com.mzizi.uiactivities.LoginActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".uiactivities.SyncMyAccount"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".uiactivities.AboutMziziApp"
+            android:screenOrientation="portrait"
+            android:theme="@style/CatchoAppTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--App Widgets in mzizi-->
+        <!---->
+<!--        <receiver-->
+<!--            android:name=".mzizi_widgets.Single.ExampleSingleAppWidget"-->
+<!--            android:label="Single Example">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />-->
+<!--            </intent-filter>-->
+
+<!--            <meta-data-->
+<!--                android:name="android.appwidget.provider"-->
+<!--                android:resource="@xml/example_app_widget_single_info" />-->
+<!--        </receiver>-->
+
+<!--        <receiver-->
+<!--            android:name=".mzizi_widgets.list.ListAppWidget"-->
+<!--            android:label="List Example">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />-->
+<!--            </intent-filter>-->
+
+<!--            <meta-data-->
+<!--                android:name="android.appwidget.provider"-->
+<!--                android:resource="@xml/example_app_widget_common_info" />-->
+<!--        </receiver>-->
+
+<!--        <receiver-->
+<!--            android:name=".mzizi_widgets.list.common.ExampleCommonAppWidget"-->
+<!--            android:label="Common Example">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />-->
+<!--            </intent-filter>-->
+
+<!--            <meta-data-->
+<!--                android:name="android.appwidget.provider"-->
+<!--                android:resource="@xml/example_app_widget_common_info" />-->
+<!--        </receiver>receiver-->
+
+
+
+        <activity
+            android:name=".floating_view.DeleteActionActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".floating_view.ChatHeadActivity" />
+        <service
+            android:name=".floating_view.ChatHeadService"
+            android:exported="false" />
+        <service
+            android:name=".floating_view.CustomFloatingViewService"
+            android:exported="false" />
+
+
+
+    </application>
+
+</manifest>

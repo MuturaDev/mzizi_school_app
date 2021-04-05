@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    android:orientation="vertical">
+
+    <com.kevalpatel.passcodeview.PinView
+        android:id="@+id/pin_view"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:dividerColor="@color/colorPrimaryDark"
+        app:pin_titleText="Register your pin here"
+        app:pin_titleTextColor="@color/homeText"
+        app:fingerprintDefaultText="Scan your finger to unlock MziziApp"
+        app:fingerprintEnable="false"
+        app:fingerprintTextColor="@color/homeText"
+        app:fingerprintTextSize="12sp"
+        app:titleTextColor="@android:color/black"
+        />
+
+</LinearLayout>

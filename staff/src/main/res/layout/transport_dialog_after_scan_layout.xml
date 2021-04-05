@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+       >
+
+
+        <TextView
+            android:id="@+id/route_name_ID"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/black"
+           android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            android:text="No Route identified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <View
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/dark_blue"/>
+
+        <RelativeLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:textColor="@color/dark_blue"
+                android:text="Bus Activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:id="@+id/status_ID"
+                android:textSize="12dp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="100dp"
+                android:layout_alignParentLeft="true"
+                android:text="ACHIENG STEPHANIE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:textColor="@color/dark_blue"
+                android:text="Session"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:id="@+id/bus_session_ID"
+                android:textSize="12dp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="100dp"
+                android:layout_alignParentLeft="true"
+                android:text="ACHIENG STEPHANIE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:textColor="@color/dark_blue"
+                android:text="Bus Trips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:id="@+id/bus_trip_ID"
+                android:textSize="12dp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="100dp"
+                android:layout_alignParentLeft="true"
+                android:text="ACHIENG STEPHANIE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:textColor="@color/dark_blue"
+                android:text="Student Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:id="@+id/student_name_ID"
+                android:textSize="12dp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="100dp"
+                android:layout_alignParentLeft="true"
+                android:text="ACHIENG STEPHANIE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+
+                android:textColor="@color/dark_blue"
+                android:text="Reg No."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:id="@+id/reg_no_ID"
+                android:textSize="12dp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="100dp"
+                android:text="ACHIENG STEPHANIE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:textColor="@color/dark_blue"
+                android:text="Class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:id="@+id/class_ID"
+                android:textSize="12dp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="100dp"
+                android:layout_alignParentLeft="true"
+                android:text="ACHIENG STEPHANIE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:textColor="@color/dark_blue"
+                android:text="Bus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:id="@+id/bus_ID"
+                android:textSize="12dp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="100dp"
+                android:layout_alignParentLeft="true"
+                android:text="KBB011M/KBB011M"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:textSize="12sp"
+                    android:id="@+id/rdbPhoneCall"
+                    android:layout_width="wrap_content"
+                    android:text="Phone Call"
+                    android:checked="true"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:textSize="12sp"
+                    android:checked="false"
+                    android:id="@+id/rdbWhatsCall"
+                    android:layout_marginStart="50dp"
+                    android:layout_width="wrap_content"
+                    android:text="Whats App Call"
+                    android:layout_height="wrap_content"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:textColor="@color/dark_blue"
+                android:text="Father Phone No."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:id="@+id/btn_father_phonenumber"
+                android:textSize="12dp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="120dp"
+                android:layout_alignParentLeft="true"
+                android:text="CALL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:textColor="@color/dark_blue"
+                android:text="Mother Phone No."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:id="@+id/btn_mother_phonenumber"
+                android:textSize="12dp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="120dp"
+                android:layout_alignParentLeft="true"
+                android:text="CALL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+        </RelativeLayout>
+
+
+
+        <View
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/dark_blue"/>
+
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:id="@+id/morning_layout_ID"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:textColor="@color/colorAccent"
+
+                android:text="Morning Picked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:id="@+id/morning_picked_ID"
+                android:textSize="12dp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="100dp"
+                android:layout_alignParentLeft="true"
+                android:text="ACHIENG STEPHANIE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/not_on_transport_layout"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+
+            <TextView
+
+                android:paddingTop="2dp"
+                android:id="@+id/not_on_transport_ID"
+                android:textSize="12dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_alignParentLeft="true"
+                android:text="This Student is NOT on Tranport for the Current Term"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:id="@+id/evening_layout_ID"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:textColor="@color/colorAccent"
+
+                android:text="Evening Picked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:id="@+id/evening_picked_ID"
+                android:textSize="12dp"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="100dp"
+                android:layout_alignParentLeft="true"
+                android:text="ACHIENG STEPHANIE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

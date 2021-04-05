@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.synnapps.carouselview.CarouselView
+            android:visibility="visible"
+            android:id="@+id/carouselView"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            app:fillColor="#FFFFFFFF"
+            app:pageColor="#00000000"
+            app:radius="0dp"
+            app:slideInterval="3000"
+            app:strokeColor="#FF777777"
+            app:strokeWidth="1dp"/>
+
+
+        <ImageView
+            android:id="@+id/slide_image"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_weight="0.36"
+            android:padding="0dp"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/slide_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:text="Step one"
+        android:textColor="#1641EE"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:id="@+id/slide_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="12sp"
+        android:text="@string/start_trip_instructions"
+        android:textAlignment="center" />
+</LinearLayout>

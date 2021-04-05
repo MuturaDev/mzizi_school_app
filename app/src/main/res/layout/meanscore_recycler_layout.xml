@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:background="@color/white"
+    >
+    <LinearLayout
+        android:visibility="visible"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/layoutabove"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Display results of year: "
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/show_text"
+            android:textSize="20sp"
+            android:layout_marginRight="10dp"
+            />
+
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="0dp"
+            android:visibility="visible"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_width="120dp"
+            android:tooltipText="YEAR"
+            android:contentDescription="Year"
+            android:layout_height="25dp"
+            android:background="@drawable/spinner_background_blue_line"
+            android:orientation="horizontal"
+            >
+
+            <!---->
+            <Spinner
+                android:id="@+id/year_spinner_ID"
+                android:layout_width="match_parent"
+                android:layout_marginRight="25dp"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:background="@android:color/transparent"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:src="@drawable/spinner_dropdown_icon"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:textColor="@color/homeText"
+        android:text="Results History"
+        android:textSize="12sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorPrimary"
+            android:layout_marginTop="20dp"
+           android:layout_centerHorizontal="true"
+            android:id="@+id/meanscore_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="invisible" />
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:id="@+id/pullToRefresh"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:scrollbars="vertical"
+                android:scrollIndicators="end"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:layout_height="match_parent"
+                android:id="@+id/meanscore_recycle"
+                >
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:visibility="invisible"
+        android:id="@+id/meanscore_layout_noContent"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="15dp"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:text="No exam results to show."/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:src="@drawable/refresh_myaccount_24"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:text="Tap to update."
+                android:textSize="15dp"
+                android:textColor="@android:color/holo_green_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/home_item_ID"
+        android:layout_weight="1"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="5dp"
+        app:cardElevation="0dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="5dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp">
+
+            <ImageView
+                android:id="@+id/imageicon"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/exam"
+                android:layout_width="@dimen/iconsize"
+                android:layout_height="@dimen/iconsize"/>
+            <TextView
+                android:id="@+id/hometext"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/imageicon"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/homeText"
+                android:text="Results Visualization"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

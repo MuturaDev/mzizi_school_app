@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/left_column"
+            android:text="Paybill:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingLeft="70dp"
+            android:textColor="@android:color/holo_blue_light"
+            android:textAlignment="textStart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"/>
+
+        <TextView
+            android:paddingTop="5dp"
+            android:textSize="15sp"
+            android:text="459512"
+            android:focusable="true"
+            android:longClickable="true"
+            android:defaultFocusHighlightEnabled="true"
+            android:textIsSelectable="true"
+            android:textColorHighlight="@android:color/holo_blue_dark"
+            android:paddingLeft="50dp"
+            android:id="@+id/right_column"
+            android:textColor="@android:color/black"
+            android:textAlignment="textStart"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include
+        android:visibility="gone"
+        layout="@layout/no_internet_connection_layout"/>
+
+    <LinearLayout
+        android:id="@+id/inner_view_attendance_layout_ID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/spinner_bg"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/label_confirmation_message_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Select Year and Term"
+                android:textColor="@color/confirmation_failure"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <!--This date from and date to has to be changed since, it is not best way to get.-->
+            <!--<LinearLayout-->
+            <!--android:layout_marginStart="15dp"-->
+            <!--android:layout_marginEnd="15dp"-->
+            <!--android:id="@+id/layout_to_from_ID"-->
+            <!--android:visibility="visible"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:weightSum="2">-->
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@drawable/date_background"-->
+            <!--&gt;-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/txt_dateFrom_ID"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_marginRight="30dp"-->
+            <!--android:editable="false"-->
+            <!--android:text="From"-->
+            <!--android:textAlignment="textStart"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15sp" />-->
+            <!--<ImageView-->
+            <!--android:layout_marginTop="0dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:id="@+id/date_image_from_ID"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/date_icon"/>-->
+
+
+            <!--</RelativeLayout>-->
+            <!--<RelativeLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_marginStart="5dp"-->
+            <!--android:layout_height="match_parent"-->
+
+            <!--android:background="@drawable/date_background"-->
+            <!--&gt;-->
+
+            <!--<TextView-->
+
+            <!--android:id="@+id/txt_dateTo_ID"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_marginRight="30dp"-->
+            <!--android:editable="false"-->
+            <!--android:text="To"-->
+            <!--android:textAlignment="textStart"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="15sp" />-->
+            <!--<ImageView-->
+            <!--android:layout_marginTop="0dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:id="@+id/date_image_to_ID"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/date_icon"/>-->
+
+
+            <!--</RelativeLayout>-->
+
+
+            <!--</LinearLayout>-->
+
+
+            <LinearLayout
+                android:id="@+id/sp_group_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="0dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="visible"
+                android:weightSum="4">
+
+                <RelativeLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/spinner_background"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="25dp">
+
+                        <Spinner
+                            android:id="@+id/sp_year_ID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="center"
+                            android:spinnerMode="dropdown"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/pb_manageDiscipline_progress_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toEndOf="@+id/sp_year_ID"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <ProgressBar
+                                android:id="@+id/progressBar2"
+                                style="?android:attr/progressBarStyleLarge"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:indeterminate="true"
+                                android:indeterminateTint="@android:color/holo_blue_dark" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:paddingTop="0dp"
+                                android:text="Loading..."
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/spinner_dropdown_icon" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/spinner_background"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/sp_term_ID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="25dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/spinner_dropdown_icon" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/key_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/layout_btn_attendance_ID"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/attendance_key_bg"
+                    android:orientation="horizontal"
+                    android:weightSum="8">
+
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1.3"
+                        android:contentDescription="Absent"
+                        android:src="@drawable/student_absent_icon2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.3"
+                        android:text="Absent"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1.3"
+                        android:contentDescription="Absent"
+                        android:src="@drawable/future_classs_to_attend_icon" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.6"
+                        android:text="Next Class"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1.3"
+                        android:contentDescription="Present"
+                        android:src="@drawable/student_present_icon2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.5"
+
+                        android:text="Present"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:background="@android:color/white"
+                    android:gravity="start"
+                    android:padding="2dp"
+                    android:paddingTop="0dp"
+                    android:text="KEY"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp"
+                    android:gravity="start"
+                    android:padding="2dp"
+                    android:paddingTop="0dp"
+                    android:text="Note: Next Class - No class attendance record"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_viewing_results_of_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="@color/exam_history_label"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+
+            <TextView
+                android:id="@+id/no_content_to_display_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:text="No class attendance records to show."
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/pb_loading_txt_manageDiscipline_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@android:color/holo_blue_dark" />
+
+                <!--This textview should be annimated in some way-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="Loading..."
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <GridView
+                android:id="@+id/grid_view_class_attendance_ID"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:columnWidth="90dp"
+                android:gravity="center"
+                android:numColumns="5"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="5dp"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

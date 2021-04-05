@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:isScrollContainer="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/profile_image"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"/>
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/profile_image"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/homeText"
+                            android:textSize="12sp"
+                            android:textAlignment="center"
+                            android:id="@+id/name_label"
+                            android:layout_width="wrap_content"
+                            android:text="Name:"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/name_label"
+                            android:textColor="@color/homeText"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:id="@+id/name_text"
+                            android:layout_width="wrap_content"
+                            android:text=""
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/name_text"
+                            android:textColor="@color/homeText"
+                            android:textSize="12sp"
+                            android:textAlignment="center"
+                            android:id="@+id/school_label"
+                            android:layout_width="wrap_content"
+                            android:text="School Name:"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_marginTop="2dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/school_label"
+                            android:textColor="@color/homeText"
+                            android:textSize="13sp"
+                            android:id="@+id/school_text"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:layout_width="wrap_content"
+                            android:text=""
+                            android:layout_height="wrap_content"/>
+
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:background="@color/white"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_marginTop="0dp"
+                            android:weightSum="2"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:weightSum="2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Admission No.:"
+                                    android:textColor="@color/homeText"
+                                    android:textSize="@dimen/headerTextSize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:textColor="@color/homeText"
+                                    android:text=""
+                                    android:textAlignment="center"
+                                    android:layout_gravity="center"
+                                    android:textSize="@dimen/valueTextSize"
+                                    android:id="@+id/admission_no_text"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"/>
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:weightSum="2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/homeText"
+                                    android:text="Class:"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/headerTextSize"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:id="@+id/course_name_text"
+                                    android:textColor="@color/homeText"
+                                    android:text=""
+                                    android:textAlignment="center"
+                                    android:layout_gravity="center"
+                                    android:textSize="@dimen/valueTextSize"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"/>
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:weightSum="2"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:weightSum="2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/homeText"
+                                    android:text="Date of Birth:"
+                                    android:textStyle="bold"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/headerTextSize"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:id="@+id/date_of_birth_text"
+                                    android:textColor="@color/homeText"
+                                    android:text=""
+                                    android:textAlignment="center"
+                                    android:layout_gravity="center"
+                                    android:textSize="@dimen/valueTextSize"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"/>
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:weightSum="2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/homeText"
+                                    android:text="Phone No.:"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/headerTextSize"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:textColor="@color/homeText"
+                                    android:text=""
+                                    android:id="@+id/phone_number_text"
+                                    android:layout_weight="1"
+                                    android:textAlignment="center"
+                                    android:layout_gravity="center"
+                                    android:textSize="@dimen/valueTextSize"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"/>
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:weightSum="2"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:layout_weight="1"
+                                android:weightSum="2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="Mean Score:"
+                                    android:textColor="@color/homeText"
+                                    android:textSize="@dimen/headerTextSize"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:textColor="@color/homeText"
+                                    android:text=""
+                                    android:id="@+id/mean_score_text"
+                                    android:layout_weight="1"
+                                    android:textAlignment="center"
+                                    android:layout_gravity="center"
+                                    android:textSize="@dimen/valueTextSize"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"/>
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:layout_weight="1"
+                                android:weightSum="2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/homeText"
+                                    android:text="Mean Grade:"
+                                    android:textStyle="bold"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:textSize="@dimen/headerTextSize"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:textColor="@color/homeText"
+                                    android:text=""
+                                    android:textAlignment="center"
+                                    android:layout_gravity="center"
+                                    android:textSize="@dimen/valueTextSize"
+                                    android:id="@+id/mean_grade_text"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"/>
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_marginTop="20dp"
+                            android:weightSum="2"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:layout_weight="1"
+                                android:weightSum="2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/homeText"
+                                    android:text="Two Names:"
+                                    android:textStyle="bold"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:textSize="@dimen/headerTextSize"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:textColor="@color/homeText"
+                                    android:text=""
+                                    android:id="@+id/two_names_text"
+                                    android:layout_weight="1"
+                                    android:textAlignment="center"
+                                    android:layout_gravity="center"
+                                    android:textSize="@dimen/valueTextSize"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"/>
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/homeText"
+                                    android:text="Mzizi School App Credentials"
+                                    android:layout_weight="2"
+                                    android:textStyle="bold"
+                                    android:textSize="14sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+
+                                <LinearLayout
+                                    android:paddingTop="10dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:layout_marginBottom="10dp"
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_weight="2"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:textColor="@color/homeText"
+                                            android:text="Username:"
+                                            android:textStyle="bold"
+
+                                            android:layout_width="0dp"
+                                            android:textSize="@dimen/headerTextSize"
+                                            android:layout_weight="1"
+                                            android:layout_height="wrap_content"/>
+
+                                        <TextView
+                                            android:layout_weight="1"
+                                            android:textColor="@color/homeText"
+                                            android:id="@+id/username_text"
+                                            android:textAlignment="center"
+                                            android:layout_gravity="center"
+                                            android:textSize="@dimen/valueTextSize"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"/>
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_marginBottom="10dp"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:textColor="@color/homeText"
+                                            android:text="Password:"
+                                            android:textSize="@dimen/headerTextSize"
+                                            android:layout_weight="1"
+                                            android:layout_width="0dp"
+                                            android:textStyle="bold"
+                                            android:layout_height="wrap_content"/>
+
+                                        <TextView
+                                            android:id="@+id/password_text"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="1"
+                                            android:textAlignment="center"
+                                            android:layout_gravity="center"
+                                            android:textColor="@color/homeText"
+                                            android:textSize="@dimen/valueTextSize"
+                                            android:layout_height="wrap_content"/>
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:weightSum="2"
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:textColor="@color/homeText"
+                                            android:text="School Code:"
+                                            android:layout_width="0dp"
+                                            android:textSize="@dimen/headerTextSize"
+                                            android:layout_weight="1"
+                                            android:textStyle="bold"
+                                            android:layout_height="wrap_content"/>
+
+                                        <TextView
+                                            android:id="@+id/schoolcode_text"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="1"
+                                            android:textAlignment="center"
+                                            android:layout_gravity="center"
+                                            android:textColor="@color/homeText"
+                                            android:textSize="@dimen/valueTextSize"
+                                            android:layout_height="wrap_content"/>
+
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:weightSum="3"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_weight="2"
+                                android:weightSum="3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:textColor="@color/homeText"
+                                    android:text="Termly Class Attendance:"
+                                    android:textSize="@dimen/headerTextSize"
+                                    android:layout_weight="2"
+                                    android:textStyle="bold"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:textColor="@color/homeText"
+                                    android:text=""
+                                    android:id="@+id/class_attendance_text"
+                                    android:textAlignment="center"
+                                    android:layout_gravity="center"
+                                    android:textSize="@dimen/valueTextSize"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="10dp"
+            app:cardElevation="5dp"
+            android:visibility="gone"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:visibility="visible"
+                        android:background="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="STUDENT CURRENT BIODATA "/>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/currentBioDataCollapse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="4">
+
+                            <RelativeLayout
+                                android:id="@+id/personal_information_expand"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="@drawable/home_expandable_bg"
+                                android:paddingLeft="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="Personal Information"
+                                    android:textColor="@color/homeText"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <ImageButton
+                                    android:id="@+id/expand1"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/expand_icon" />
+
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/personal_information_collapse"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="5dp"
+                                android:visibility="gone">
+
+                                <fragment android:name="ultratude.com.mzizi.verticalstepperform.stepperfragments.StudentInfoFragment"
+                                    android:id="@+id/student_details_fragment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:id="@+id/father_details_expand"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/home_expandable_bg"
+                                android:paddingLeft="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="Father Details  "
+                                    android:textColor="@color/homeText"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <ImageButton
+                                    android:id="@+id/expand2"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/expand_icon" />
+
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/father_details_collapse"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="5dp"
+                                android:visibility="gone">
+
+
+
+                                <fragment android:name="ultratude.com.mzizi.verticalstepperform.stepperfragments.FatherDetailsFragment"
+                                    android:id="@+id/father_details_fragment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/mother_details_expand"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/home_expandable_bg"
+                                android:paddingLeft="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="Mother Details "
+                                    android:textColor="@color/homeText"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <ImageButton
+                                    android:id="@+id/expand3"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/expand_icon" />
+
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/mother_details_collapse"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="5dp"
+                                android:visibility="gone">
+
+                                <fragment android:name="ultratude.com.mzizi.verticalstepperform.stepperfragments.MotherDetailsFragment"
+                                    android:id="@+id/mother_details_fragment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/guardian_details_expand"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/home_expandable_bg"
+                                android:paddingLeft="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="Guardian Details "
+                                    android:textColor="@color/homeText"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <ImageButton
+                                    android:id="@+id/expand4"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/expand_icon" />
+
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@+id/guardian_details_collapse"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="5dp"
+                                android:visibility="gone">
+
+                                <fragment android:name="ultratude.com.mzizi.verticalstepperform.stepperfragments.GuardianDetailsFragment"
+                                    android:id="@+id/Guardian_details_fragment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

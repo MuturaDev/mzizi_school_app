@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ultratude.com.staff.displaygif.GifImageView
+            android:id="@+id/GifImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true" />
+
+
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_marginTop="300dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/mzizi_app_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:text="Mzizi School App needs an update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/top2"
+            android:orientation="vertical"
+            android:layout_below="@+id/top"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:textStyle="italic"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center_horizontal"
+                android:text="To use this app, download the latest version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:paddingRight="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_alignParentLeft="true"
+                        android:text="WHAT IS NEW?"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"/>
+
+
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:text="V12.5.1"
+                        android:textStyle="bold"
+                        android:id="@+id/version_number"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/mzizi_app_new_feature"
+                    android:text=""
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="wrap_content"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <Button
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_marginTop="20dp"
+                android:id="@+id/update_btn"
+                android:background="#0FD9C8"
+                android:text="UPDATE"
+                android:textColor="@android:color/white"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_below="@+id/top2"
+            android:src="@drawable/playstore_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+</ScrollView>

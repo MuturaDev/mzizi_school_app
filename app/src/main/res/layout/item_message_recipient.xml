@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="28dp">
+        <TextView
+
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/view_text_id"
+            android:visibility="invisible"
+            android:layout_marginTop="3dp"
+            android:layout_gravity="right"
+            android:textSize="12sp"
+            android:textColor="#33B6E5"
+            android:text="Tap to view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_marginTop="3dp"
+            android:id="@+id/layout_to_change_btn_bubble"
+            android:background="@drawable/out_going_speech_bubble"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:paddingLeft="5dp"
+                android:paddingTop="4dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/text_message_body_recipient"
+                android:layout_width="match_parent"
+                android:layout_weight="19"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:layout_gravity="start"
+                android:layout_marginRight="5dp"
+                android:maxWidth="240dp"
+                android:textSize="13sp"
+                android:text="@string/in_news"
+                android:textColor="#ffffff" />
+
+
+            <RelativeLayout
+                android:layout_width="30dp"
+                android:layout_height="10dp"
+                android:visibility="visible"
+                android:id="@+id/txt_status_notification_read_not_read_ID"
+                android:layout_marginEnd="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/text_message_body_recipient"
+                >
+
+
+                <ProgressBar
+                    android:id="@+id/sending_ID"
+                    android:visibility="visible"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:indeterminate="true"
+                    android:indeterminateTintMode="src_atop"
+                    android:indeterminateTint="#00C0EF" />
+
+
+                <ImageView
+                    android:id="@+id/success_ID"
+                    android:visibility="gone"
+                    android:src="@drawable/double_tick_send_success"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <ImageView
+                    android:id="@+id/failure_ID"
+                    android:visibility="gone"
+                    android:src="@drawable/cross_send_failure"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:paddingBottom="2dp"
+                android:layout_toStartOf="@+id/txt_status_notification_read_not_read_ID"
+                android:id="@+id/text_message_time"
+                android:layout_below="@+id/text_message_body_recipient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginEnd="0dp"
+                android:text="Thursday, 22 Mar . 16:44 "
+                android:textSize="10sp"
+                />
+            <TextView
+                android:visibility="invisible"
+                android:paddingBottom="2dp"
+                android:layout_toStartOf="@+id/text_message_time"
+                android:id="@+id/txt_label_tap_resend"
+                android:layout_below="@+id/text_message_body_recipient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginEnd="10dp"
+                android:text="Tap to resend"
+                android:textSize="10sp"
+                />
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:visibility="visible"
+        android:layout_alignParentEnd="true"
+        android:layout_width="30dp"
+        android:id="@+id/image_message_profile"
+        android:layout_height="30dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/you_icon"
+        />
+
+
+
+
+
+
+
+
+</RelativeLayout>

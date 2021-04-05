@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <RelativeLayout
+        android:id="@+id/file_upload"
+        android:background="@drawable/fee_balance_circle_bottom_bg"
+        android:layout_width="match_parent"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_height="210dp">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:id="@+id/instruction_info"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Tap to find the assignment file to upload "/>
+
+
+
+        <ImageView
+            android:layout_below="@+id/instruction_info"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:id="@+id/image"
+            android:layout_height="50dp"
+            android:src="@drawable/search_file_in_folder_icon"/>
+
+        <LinearLayout
+            android:layout_below="@+id/image"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:gravity="bottom"
+            android:layout_height="match_parent">
+
+
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/file_path"
+                android:textSize="12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="File Name"
+                android:textColor="@color/homeText"
+                />
+
+            <ImageView
+                android:id="@+id/file_thumbnail"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="100dp"
+                android:scaleType="center"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="@string/file_thumbnail"
+                />
+
+<!--            <android.support.constraint.ConstraintLayout-->
+<!--                android:id="@+id/constraint_results_layout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:visibility="visible"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--              -->
+
+<!--                <TextView-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    android:id="@+id/file_path"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/uri"-->
+<!--                    android:textColor="@color/homeText"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/file_thumbnail" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/file_size"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/size"-->
+<!--                    app:layout_constrainedWidth="true"-->
+<!--                    android:textColor="@color/homeText"-->
+<!--                    app:layout_constraintHorizontal_chainStyle="spread_inside"-->
+<!--                    app:layout_constraintLeft_toRightOf="@id/file_thumbnail"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/file_path" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/file_mime"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/mime"-->
+<!--                    android:textColor="@color/homeText"-->
+<!--                    app:layout_constrainedWidth="true"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/file_size"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/file_path" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/file_bucketname"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/bucketname"-->
+<!--                    android:textColor="@color/homeText"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/file_thumbnail"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/file_size" />-->
+
+
+<!--            </android.support.constraint.ConstraintLayout>-->
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completed assignment shown below:"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/homeText"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+
+
+
+            <androidx.cardview.widget.CardView
+                app:cardElevation="5dp"
+                app:cardCornerRadius="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/tobehighlighted"
+                    android:orientation="vertical"
+
+                    android:background="@drawable/fee_balance_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:padding="3dp"
+                        android:background="@color/vertical_stepper_form_background_color_next_button"
+                        android:id="@+id/submit_status_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="1dp"
+                        android:text=""/>
+
+                    <TextView
+                        android:padding="3dp"
+                        android:background="@color/colorPrimary"
+                        android:id="@+id/name_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="1dp"
+                        android:text="New: LESSON - ENGLISH - CLASS 7: ENGLISH: GRAMMAR: P"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_toRightOf="@+id/layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="1dp">
+
+                            <RelativeLayout
+                                android:orientation="vertical"
+                                android:layout_toRightOf="@+id/layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp">
+
+                                <com.borjabravo.readmoretextview.ReadMoreTextView
+                                    android:layout_marginBottom="10dp"
+                                    android:id="@+id/body_text"
+                                    android:layout_marginTop="28dp"
+                                    app:colorClickableText="@color/confirmation_success"
+                                    app:showTrimExpandedText="false"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="normal"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/homeText"
+                                    android:text="@string/at_step_8"/>
+
+                                <TextView
+                                    android:id="@+id/assingment_dueDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@color/pink"
+                                    android:padding="3dp"
+                                    android:text="Due in 10 days(s)"
+                                    android:textColor="@color/white"
+                                    android:textSize="13sp" />
+
+
+                                <TextView
+                                    android:layout_below="@+id/body_text"
+                                    android:id="@+id/download_text_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:text="Download File"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:paddingLeft="10dp"
+                                    android:layout_below="@id/body_text"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_toRightOf="@+id/download_text_btn"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/pink"
+                                    android:text="After tapping on 'Download File' on the left, and the document is not displayed, tap on the top right menu, then refresh. "
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:visibility="gone"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:text="Upload assignment"
+                                    android:layout_below="@+id/body_text"
+                                    android:paddingBottom="5dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginEnd="60dp"
+                                    android:textSize="17sp"
+                                    android:id="@+id/upload_text_btn"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimary"/>
+
+
+
+                            </RelativeLayout>
+
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Add a comment:"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/homeText"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/fee_balance_bg"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/label_penalty_ID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Feedback"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/homeText"
+                    android:textStyle="normal"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:textSize="14sp"
+                    android:textAlignment="textStart"
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/add_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:background="@null"
+                    android:lines="20"
+                    android:minLines="5"
+                    android:maxLines="15"
+                    android:inputType="textMultiLine"
+                    />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/submit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:paddingLeft="20dp"
+                        android:id="@+id/next_btn_layout"
+                        android:paddingRight="20dp"
+                        android:background="@color/colorPrimary"
+                        android:orientation="horizontal"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        >
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/file_upload" />
+
+                        <TextView
+                            android:id="@+id/next_btn_text"
+                            android:textAllCaps="true"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Submit"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

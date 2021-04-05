@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--    android:icon="@drawable/maximize_icon"-->
+    <item
+        android:title="Tap to upload"
+        android:id="@+id/upload_attendance_btn"
+        android:orderInCategory="1"
+        app:showAsAction="always" />
+</menu>

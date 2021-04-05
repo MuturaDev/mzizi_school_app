@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="5dp"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/fee_balance_bg"
+    android:id="@+id/video_item_layout"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.codewaves.youtubethumbnailview.ThumbnailView
+            android:id="@+id/thumbnail"
+            android:layout_width="160dp"
+            android:layout_height="110dp"
+            android:background="@android:color/black"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"/>
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/video_name"
+            android:textColor="@color/colorPrimary"
+            android:text="RSA Business Fair Highlights"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+    <com.borjabravo.readmoretextview.ReadMoreTextView
+        android:id="@+id/video_body"
+        android:layout_marginTop="5dp"
+        android:textAlignment="textStart"
+        android:textSize="15sp"
+        android:textColor="@color/homeText"
+        app:colorClickableText="@color/confirmation_success"
+        android:layout_width="wrap_content"
+        android:text="@string/in_news"
+        app:showTrimExpandedText="false"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

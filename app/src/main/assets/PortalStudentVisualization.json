@@ -1,0 +1,109 @@
+
+[
+    {
+        "Period": "2019 T 1",
+        "UnitName": "G0: SCI",
+        "AverageScore": "70"
+    },
+    {
+        "Period": "2019 T 1",
+        "UnitName": "G0: SSTRE",
+        "AverageScore": "62"
+    },
+    {
+        "Period": "2019 T 1",
+        "UnitName": "G1: ENG",
+        "AverageScore": "71"
+    },
+    {
+        "Period": "2019 T 1",
+        "UnitName": "G1: KIS",
+        "AverageScore": "57"
+    },
+    {
+        "Period": "2019 T 1",
+        "UnitName": "G1: MAT",
+        "AverageScore": "56"
+    },
+    {
+        "Period": "2019 T 2",
+        "UnitName": "G0: SCI",
+        "AverageScore": "76"
+    },
+    {
+        "Period": "2019 T 2",
+        "UnitName": "G0: SSTRE",
+        "AverageScore": "64"
+    },
+    {
+        "Period": "2019 T 2",
+        "UnitName": "G1: ENG",
+        "AverageScore": "70"
+    },
+    {
+        "Period": "2019 T 2",
+        "UnitName": "G1: KIS",
+        "AverageScore": "61"
+    },
+    {
+        "Period": "2019 T 2",
+        "UnitName": "G1: MAT",
+        "AverageScore": "75"
+    },
+    {
+        "Period": "2019 T 3",
+        "UnitName": "G0: SCI",
+        "AverageScore": "75"
+    },
+    {
+        "Period": "2019 T 3",
+        "UnitName": "G0: SSTRE",
+        "AverageScore": "71"
+    },
+    {
+        "Period": "2019 T 3",
+        "UnitName": "G1: ENG",
+        "AverageScore": "79"
+    },
+    {
+        "Period": "2019 T 3",
+        "UnitName": "G1: KIS",
+        "AverageScore": "62"
+    },
+    {
+        "Period": "2019 T 3",
+        "UnitName": "G1: MAT",
+        "AverageScore": "83"
+    },
+    {
+        "Period": "2020 T 1",
+        "UnitName": "G0: SCI",
+        "AverageScore": "62"
+    },
+    {
+        "Period": "2020 T 1",
+        "UnitName": "G0: SSTRE",
+        "AverageScore": "54"
+    },
+    {
+        "Period": "2020 T 1",
+        "UnitName": "G1: ENG",
+        "AverageScore": "76"
+    },
+    {
+        "Period": "2020 T 1",
+        "UnitName": "G1: KIS",
+        "AverageScore": "56"
+    },
+    {
+        "Period": "2020 T 1",
+        "UnitName": "G1: MAT",
+        "AverageScore": "78"
+    }
+]
+
+
+
+
+
+

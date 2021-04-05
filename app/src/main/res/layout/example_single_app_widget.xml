@@ -1,0 +1,80 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:text="Example SingleAppWidgetProvider"
+        android:textColor="@color/homeText"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/appwidget_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:textColor="@color/homeText"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/previous"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="start"
+            android:gravity="start" />
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:gravity="end" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+
+<!--3) Creating the app widget layout
+    -you must declare an initial layout for your app widget in xml, saved in the layout resource directory
+    -you must follow specific app widget guidelines.
+    -app widget layouts are simple if your are familiar with layouts, but you must be aware that app widget layouts
+        are based on RemoteViews, WHICH DO NOT SUPPORT EVERY KIND OF LAYOUT OR VIEW WIDGET
+    -The RemoteView object, is the App Widget. Can support the following layout classes:
+        -FrameLayout
+        -LinearLayout
+        -RelativeLayout,
+        -GridLayout
+        AND THE FOLLOWING WIDGET CLASSES
+            -AnalogClock
+            -Button
+            -Chronometer
+            -ImageButton
+            -ImageView
+            -ProgressBar
+            -TexxtView
+            -ViewFlipper
+            -ListView
+            -GridView
+            -StackView
+            -AdapterViewFlipper NOTE: Descendants of these class are not supported.
+    -Its a must to add margins all aroud your layout, in App Widget
+        -this because they should not generally extend to screen edges and should not be visually flush
+            with other widgets. Add margins all around your widget frame.-->

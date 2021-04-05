@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uiactivities.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+     <include layout="@layout/content_main" />
+
+
+
+
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:id="@+id/fab"-->
+            <!--android:visibility="invisible"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="top|end"-->
+            <!--android:layout_marginTop="130dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:padding="0dp"-->
+            <!--android:tooltipText="Siblings"-->
+            <!--app:srcCompat="@drawable/floating_action_icon"-->
+            <!--app:elevation="20dp"-->
+            <!--app:backgroundTint="#FFFFFF" />-->
+
+
+    <!--<RelativeLayout-->
+            <!--android:visibility="visible"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_marginTop="270dp"-->
+            <!--android:id="@+id/floating_chat_ID"-->
+            <!--android:layout_marginBottom="40dp"-->
+            <!--android:layout_gravity="top|end"-->
+            <!--android:background="@drawable/duplicates_notif"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="60dp">-->
+
+                <!--<RelativeLayout-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="35dp"-->
+                    <!--android:src="@drawable/message_from_icon"-->
+                    <!--android:layout_height="35dp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/txt_new_chat_count_ID"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:layout_marginStart="25dp"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:gravity="center_horizontal|center_vertical"-->
+                    <!--android:textSize="9sp"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:paddingStart="3dp"-->
+                    <!--android:text="chat"-->
+                    <!--android:background="@drawable/message_count_icon_bg"-->
+                    <!--android:layout_width="25dp"-->
+                    <!--android:layout_height="25dp" />-->
+
+            <!--</RelativeLayout>-->
+
+        <!--</RelativeLayout>-->
+
+
+    <!--layout_behavior - sets the view as the bottom sheet
+        behavior_peekHeight - sets the visible part of the sheet
+        behavior_hideable - sets whether the view can be hidden by dragging it further downwards. it accepts boolean values-->
+    <include
+        layout="@layout/home_bottom_sheet_layout" />
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

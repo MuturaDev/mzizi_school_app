@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="700dp"
+    android:background="@color/colorPrimary"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/action_bar_offset"
+    android:animateLayoutChanges="true"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:weightSum="4"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:orientation="horizontal"
+               android:layout_width="0dp"
+                android:layout_weight="2"
+                android:id="@+id/image_view_btn"
+                android:paddingBottom="3dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:background="@drawable/gallery_bottom_outline"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/camera_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/video_image_view"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:background="@drawable/gallery_layout_outline"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/videos_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/video_layout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    class="ultratude.com.mzizi.videoimagefragments.VideoFragment"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    class="ultratude.com.mzizi.videoimagefragments.VideoFragment"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

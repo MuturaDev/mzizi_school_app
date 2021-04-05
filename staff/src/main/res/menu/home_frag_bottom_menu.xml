@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/transport_CardID"
+        android:icon="@drawable/transport_route_icon"
+        android:title="Transport Routes" />
+
+    <item
+        android:id="@+id/optional_fee_Card"
+        android:icon="@drawable/optional_fee_icon"
+        android:title="Optional Fees" />
+
+    <item
+        android:id="@+id/media_gallery_CardID"
+        android:icon="@drawable/media_gallery_icon"
+        android:title="Video Gallery" />
+
+
+    <item
+        android:id="@+id/order_items_CardID"
+        android:icon="@drawable/order_items"
+        android:title="Order School Items" />
+
+    <item
+        android:id="@+id/parent_web_portal_CardID"
+        android:icon="@drawable/parent_portal"
+        android:title="Parent Web Portal" />
+
+    <item
+        android:id="@+id/settings_id"
+        android:icon="@drawable/settings_icon"
+        android:title="Settings" />
+
+
+</menu>

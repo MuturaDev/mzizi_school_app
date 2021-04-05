@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:gravity="end"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:id="@+id/header_layout"
+    android:background="@color/colorPrimary"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:animateLayoutChanges="true"
+    >
+
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary"/>
+    <RelativeLayout
+        android:id="@+id/other_siblings_layout_clickable"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="3dp"
+        android:gravity="end"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:visibility="visible"
+            android:id="@+id/sibling_one"
+            android:layout_marginRight="3dp"
+
+            android:layout_alignParentRight="true"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/switch_siblings"
+            app:civ_border_width="0dp"
+            />
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/profile_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/student_profile_photoID"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="0dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="1dp"
+                android:paddingLeft="10dp"
+                >
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NADIA KENDI"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:id="@+id/student_nameID"
+                    android:textStyle="bold"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    >
+
+                    <TextView
+                        android:layout_toRightOf="@+id/insession"
+                        android:id="@+id/registration_numberID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adm No. 750"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white"/>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+
+
+            <TextView
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textColor="@android:color/white"
+                android:id="@+id/school_nameID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:id="@+id/school_moto_text"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:textAlignment="textStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="bottom"
+            android:background="@android:color/white"/>
+
+        <TextView
+            android:visibility="visible"
+            android:layout_marginTop="5dp"
+            android:text="Tap above to view student profile "
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:id="@+id/portal_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:visibility="invisible"
+            android:layout_marginStart="20dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:text="This is not school fees"
+            android:textSize="9sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/sibling_list_layout"
+        android:layout_width="match_parent"
+        android:isScrollContainer="true"
+        android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewbottomsheet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">@android:color/darker_gray</color>
+<!--    <color name="colorAccent">#FF4081</color>-->
+    <color name="colorAccent">#ffffff</color>
+    <color name="textColorPrimary">@android:color/black</color>
+    <color name="no_route">@android:color/holo_red_light</color>
+
+    <color name="confirmation_failure">@android:color/holo_red_dark</color>
+    <color name="confirmation_success">@android:color/holo_green_dark</color>
+    <color name="exam_history_label">#088088</color>
+
+    <color name="update_attendance_register">#880088</color>
+    <color name="new_attendance_register">@android:color/holo_green_dark</color>
+
+    <color name="purple">#880888</color>
+    <color name="black">#000</color>
+
+    <color name="dark_blue">#088088</color>
+    <color name="colorTransparentWhite">#cccccc</color>
+    <color  name="chip_saved">@android:color/white</color>
+    <color name="chip_not_saved">@android:color/holo_blue_light</color>
+
+
+<!--    Zing-->
+    <color name="actionbar_opacity">#33000000</color>
+    <color name="primary">#3F51B5</color>
+    <color name="primary_dark">#303F9F</color>
+    <color name="primary_light">#C5CAE9</color>
+    <color name="accent">#E040FB</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
+
+    <!--    Customer Feedback-->
+
+    <color name="colorAccentPreview">#FF4081</color>
+
+    <color name="libraryAccentColor">#0FD9C8</color>
+    <color name="libraryColorPrimary">#0FD9C8</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="dashboard_bg">#0FD9C8</color>
+    <color name="dashboard_txt">#FFFFFF</color>
+
+    <color name="backgroundBase">#D3D3D3</color>
+    <color name="field_bg">#F0F0F0</color>
+
+    <color name="light_gray_text">#9DA0A1</color>
+    <color name="dark_gray_text">#696D6F</color>
+
+
+</resources>

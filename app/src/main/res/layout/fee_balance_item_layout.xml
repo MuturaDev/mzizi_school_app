@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fee_balance_bg"
+    android:layout_marginTop="5dp"
+    android:paddingBottom="5dp"
+
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:elevation="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <!--this textview is just a global title of your listview if you need one but can be remove-->
+            <LinearLayout
+                android:paddingTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="1dp"
+                android:weightSum="6">
+
+                <TextView
+                    android:paddingLeft="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:text="Ref No. "
+                    android:textStyle="bold"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorPrimary"
+                    android:textIsSelectable="false"
+                    android:textSize="12sp"
+
+                    />
+
+                <TextView
+                    android:visibility="invisible"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tranType_refNo_textID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:text=""
+                    android:textColor="#000" />
+
+                <TextView
+                    android:textAlignment="center"
+                    android:padding="3dp"
+                    android:textStyle="bold"
+                    android:id="@+id/transType_refNo_txtID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:layout_marginRight="3dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:background="@drawable/transtype_green_bg"
+                    android:text="INV1053/2018/21 890"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/colorPrimary"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="1dp"
+                android:weightSum="6">
+
+                <TextView
+                    android:id="@+id/label_receipt_or_invoice_ID"
+                    android:paddingLeft="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="2"
+                    android:text="Receipt Date "
+                    android:textColor="@color/colorPrimary"
+                    android:textAlignment="textStart"
+                    android:textIsSelectable="false"
+                    android:textSize="12dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="2"
+                    android:text=":"
+                    android:textColor="@color/homeText"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/postingDate_textID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="2dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="2"
+                    android:textColor="@color/homeText"
+                    android:text=""
+                    android:textSize="10dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="1dp"
+                android:weightSum="6">
+
+                <TextView
+                    android:paddingLeft="2dp"
+                    android:id="@+id/textView4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="2"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Narration "
+                    android:textAlignment="textStart"
+                    android:textIsSelectable="false"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="2"
+                    android:text=":"
+                    android:textColor="@color/homeText"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/narration_textID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="2"
+                    android:textColor="@color/homeText"
+                    android:text=""
+                    android:paddingRight="2dp"
+                    android:textSize="10dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="1dp"
+                android:weightSum="6">
+
+                <TextView
+                    android:paddingLeft="2dp"
+                    android:layout_width="0dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="2"
+                    android:text="Amount "
+                    android:textAlignment="textStart"
+                    android:textIsSelectable="false"
+                    android:textSize="12dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="2"
+                    android:text=":"
+                    android:textColor="@color/homeText"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/amount_textID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="2"
+                    android:text=""
+                    android:textColor="@color/homeText"
+                    android:paddingRight="2dp"
+                    android:textSize="10dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="1dp"
+                android:weightSum="6">
+
+                <TextView
+                    android:paddingLeft="2dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="2"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Running Balance "
+                    android:textAlignment="textStart"
+                    android:textIsSelectable="false"
+                    android:textSize="12dp"
+                    />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="2"
+                    android:text=":"
+                    android:textColor="@color/homeText"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/runningBalance_textID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="2"
+                    android:paddingRight="2dp"
+                    android:textColor="@color/homeText"
+                    android:text=""
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    >
+
+    <include
+        android:visibility="gone"
+        layout="@layout/no_internet_connection_layout"/>
+
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/inner_meanscore_recyler_layout2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_bg">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:elevation="5dp"
+                android:visibility="visible"
+                android:paddingRight="5dp"
+                android:id="@+id/layoutabove"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                >
+
+                <TextView
+
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Display results of year: "
+                    android:textColor="@color/exam_history_label"
+                    android:id="@+id/show_text"
+                    android:textSize="15sp"
+                    android:layout_marginRight="5dp"
+                    />
+
+
+
+
+                <RelativeLayout
+                    android:visibility="visible"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:layout_width="120dp"
+                    android:tooltipText="YEAR"
+                    android:contentDescription="Year"
+                    android:layout_height="25dp"
+                    android:background="@drawable/spinner_background_green_line"
+                    android:orientation="horizontal"
+                    >
+
+                    <!---->
+                    <Spinner
+                        android:id="@+id/year_spinner_ID"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="25dp"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:background="@android:color/transparent"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/spinner_dropdown_icon"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_viewing_results_of_ID"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/exam_history_label"
+                android:text="Viewing exam results of James Mutura Gituma, 13178 "
+                android:gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                android:id="@+id/meanscore_layout_noContent"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15dp"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textAlignment="center"
+                    android:text="No exam results to show."/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/meanscore_progress"
+                android:visibility="visible"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:indeterminate="true"
+                    android:indeterminateTint="@android:color/holo_blue_dark"
+                    android:layout_gravity="center_horizontal"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    />
+
+                <!--This textview should be annimated in some way-->
+                <TextView
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Loading..."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:scrollbars="vertical"
+                android:scrollIndicators="end"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:layout_height="match_parent"
+                android:id="@+id/meanscore_recycle"
+                android:layout_marginTop="5dp">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

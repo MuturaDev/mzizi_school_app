@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+
+    <ImageView
+        android:visibility="visible"
+        android:layout_width="40dp"
+        android:id="@+id/image_message_profile"
+        android:layout_height="40dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/message_from_icon"
+        />
+
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="28dp">
+        <TextView
+
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/view_text_id"
+            android:visibility="invisible"
+            android:layout_marginTop="0dp"
+            android:layout_gravity="right"
+            android:textSize="12sp"
+            android:textColor="#33B6E5"
+            android:text="Tap to view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:background="@drawable/incoming_speach_bubble"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:id="@+id/layout_to_change_btn_bubble"
+            android:layout_height="wrap_content">
+            <TextView
+                android:paddingLeft="20dp"
+                android:paddingTop="4dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/text_message_body_sent"
+                android:layout_width="match_parent"
+                android:layout_weight="19"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginRight="5dp"
+                android:maxWidth="240dp"
+                android:textSize="13sp"
+                android:text="@string/in_news"
+                android:textColor="#ffffff" />
+
+
+            <TextView
+                android:layout_alignParentEnd="true"
+                android:paddingBottom="2dp"
+                android:layout_toStartOf="@+id/txt_status_notification_read_not_read_ID"
+                android:id="@+id/text_message_time"
+                android:layout_below="@+id/text_message_body_sent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginEnd="5dp"
+                android:text="Thursday, 22 Mar . 16:44 "
+                android:textSize="10sp"
+                />
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>

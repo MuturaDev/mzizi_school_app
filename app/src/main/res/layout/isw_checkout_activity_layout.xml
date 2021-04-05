@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        tools:showIn="@layout/activity_main">
+
+        <!--<EditText-->
+            <!--android:id="@+id/customer_email"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:hint="customer email"-->
+            <!--android:inputType="textEmailAddress"-->
+            <!--android:text="someone@somewhere.something" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/customer_id"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:hint="customer id"-->
+            <!--android:inputType="text"-->
+            <!--android:text="blabla" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/merchant_id"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:hint="merchant id"-->
+            <!--android:inputType="text"-->
+            <!--android:text="TZLETU0001" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/domain"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:hint="Domain"-->
+            <!--android:inputType="text"-->
+            <!--android:text="ISWKE" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/terminal_id"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:hint="terminal id"-->
+            <!--android:inputType="text"-->
+            <!--android:text="3TLP0001" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/client_id"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:enabled="true"-->
+            <!--android:hint="Client Id"-->
+            <!--android:inputType="text"-->
+            <!--android:text="IKIAAB09E4ECCB92A508AEDE0D01B36472E27C309F05" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/client_secret"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:enabled="true"-->
+            <!--android:hint="Client Secret"-->
+            <!--android:inputType="text"-->
+            <!--android:text="f4Vm0o0bXBQTIG4DAKrbs4urZZgJSieih/EiHjnf9/E=" />-->
+
+
+        <!--<EditText-->
+            <!--android:id="@+id/amount"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:hint="amount"-->
+            <!--android:inputType="number"-->
+            <!--android:text="963" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/currency"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:hint="currency"-->
+            <!--android:inputType="text"-->
+            <!--android:text="KES" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/preauth"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:hint="preauth"-->
+            <!--android:inputType="number"-->
+            <!--android:maxLength="1"-->
+            <!--android:text="1" />-->
+        <!--<EditText-->
+            <!--android:id="@+id/orderIdField"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:hint="orderId"-->
+            <!--android:inputType="text"-->
+            <!--android:maxLength="10"-->
+            <!--android:text="TZL_ANDR_132" />-->
+
+        <!--<com.interswitchgroup.mobpayexample.MultiSelectionSpinner-->
+            <!--android:id="@+id/tokens"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<CheckBox-->
+            <!--android:id="@+id/tokenization_checkBox"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Tokenize" />-->
+
+        <!--<com.interswitchgroup.mobpayexample.MultiSelectionSpinner-->
+            <!--android:id="@+id/channels"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/card_field"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:hint="Card Number"-->
+            <!--android:maxLength="16"-->
+            <!--android:inputType="number"-->
+            <!--android:text="4111111111111111" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/cvv"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:hint="CVV"-->
+            <!--android:inputType="number"-->
+            <!--android:maxLength="3"-->
+            <!--android:text="123" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/expYear"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:hint="Expiry Year"-->
+            <!--android:inputType="number"-->
+            <!--android:maxLength="2"-->
+            <!--android:text="20" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/expMonth"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:hint="Expiry month"-->
+            <!--android:inputType="number"-->
+            <!--android:maxLength="2"-->
+            <!--android:text="02" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/launchUiButton"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Launch UI" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/cardPaymentButton"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Card Payment" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/mobilePaymentButton"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Mobile payment" />-->
+        <!--</LinearLayout>-->
+
+
+    </LinearLayout>
+</ScrollView>

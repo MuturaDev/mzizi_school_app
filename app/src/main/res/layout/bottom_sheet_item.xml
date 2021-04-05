@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp"
+    >
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sibling_cardid"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="3dp"
+            >
+            <ImageView
+
+                android:id="@+id/sibling_image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/student_registration"
+                android:layout_gravity="center"
+                />
+
+           <LinearLayout
+               android:layout_marginStart="10dp"
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/sibling_name"
+
+                   android:layout_marginTop="2dp"
+                   android:textSize="10dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/homeText"
+                   android:text=""/>
+
+               <TextView
+                   android:id="@+id/reg_num"
+                   android:textAlignment="center"
+                   android:layout_marginTop="2dp"
+                   android:textSize="10dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/homeText"
+                   android:text=""/>
+
+               <TextView
+                   android:id="@+id/course_name"
+                   android:layout_marginTop="2dp"
+                   android:textSize="10dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/homeText"
+                   android:text=""/>
+
+           </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

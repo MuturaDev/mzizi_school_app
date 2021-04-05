@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="0dp"
+    android:paddingLeft="0dp"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    >
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/fee_balance_noContent"
+            android:visibility="invisible"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:text="No fee transaction to show."/>
+
+            <LinearLayout
+                android:id="@+id/tap_to_refresh_ID"
+                android:visibility="invisible"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:text="Tap on,"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/refresh_myaccount_24"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:text="at the top to refresh."
+                    android:textSize="15sp"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/circle_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:elevation="5dp"
+            android:background="@drawable/fee_balance_circle_bottom_bg"
+            android:layout_height="150dp">
+
+
+            <TextView
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:id="@+id/top_header_value"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:text="Current Balance: "/>
+
+            <TextView
+                android:layout_below="@+id/top_header_value"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                android:text="Ksh. 0.000"
+                android:id="@+id/current_balance"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:visibility="visible"
+            android:id="@+id/fee_balance_layout"
+            android:layout_below="@+id/circle_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:orientation="vertical"
+            >
+
+            <ProgressBar
+                android:layout_centerHorizontal="true"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/colorPrimary"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/feebalance_progress"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/pullToRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                >
+
+                <!--TODO: It should not be done like this, get in
+                Android content placeholder animation, androidhive-->
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_view_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    shimmer:duration="800"
+                    >
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:paddingBottom="5dp"
+                        android:visibility="invisible"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/fee_balance_recycler"
+                        android:scrollbars="vertical"
+                        android:scrollbarAlwaysDrawVerticalTrack="true"
+                        />
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+    <include
+        layout="@layout/show_payment_details_bottom_sheet_layout"
+        />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

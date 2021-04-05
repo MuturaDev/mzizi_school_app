@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:initialKeyguardLayout="@layout/example_single_app_widget"
+    android:initialLayout="@layout/example_single_app_widget"
+    android:minHeight="120dp"
+    android:minWidth="120dp"
+    android:previewImage="@drawable/example_appwidget_preview"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="1"
+    android:widgetCategory="home_screen"/>
+
+
+<!--2) Adding the AppWidgetProviderInfo METADATA
+
+    -This class defines the essential App Widget qualities.
+        such as minimum layout dimensions, i mean the appwidget provider tag element properties.
+            -initial layout resources
+            -how often to update the AppWidget
+            -optionally, a configuration activity to launch at create time.
+        all this is defined in an xml resource.
+
+        -minHeight and minWidget = specifiy the minimum amount of space the app widget consumes by default.
+            also specifies the default homescreen position app widget in its window based on a grid of ceslls that have a define dheight and width
+
+        -updatePeriodMillis - attributes defines how often the app widget framework should request an update from the AppWidgetProvider by calling on update call method.
+        an actuall update is not guaranteed to occur exactly on time with this value and we suggest updating
+        as infrequently as possible, perhaps not more than once in an hour to preserve battery life.
+        This frequency is adjustable in a configuration.
+        -initial layout = points to the layout resource that defines the app widget layout
+        -configure = defines activity to launch when teh user adds the app widget, in order for them to configure app widget properties.
+        -priviewimage = defines the preview of how the app will look like after its configured. what the user sees when selecting the app widget. If not suppplied the user instead sees your application launcher.
+
+         more on https://developer.android.com/guide/topics/appwidgets-->

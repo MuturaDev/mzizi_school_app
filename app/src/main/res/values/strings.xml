@@ -1,0 +1,261 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Mzizi School App</string>
+    <string name="in_news">Da Nang International Fireworks Festival 2018Update: Dec 08, 2016 (TITC) - Da Nang International Fireworks Festival 2017 (DIFF 2017) with the theme from 29 April to 24 June 2017 with the aim to Da Nang becoming a unique cultural festival tourism space.</string>
+    <string name="title_activity_try_try">TryTry</string>
+    <!--<string name="text_logo">Copyright &#169; 2011-2018 </string>-->
+    <!--<string name="text_logo_concat">&#160; &#160;Ultratude Tech Ltd</string>-->
+
+
+    <string name="settle_text_myaccount">Settle the balance above using <b>PAYBILL + ACCOUNT</b> shown to continue using this portal. MPESA Name: <b>ULTRATUDE TECH LTD.</b></string>
+    <string name="note_text_myaccount"><b>NOTE:</b> This is <b>NOT</b> school fee balance. <b>DO NOT</b> use this paybill to pay for school fees.</string>
+
+
+
+
+    <string name="action_settings">Settings</string>
+    <string name="about_text1">MziziApp helps you get access to your child\’s academic performance, fee transactions, important school events, and contact information of the school.</string>
+    <string name="about_text2">This app is only available to parents whose school is registered with the Mzizi School Management System.</string>
+    <string name="about_text3">This app provides academic information and many more features. Keep up to date with all the latest information and happenings from your school.</string>
+    <string name="about_text4">Interactive features include:</string>
+    <string name="about_text5">- Ability to view all results</string>
+    <string name="about_text6">- Ability to view all fee transactions </string>
+    <string name="about_text7">- Ability to view class attendance </string>
+    <string name="about_text8">- Ability to view direct messages from the school </string>
+    <string name="about_text9">- Ability to view upcoming events </string>
+    <string name="about_text10">- Ability to view school contact information and payment instructions</string>
+    <string name="about_text11">New Features:</string>
+    <string name="about_text12">-Parent Chat - parent to school chat service</string>
+    <string name="about_text13">-NEW UI Design - Dashboard, Quick preview containing a summary of the current information.</string>
+    <string name="about_text14">-Change password capability</string>
+    <string name="about_text15">-Assignment, Examination, Lesson Exercises, E-Learning Content in pdf, Video and audio formats.</string>
+    <string name="about_text16">-Video Gallery - entertainment and educational.</string>
+    <string name="about_text17">-Assignments, Examinations, Lesson Exercises, E-learning content in formats of Video, audio, and Text. These can be downloaded from the app, and when done, uploaded for submission.</string>
+
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_gallery">Video Gallery</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="title_activity_transport_routes">TransportRoutes</string>
+
+
+    <!--Pattern/Pin VIew-->
+    <string name="key_1">1</string>
+    <string name="key_2">2</string>
+    <string name="key_3">3</string>
+    <string name="key_4">4</string>
+    <string name="key_5">5</string>
+    <string name="key_6">6</string>
+    <string name="key_7">7</string>
+    <string name="key_8">8</string>
+    <string name="key_9">9</string>
+    <string name="key_0">0</string>
+
+    <!--Vertical Stepper Form-->
+    <string name="vertical_stepper_form_continue_button">Continue</string>
+    <string name="vertical_stepper_form_cancel_button">Cancel</string>
+    <string name="vertical_stepper_form_confirm_button">Confirm data</string>
+    <string name="vertical_stepper_form_confirmation_step_title">Confirmation</string>
+    <!--Form Implementation-->
+    <string name="add_alarm">Save Details</string>
+    <string name="new_alarm_added">New alarm added successfully</string>
+    <string name="error_alarm_name_min_characters">Please provide the required answer, for the above question.</string>
+
+    <string name="error_alarm_days_min_days">At least 1 day must be selected</string>
+    <string name="main_activity_alarm_added_info">Recurring alarm () set up at []</string>
+    <string name="main_activity_explanation">Click the button to set up a new alarm</string>
+    <string name="main_activity_explanation_disclaimer">Don\'t worry, this app does not actually set up alarms.</string>
+
+    <string name="form_hint_title">Alarm name (required)</string>
+    <string name="form_hint_description">Alarm description (optional)</string>
+    <string name="form_discard_question">Discard alarm?</string>
+    <string name="form_info_will_be_lost">All the information about this new alarm will be lost</string>
+
+    <string name="form_sending_data_message">Adding new alarm…</string>
+    <string name="form_discard_cancel">Cancel</string>
+    <string name="form_discard">Discard</string>
+    <string name="form_empty_field">(Empty)</string>
+
+    <string-array name="steps_titles_general">
+        <item>First Name</item>
+        <item>Middle Name</item>
+        <item>Second Name</item>
+        <item>Phone Number</item>
+        <item>Email Address</item>
+        <item>National ID</item>
+        <item>Occupation</item>
+    </string-array>
+
+    <string-array name="questions">
+        <item>The Largest Component of air?</item>
+        <item>Conserving the environment means?</item>
+        <item>The following statements give the composition of air, which one is not correct?</item>
+        <item>Which one of the following is not a component of the environment?</item>
+        <item>Which one of the following is a living component of the environment?</item>
+        <item>Pants are useful to animals in the following ways except</item>
+        <item>The living part of the environment comprises</item>
+        <item>The best choices for the parts labelled Q and z respectively are?</item>
+        <item>a component of air with the largest percentage</item>
+        <item>All the following are natural components of soil except</item>
+        <item>Plants make their own food through the process called?</item>
+        <item>Find the area of the unshaded part</item>
+    </string-array>
+    <string-array name="steps_titles_student">
+        <item>Student First Name</item>
+        <item>Student Second Name</item>
+        <item>Student Last Name</item>
+        <item>Admission Number</item>
+        <item>Gender</item>
+        <item>DOB</item>
+        <item>Date of Admission</item>
+        <item>School Name</item>
+        <item>Current Class</item>
+        <item>Current Stream</item>
+        <item>Special Need</item>
+        <item>NEMIS NO</item>
+        <item>Boarding Type</item>
+        <item>Religion</item>
+        <item>Former School</item>
+        <item>Contact Person</item>
+        <item>Former School Phone</item>
+        <item>Language Spoken</item>
+        <item>Residential Address</item>
+        <item>Dietary Requirement</item>
+        <item>Health Info</item>
+        <item>Nationality</item>
+        <item>Immunization Card</item>
+        <item>Passport Photo</item>
+    </string-array>
+    <string-array name="steps_subtitles">
+        <item>Name of the alarm</item>
+        <item>Description of the alarm</item>
+        <item>Time when the alarm will go off</item>
+        <item>Week schedule of the alarm</item>
+    </string-array>
+    <string-array name="week_days">
+        <item>M</item>
+        <item>T</item>
+        <item>W</item>
+        <item>T</item>
+        <item>F</item>
+        <item>S</item>
+        <item>S</item>
+    </string-array>
+    <string-array name="week_days_extended">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+
+    <string name="file_thumbnail">File Thumbnail</string>
+    <string name="open_camera">Open Camera</string>
+    <string name="done">Done</string>
+    <string name="selection_count">%1$d/%2$d</string>
+    <string name="permission_not_given">Permission not given</string>
+
+    <string name="launch_file_picker">Launch File Picker</string>
+
+    <string name="uri">File path : %1$s</string>
+    <string name="size">File Size :  %1$d</string>
+    <string name="mime">Mime: %1$s</string>
+    <string name="type">Type : %1$d</string>
+    <string name="name">Name : %1$s</string>
+    <string name="bucketname">Folder Found : %1$s</string>
+    <string name="launch_audio_picker">Launch audio picker</string>
+    <string name="launch_video_picker">Launch video picker</string>
+    <string name="launch_image_picker">Launch image picker</string>
+    <string name="share_log">Share Log</string>
+
+
+<!--    TableView-->
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="sort_ascending">Sort Ascending</string>
+    <string name="sort_descending">Sort Descending</string>
+    <string name="hiding_row_sample">Hiding 3. Row Sample</string>
+    <string name="showing_row_sample">Showing 3. Row Sample</string>
+    <string name="scroll_to_column_position">Scroll to 15. column position</string>
+    <string name="scroll_to_row_position">Scroll to 5. row position</string>
+    <string name="show_hide_the_column">Showing / Hiding 1. column</string>
+<!--    https://stackoverflow.com/questions/48345910/error-multiple-substitutions-specified-in-non-positional-format-did-you-mean-t-->
+    <string name="table_pagination_details">Page %1$s, showing items %2$s - %3$s.</string>
+
+    <string-array name="moods">
+        <item />
+        <item>Happy</item>
+        <item>Sad</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item />
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="items_per_page">
+        <item>10</item>
+        <item>20</item>
+        <item>25</item>
+        <item>50</item>
+        <item>All</item>
+    </string-array>
+
+
+<!--    Catcho-->
+    <string name="catcho_report_title1">Mzizi School App</string>
+    <string name="catcho_report_title2">\t\t\tCrash Reporter</string>
+    <string name="catcho_title">Title</string>
+    <string name="catcho_description">Description</string>
+    <string name="catcho_device_info">Info</string>
+    <string name="catcho_email">Email</string>
+    <string name="catcho_send_email">Send Email...</string>
+    <string name="catcho_no_email_clients">There are no email clients installed.</string>
+    <string name="catcho_err_send_msg">There\'s an error during send the msg, please try again later.</string>
+
+
+
+<!--    FCM-->
+    <!--
+        This is the name that users will see when interacting with this channel.
+        It should describe the category of notifications that will be sent through this channel
+     -->
+    <string name="default_notification_channel_name" translatable="true">News</string>
+    <string name="msg_subscribe_failed">Failed to subscribe to news topic</string>
+
+
+    //FLOATING VIEW
+    <string name="chathead_content_title">Mzizi School App running</string>
+    <string name="content_text">Zoom credential dialog active</string>
+    <string name="mail_content_title">Demo Customize: active</string>
+    <string name="chathead_click_message">Click</string>
+    <string name="delete_demo">Delete dialog</string>
+    <string name="show_demo"></string>
+    <string name="show_customized_demo">Show Customized FloatingView</string>
+    <string name="show_settings">Initial Settings</string>
+    <string name="permission_denied">Overlay permission not granted.</string>
+    <string name="mail_address">example@example.com</string>
+    <string name="mail_title">Title</string>
+    <string name="mail_content">Message</string>
+    <string name="touch_finished_position" formatted="false">Current position (%d,%d)</string>
+    <string name="deleted_soon">FloatingView will be deleted soon.</string>
+    <string name="finish_deleted">FloatingView has been deleted.</string>
+    <string name="default_floatingview_channel_id">default_floatingview_channel</string>
+    <string name="default_floatingview_channel_name">Default Channel</string>
+
+</resources>
+
+
+
+

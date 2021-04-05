@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--android:background="@drawable/splash_screen_gradient_bg"-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ultratude.com.mzizi.uiactivities.SplashActivity"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    >
+
+    <ImageView
+        android:layout_marginLeft="40dp"
+        android:visibility="visible"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:paddingStart="0dp"
+        android:layout_height="450dp"
+        android:src="@drawable/logo_mzizi_p"
+        android:id="@+id/splashimage"
+        />
+
+   <LinearLayout
+       android:id="@+id/top_layout"
+      android:layout_centerHorizontal="true"
+       android:orientation="vertical"
+       android:layout_marginBottom="70dp"
+       android:layout_alignParentBottom="true"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+
+<!--       <include-->
+
+<!--           layout="@layout/animate_mzizi_logo_layout"/>-->
+
+
+
+
+
+
+       <TextView
+           android:visibility="visible"
+           android:textColor="#45A8B7"
+           android:textStyle="bold"
+           android:textAlignment="center"
+           android:layout_marginTop="30dp"
+           android:textSize="20sp"
+           android:text="MZIZI SCHOOL"
+           android:id="@+id/school_name_text"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+
+       <TextView
+           android:visibility="visible"
+           android:textColor="#45A8B7"
+           android:textStyle="italic"
+           android:textSize="15dp"
+           android:layout_marginTop="20dp"
+           android:textAlignment="center"
+           android:text="Together we would make it"
+           android:id="@+id/school_motto_text"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+
+   </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<!--            <FrameLayout-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"/>-->
+<!--        <fragment-->
+<!--            android:tag="pattern"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            class="ultratude.com.mzizi.changepasswordfragments.PatternFragment"-->
+<!--            />-->
+
+
+
+    </LinearLayout>
+
+<!--    <com.airbnb.lottie.LottieAnimationView-->
+<!--        android:id="@+id/animation_view"-->
+<!--        android:paddingBottom="0dp"-->
+<!--        android:layout_marginBottom="0dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="270dp"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        app:lottie_autoPlay="true"-->
+<!--        app:lottie_colorFilter="@color/colorPrimary"-->
+
+<!--        app:lottie_rawRes="@raw/wave"-->
+<!--        app:lottie_loop="true"/>-->
+
+
+
+</RelativeLayout>

@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:elevation="5dp"
+    android:paddingRight="5dp"
+    android:isScrollContainer="true"
+    android:background="@drawable/attendance_bottom_sheet_bg"
+    android:fitsSystemWindows="true"
+    android:id="@+id/bottom_sheet_layout"
+    >
+
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Attendance Filters"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+
+
+<LinearLayout
+    android:id="@+id/mark_class_attendance_history_ID"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="10dp"
+    android:isScrollContainer="true"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <TextView
+        android:layout_marginBottom="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Previously marked class registers are displayed here (Tap to update)"
+        android:textColor="@android:color/white"
+        android:background="@drawable/chip_bg_solid"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rl_marked_attendance_ID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:orientation="horizontal"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="horizontal"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <!--<include layout="@layout/chip_dialog_fragment_layout"/>-->
+        <!--<include layout="@layout/chip_dialog_fragment_layout"/>-->
+        <!--<include layout="@layout/chip_dialog_fragment_layout"/>-->
+        <!--<include layout="@layout/chip_dialog_fragment_layout"/>-->
+
+    </LinearLayout>
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/filter_input_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+
+    android:orientation="vertical"
+    android:paddingBottom="0dp"
+    android:paddingLeft="10dp"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/spinner_background"
+            android:orientation="horizontal">
+
+
+            <Spinner
+                android:id="@+id/sp_school_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="25dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+            <ProgressBar
+                android:id="@+id/pg_school_sp"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@android:color/black"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/image_school_sp_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/spinner_dropdown_icon" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/spinner_background"
+            android:orientation="horizontal">
+
+            <!--android:id="@+id/sp_school_ID"-->
+            <Spinner
+                android:id="@+id/sp_batch_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="25dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+            <ProgressBar
+                android:id="@+id/pg_batch_sp"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@android:color/black"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+            <!--                -->
+            <ImageView
+                android:id="@+id/image_batch_sp_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/spinner_dropdown_icon" />
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <RelativeLayout
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/spinner_background"
+            android:orientation="horizontal">
+
+            <!--android:id="@+id/sp_school_ID"-->
+            <Spinner
+                android:id="@+id/sp_term_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="25dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+            <ProgressBar
+                android:id="@+id/pg_term_sp"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@android:color/black"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+            <!--                -->
+            <ImageView
+                android:id="@+id/image_term_sp_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/spinner_dropdown_icon" />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/spinner_background"
+            android:orientation="horizontal">
+
+
+            <Spinner
+                android:id="@+id/sp_class_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="25dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+            <ProgressBar
+                android:id="@+id/pg_class_sp"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@android:color/black"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/image_class_sp_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/spinner_dropdown_icon" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <RelativeLayout
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/spinner_background"
+            android:orientation="horizontal">
+
+
+            <Spinner
+                android:id="@+id/sp_stream_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="25dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+
+            <ProgressBar
+                android:id="@+id/pg_stream_sp"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@android:color/black"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/image_stream_sp_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/spinner_dropdown_icon" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/spinner_background"
+            android:orientation="horizontal">
+
+
+
+            <Spinner
+                android:id="@+id/sp_unit_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:visibility="visible"
+                android:layout_marginRight="25dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+            <ProgressBar
+                android:id="@+id/pg_unit_sp"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@android:color/black"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+
+
+
+            <ImageView
+                android:id="@+id/image_unit_sp_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/spinner_dropdown_icon" />
+
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <RelativeLayout
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/spinner_background"
+            android:orientation="horizontal">
+
+            <!--android:id="@+id/sp_school_ID"-->
+            <Spinner
+                android:id="@+id/sp_lesson_period_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="25dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+            <ProgressBar
+                android:id="@+id/pg_lesson_period_sp"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@android:color/black"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+            <!--                -->
+            <ImageView
+                android:id="@+id/image_lesson_period_sp_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/spinner_dropdown_icon" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/spinner_background"
+            android:orientation="horizontal">
+
+            <!--                android:id="@+id/txt_replace_sp_ID"-->
+            <TextView
+                android:layout_marginTop="0dp"
+                android:paddingTop="0dp"
+                android:background="@android:color/transparent"
+                android:visibility="invisible"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15sp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="Class 2 N"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <!--                android:id="@+id/sp_classStream_ID"-->
+            <Spinner
+                android:id="@+id/sp_student_list_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:visibility="visible"
+                android:layout_marginRight="25dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+
+            <ProgressBar
+                android:id="@+id/pg_student_list_sp"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@android:color/black"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+
+
+            <!---->
+            <ImageView
+                android:id="@+id/image_student_list_sp_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/spinner_dropdown_icon" />
+
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <RelativeLayout
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/spinner_background"
+            android:orientation="horizontal">
+
+
+            <Spinner
+                android:id="@+id/sp_session_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="25dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+
+            <ProgressBar
+                android:id="@+id/pg_session_sp"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@android:color/black"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/image_session_sp_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/spinner_dropdown_icon" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/spinner_background"
+            android:orientation="horizontal">
+
+            <!--                android:id="@+id/txt_replace_sp_ID"-->
+            <TextView
+                android:layout_marginTop="0dp"
+                android:paddingTop="0dp"
+                android:background="@android:color/transparent"
+                android:visibility="invisible"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15sp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="Class 2 N"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <!--                android:id="@+id/sp_classStream_ID"-->
+            <Spinner
+                android:id="@+id/sp_study_session_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:visibility="visible"
+                android:layout_marginRight="25dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+
+            <ProgressBar
+                android:id="@+id/pg_study_session_sp"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@android:color/black"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+
+
+            <!---->
+            <ImageView
+                android:id="@+id/image_study_session_sp_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/spinner_dropdown_icon" />
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <RelativeLayout
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/spinner_background"
+            android:orientation="horizontal">
+
+
+            <Spinner
+                android:id="@+id/sp_activity_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="25dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:spinnerMode="dropdown" />
+
+
+            <ProgressBar
+                android:id="@+id/pg_activity_sp"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@android:color/black"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/image_activity_sp_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/spinner_dropdown_icon" />
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:weightSum="4">
+
+        <TextView
+
+            android:id="@+id/txt_count_number_of_Students"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="No. of Students"
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="4"
+            android:background="@drawable/date_background">
+
+            <TextView
+
+                android:id="@+id/txt_mark_attendance_date_ID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="30dp"
+                android:editable="false"
+                android:hint="Date"
+                android:paddingBottom="0dp"
+                android:paddingLeft="5dp"
+                android:text=""
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/date_icon" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="end|bottom"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/label_confirmation_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3.7"
+            android:gravity="start"
+            android:text=" "
+            android:textColor="@color/confirmation_failure"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.3"
+            android:background="@drawable/round_alight"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp">
+
+
+            <Button
+                android:id="@+id/btn_save_ID"
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="0dp"
+                android:background="#ffffff"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="0dp"
+                android:text="done"
+                android:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/pb_attendance_progress"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:indeterminate="true"
+                android:indeterminateTint="@android:color/holo_blue_dark"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="4"
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="5dp">
+
+    <TextView
+        android:id="@+id/txt_register_status"
+        android:text=""
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+
+<RelativeLayout
+    android:layout_marginTop="1dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/label_filterdata_if_select_classAndSession_message"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"
+        android:textColor="@color/confirmation_failure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Congratulation, You've marked, Sun, 20 Jan 2019's register"/>
+
+
+
+
+</RelativeLayout>
+
+
+
+</LinearLayout>

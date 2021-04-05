@@ -1,0 +1,38 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
+         https://developer.android.com/design/patterns/navigation-drawer.html -->
+    <dimen name="navigation_drawer_width">240dp</dimen>
+
+
+    <!--more-->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!--Student Enquiery-->
+    <dimen name="student_enquery_space_btn_menu">10dp</dimen>
+    <dimen name="student_enquery_space_side_menu">5dp</dimen>
+    <dimen name="student_enquery_space_top_menu">10dp</dimen>
+
+
+    <!--Disciplinary Cases-->
+    <dimen name="padding_left_year_term_section">5dp</dimen>
+    <dimen name="padding_right_year_term_section">5dp</dimen>
+
+    <!--    Customer Feedback-->
+    <dimen name="screen_header_height">56dp</dimen>
+
+    <dimen name="_50sdp">5dp</dimen>
+    <dimen name="_3sdp">1dp</dimen>
+    <dimen name="_1sdp">1dp</dimen>
+    <dimen name="_5sdp">5dp</dimen>
+
+
+
+
+
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home"
+            />
+        <item
+            android:id="@+id/nav_fee"
+            android:icon="@drawable/feebalance_icon"
+            android:title="Fee Balance" />
+        <item
+            android:id="@+id/nav_score"
+            android:icon="@drawable/meanscore_icon"
+            android:title="Current Mean Score" />
+
+
+        <!--<item-->
+            <!--android:id="@+id/new_carriculum_ID"-->
+            <!--android:icon="@drawable/meanscore_icon"-->
+            <!--android:title="New Carriculum Exam Format"-->
+            <!--/>-->
+
+        <!--<item android:id="@+id/nav_membership"-->
+            <!--android:title="Mzizi Membership"-->
+            <!--android:icon="@drawable/logo_mzizi_2"/>-->
+    </group>
+
+    <item android:title="School Communication">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_events"
+                    android:icon="@drawable/upcoming_events_icon"
+                    android:title="Upcoming Events" />
+            <item
+                android:id="@+id/nav_notifications"
+                android:icon="@drawable/notifications_icon"
+                android:title="Notifications" />
+            <item
+                android:id="@+id/contacts_navid"
+                android:icon="@drawable/contact_icon_vector"
+                android:title="School Contact Info" />
+            <!--&lt;!&ndash;<item android:id="@+id/nav_contacts"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:icon="@drawable/ic_contact_24dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:title="School Contacts"/>&ndash;&gt;-->
+            </group>
+        </menu>
+    </item>
+    <item android:title="About Mzizi School App">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_tutorial"
+                    android:icon="@drawable/tutorial_icon"
+                    android:title="Start Tutorial" />
+                <item
+                    android:id="@+id/nav_about"
+                    android:icon="@drawable/about_icon"
+                    android:title="About" />
+
+                <item
+                    android:id="@+id/nav_feedback"
+                    android:icon="@drawable/feedback_icon"
+                    android:title="Feedback" />
+                <!--&lt;!&ndash;<item android:id="@+id/nav_contacts"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:icon="@drawable/ic_contact_24dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:title="School Contacts"/>&ndash;&gt;-->
+            </group>
+        </menu>
+    </item>
+</menu>

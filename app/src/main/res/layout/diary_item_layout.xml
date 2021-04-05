@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="5dp"
+        app:cardCornerRadius="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/tobehighlighted"
+            android:orientation="vertical"
+            android:background="@drawable/fee_balance_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:visibility="gone"
+                android:padding="3dp"
+                android:background="@color/vertical_stepper_form_background_color_next_button"
+                android:id="@+id/submit_status_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:layout_marginBottom="1dp"
+                android:text=""/>
+
+
+
+            <TextView
+                android:padding="3dp"
+                android:background="@color/colorPrimary"
+                android:id="@+id/name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:layout_marginBottom="1dp"
+                android:text="New: LESSON - ENGLISH - CLASS 7: ENGLISH: GRAMMAR: P"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_toRightOf="@+id/layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <RelativeLayout
+                        android:orientation="vertical"
+                        android:layout_toRightOf="@+id/layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+<!--                        <com.borjabravo.readmoretextview.ReadMoreTextView-->
+<!--                            android:layout_below="@+id/rl"-->
+<!--                            android:layout_marginBottom="10dp"-->
+<!--                            android:id="@+id/body_text"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            android:paddingStart="3dp"-->
+<!--                            app:colorClickableText="@color/confirmation_success"-->
+<!--                            app:showTrimExpandedText="false"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            app:trimLines="5"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textStyle="normal"-->
+<!--                            android:textSize="15sp"-->
+<!--                            android:textColor="@color/homeText"-->
+<!--                            android:text="@string/at_step_8"/>-->
+
+
+
+                       <LinearLayout
+                           android:layout_below="@+id/rl"
+                           android:layout_marginTop="5dp"
+                           android:id="@+id/text_layout"
+                           android:orientation="vertical"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content">
+
+                           <TextView
+
+                               android:layout_marginBottom="10dp"
+                               android:id="@+id/body_text"
+                               android:paddingStart="3dp"
+                               android:layout_gravity="center_vertical"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:textStyle="normal"
+                               android:textSize="15sp"
+                               android:textColor="@color/homeText"
+                               android:text="@string/at_step_8"/>
+
+                           <TextView
+                               android:layout_marginBottom="10dp"
+                               android:id="@+id/list1"
+                               android:layout_marginTop="5dp"
+                               android:paddingStart="3dp"
+                               android:textAlignment="center"
+                               android:layout_gravity="center_vertical"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:textStyle="normal"
+                               android:textSize="15sp"
+                               android:textColor="@color/homeText"
+                               />
+
+                           <TextView
+                               android:layout_marginBottom="10dp"
+                               android:id="@+id/list2"
+                               android:layout_marginTop="5dp"
+                               android:paddingStart="3dp"
+                               android:layout_gravity="center_vertical"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:textStyle="normal"
+                               android:textSize="15sp"
+                               android:textColor="@color/homeText"
+                               />
+
+                       </LinearLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <com.codewaves.youtubethumbnailview.ThumbnailView
+                                android:id="@+id/thumbnail"
+                                android:visibility="visible"
+                                android:layout_width="match_parent"
+                                android:layout_height="160dp"
+                                android:background="@android:color/black"
+                                android:clickable="true"
+                                android:foreground="?android:attr/selectableItemBackground"/>
+
+                            <TextView
+                                android:background="@color/pink"
+                                android:id="@+id/assingment_dueDate"
+                                android:padding="3dp"
+                                android:layout_alignParentRight="true"
+                                android:textSize="13sp"
+                                android:textColor="@color/white"
+                                android:text="Due in 10 days(s)"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_marginLeft="3dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_width="wrap_content"
+                            android:text="Download File"
+                            android:layout_below="@+id/text_layout"
+                            android:paddingBottom="5dp"
+
+                            android:textSize="17sp"
+                            android:id="@+id/download_text_btn"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"/>
+
+
+
+                        <TextView android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_width="wrap_content"
+                            android:text="Upload assignment"
+                            android:layout_below="@+id/text_layout"
+                            android:paddingBottom="5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="60dp"
+                            android:textSize="17sp"
+                            android:id="@+id/upload_text_btn"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"/>
+
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tapDonwloadInfo"
+                        android:paddingLeft="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="@color/pink"
+                        android:text="After tapping on 'View File' on the left, and the document is not displayed, tap on the top right menu, then refresh. "
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    </LinearLayout>

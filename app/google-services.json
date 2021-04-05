@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "707218257883",
+    "firebase_url": "https://mzizi-school-app-466cc.firebaseio.com",
+    "project_id": "mzizi-school-app-466cc",
+    "storage_bucket": "mzizi-school-app-466cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707218257883:android:a064fd2b7540f7911719fe",
+        "android_client_info": {
+          "package_name": "ultratude.com.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "707218257883-idhia108b4ko2gbjk8cag7if158l4huo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ultratude.com.app",
+            "certificate_hash": "6bbe1efe56f5864f0ebd98dcfd1e2a1f0f08029c"
+          }
+        },
+        {
+          "client_id": "707218257883-70qd2ieuh7n3oq3tajpueko12eagahb5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1k8ucdAaf0jrI0YQwmtok9CJqdQHfVDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "707218257883-70qd2ieuh7n3oq3tajpueko12eagahb5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

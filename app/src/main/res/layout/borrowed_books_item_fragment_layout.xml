@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    android:layout_margin="10dp"
+    android:backgroundTint="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="0dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:layout_centerVertical="true"
+                android:layout_below="@+id/top_layout"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="Book Title: "
+                android:id="@+id/title_label"/>
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_below="@+id/top_layout"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/title_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INTERVIEW GRADE 1 2020 "
+                android:textColor="@color/homeText"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:id="@+id/booktitle_text"
+                />
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/book_no_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Book No.: "
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:textAlignment="textStart"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/book_no_label"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BookNo"
+                android:textColor="@color/homeText"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:id="@+id/bookno_text"
+                />
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_alignParentRight="true"
+                android:textSize="15sp"
+                android:layout_marginRight="25dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="Category: "
+                android:id="@+id/category_label"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/category_label"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:textAlignment="textEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08 Jun 2019"
+                android:textColor="@color/homeText"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:id="@+id/category_text"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:text="Type: "
+            android:id="@+id/type_label"/>
+
+        <TextView
+            android:id="@+id/type_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/type_label"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="08 Jun 2019"
+            android:textAlignment="textStart"
+            android:textColor="@color/homeText"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+
+        <TextView
+            android:id="@+id/publisher_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="17dp"
+            android:text="Publisher: "
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_below="@+id/publisher_label"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true"
+            android:textAlignment="textEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+
+            android:text="08 Jun 2019"
+            android:textColor="@color/homeText"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:id="@+id/publisher_text"
+            />
+
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:text="Date Borrowed: "
+                android:id="@+id/date_borrowed_label"/>
+
+            <TextView
+                android:id="@+id/date_borrowed_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date_borrowed_label"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="08 Jun 2019"
+                android:textAlignment="textStart"
+                android:textColor="@color/homeText"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+
+            <TextView
+                android:id="@+id/date_returned_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="17dp"
+                android:text="Date Returned: "
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_below="@+id/date_returned_label"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:textAlignment="textEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+
+                android:text="08 Jun 2019"
+                android:textColor="@color/homeText"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:id="@+id/date_returned_text"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:text="Unit: "
+                android:id="@+id/unit_label"/>
+
+            <TextView
+                android:id="@+id/unit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/unit_label"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="08 Jun 2019"
+                android:textAlignment="textStart"
+                android:textColor="@color/homeText"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

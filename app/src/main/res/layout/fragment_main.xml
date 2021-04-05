@@ -1,0 +1,186 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_layout_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+<!--    <LinearLayout-->
+<!--        android:gravity="end"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/order_history"-->
+<!--            android:src="@drawable/order_history_cat"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+
+<!--    </LinearLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_line"
+            android:focusableInTouchMode="true">
+
+
+            <LinearLayout
+                android:id="@+id/table_test_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/search_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/query_string"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:inputType="textNoSuggestions"/>
+
+                    <Spinner
+                        android:id="@+id/mood_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="30"
+                        android:background="@android:color/transparent"
+                        android:entries="@array/moods"/>
+
+                    <Spinner
+                        android:id="@+id/gender_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="30"
+                        android:background="@android:color/transparent"
+                        android:entries="@array/gender"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <ImageButton
+                        android:id="@+id/previous_button"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:srcCompat="@drawable/ic_previous"/>
+
+                    <EditText
+                        android:id="@+id/page_number_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:inputType="number"/>
+
+                    <ImageButton
+                        android:id="@+id/next_button"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:srcCompat="@drawable/ic_next"/>
+
+                    <TextView
+                        android:id="@+id/table_details"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"/>
+
+                    <Spinner
+                        android:id="@+id/items_per_page_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="30"
+                        android:background="@android:color/transparent"
+                        android:entries="@array/items_per_page"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ultratude.com.mzizi.tableviewimplementation.TableView
+                android:id="@+id/tableview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/table_test_container">
+            </ultratude.com.mzizi.tableviewimplementation.TableView>
+
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@color/confirmation_success"
+                android:textSize="12sp"
+                android:layout_width="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:id="@+id/txt_no_content_to_show"
+                android:layout_height="wrap_content"
+                android:text="No Order Items to show"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+        android:id="@+id/fab_layout"
+        android:layout_gravity="bottom|end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/fab"
+                android:layout_alignParentRight="true"
+                android:visibility="visible"
+                android:layout_marginBottom="10dp"
+                android:padding="0dp"
+                android:layout_marginRight="24dp"
+
+                android:tooltipText=""
+                app:srcCompat="@drawable/order_history_cat"
+                app:elevation="5dp"
+                android:background="@color/colorPrimary"
+
+                />
+
+<!--        <com.getbase.floatingactionbutton.FloatingActionButton-->
+<!--           -->
+<!--            />-->
+
+        <TextView
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:elevation="5dp"
+            android:layout_width="wrap_content"
+            android:text="0"
+            android:id="@+id/checkoutCountText"
+            android:padding="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="@drawable/circle_drawable"
+            android:layout_height="wrap_content"/>
+
+
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/order_items_fragment_bottom_sheet_layout"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/manage_transport_screen_layout_ID"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+
+
+    <TextView
+        android:id="@+id/label_confirmation_message_ID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="Please select an action"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:elevation="10dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+
+
+        <RelativeLayout
+            android:id="@+id/btn_daily_tranport_ID"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/circle_bg"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <ImageView
+                android:id="@+id/attendance_image_click"
+                android:layout_width="115dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="50dp"
+                android:src="@drawable/daily_transport_icon" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/attendance_image_click"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:layout_marginRight="15dp"
+                android:text="Daily Transport"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_trip_transport_cases_ID"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_marginLeft="@dimen/student_enquery_space_btn_menu"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/circle_bg"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/discipline_image_click"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:src="@drawable/trip_icon"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:text="Trip Transport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/discipline_image_click"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+[
+    {
+        "Period": "2018 T 1",
+        "AverageScore": "68",
+        "MeanGrade": "B"
+    },
+    {
+        "Period": "2018 T 2",
+        "AverageScore": "66",
+        "MeanGrade": "B"
+    },
+    {
+        "Period": "2018 T 3",
+        "AverageScore": "64",
+        "MeanGrade": "B-"
+    },
+    {
+        "Period": "2019 T 1",
+        "AverageScore": "63",
+        "MeanGrade": "B-"
+    },
+    {
+        "Period": "2019 T 2",
+        "AverageScore": "69",
+        "MeanGrade": "B"
+    },
+    {
+        "Period": "2019 T 3",
+        "AverageScore": "74",
+        "MeanGrade": "B+"
+    },
+    {
+        "Period": "2020 T 1",
+        "AverageScore": "65",
+        "MeanGrade": "B"
+    }
+]

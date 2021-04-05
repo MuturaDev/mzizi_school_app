@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    android:layout_margin="10dp"
+    android:backgroundTint="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="0dp"
+        >
+
+
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:visibility="visible"
+                android:id="@+id/add_to_calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="5dp">
+
+                   <LinearLayout
+
+                       android:layout_width="wrap_content"
+                       android:layout_height="30dp"
+                       android:background="@color/colorPrimary"
+                       android:orientation="horizontal"
+                       android:padding="3dp">
+
+                       <ImageView
+                           android:id="@+id/icon"
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:layout_gravity="center_vertical"
+                           android:src="@drawable/google_calendar" />
+
+                       <TextView
+                           android:id="@+id/add_to_calendar_text"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center_vertical"
+                           android:layout_marginLeft="5dp"
+                           android:text="Add to your own Calendar Events"
+                           android:textColor="@color/white"
+                           android:textSize="12sp"
+                           android:textStyle="bold" />
+
+                   </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_below="@+id/top_layout"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="Title: "
+            android:id="@+id/title_label"/>
+        <TextView
+            android:layout_below="@+id/top_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/title_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INTERVIEW GRADE 1 2020"
+            android:textColor="@color/homeText"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:id="@+id/title_text"
+           />
+
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/title_label"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="StartDate: "
+            android:id="@+id/startdate_label"/>
+        <TextView
+            android:textAlignment="textStart"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/startdate_label"
+            android:layout_marginLeft="15dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08 Jun 2019"
+            android:textColor="@color/homeText"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:id="@+id/startdate_text"
+           />
+
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/title_label"
+            android:textSize="15sp"
+            android:layout_marginRight="25dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="EndDate: "
+            android:id="@+id/enddate_label"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/enddate_label"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:textAlignment="textEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08 Jun 2019"
+            android:textColor="@color/homeText"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:id="@+id/enddate_text"
+            />
+
+
+
+
+        <TextView
+            android:layout_below="@+id/enddate_text"
+            android:layout_marginTop="15dp"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:text="StartTime: "
+            android:id="@+id/starttime_label"/>
+        <TextView
+            android:layout_below="@id/starttime_label"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08 Jun 2019"
+            android:textAlignment="textStart"
+            android:textColor="@color/homeText"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:id="@+id/starttime_text"
+            />
+
+
+
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/enddate_text"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="EndTime: "
+            android:id="@+id/endtime_label"/>
+        <TextView
+            android:layout_below="@+id/endtime_label"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true"
+            android:textAlignment="textEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+
+            android:text="08 Jun 2019"
+            android:textColor="@color/homeText"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:id="@+id/endtime_text"
+           />
+
+
+
+
+            <!--forgot venue-->
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/starttime_text"
+            android:layout_marginTop="15dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="Venue: "
+            android:id="@+id/venue_label"/>
+        <TextView
+            android:layout_below="@+id/venue_label"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textAlignment="textStart"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R.S.A"
+            android:textColor="@color/homeText"
+            android:textStyle="normal"
+            android:textSize="12sp"
+            android:id="@+id/venue_text"
+            />
+
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/venue_text"
+
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="Description: "
+            android:id="@+id/description_label"/>
+
+       <LinearLayout
+           android:layout_below="@+id/description_label"
+           android:layout_marginLeft="10dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+
+           <ScrollView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               >
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+                   <TextView
+
+                        android:textAlignment="textStart"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:text=""
+                       android:textColor="@color/homeText"
+                       android:textSize="12sp"
+                       android:id="@+id/description_text"
+                       />
+
+               </LinearLayout>
+
+           </ScrollView>
+
+       </LinearLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+

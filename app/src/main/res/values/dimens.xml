@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">5dp</dimen>
+    <dimen name="activity_vertical_margin">10dp</dimen>
+    <dimen name="nav_header_vertical_spacing">20dp</dimen>
+    <dimen name="nav_header_height">230dp</dimen>
+
+    <!--PasscodeView-->
+    <dimen name="profile_image_dimen">0dp</dimen>
+    <dimen name="finger_print_text_size">12sp</dimen>
+    <dimen name="key_text_size">12sp</dimen>
+    <dimen name="key_stroke_width">2dp</dimen>
+    <dimen name="indicator_stroke_width">5dp</dimen>
+    <dimen name="indicator_radius">1dp</dimen>
+    <dimen name="key_padding">5dp</dimen>
+
+    <dimen name="pattern_cell_radius">5dp</dimen>
+
+
+    <!--Vertical Stepper From-->
+    <dimen name="vertical_stepper_form_width_circle">28dp</dimen>
+    <dimen name="vertical_stepper_form_text_size_circle">15sp</dimen>
+    <dimen name="vertical_stepper_form_text_size_title">17sp</dimen>
+    <dimen name="vertical_stepper_form_text_size_subtitle">14sp</dimen>
+    <dimen name="vertical_stepper_form_text_size_error_message">16sp</dimen>
+    <dimen name="vertical_stepper_form_width_vertical_line">2dp</dimen>
+    <dimen name="vertical_stepper_form_space_between_numbers_and_content">16dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+
+    <dimen name="card_corner_radius">6dp</dimen>
+
+    <dimen name="margin_fab">16dp</dimen>
+    <dimen name="padding_normal">8dp</dimen>
+    <dimen name="padding_swipestack">64dp</dimen>
+
+    <dimen name="elevation_normal">4dp</dimen>
+    <dimen name="elevation_large">8dp</dimen>
+
+
+        <!--App Widget-->
+    <dimen name="widget_margin">8dp</dimen>
+
+
+
+<!--Home page icons-->
+    <dimen name="iconsize">35dp</dimen>
+    <dimen name="iconmarginleft">20dp</dimen>
+
+<!--    Profile Screen-->
+    <dimen name="headerTextSize">13sp</dimen>
+    <dimen name="valueTextSize">12sp</dimen>
+
+    <dimen name="pattern_lock_dot_size">10dp</dimen>
+    <dimen name="pattern_lock_dot_selected_size">10dp</dimen>
+    <dimen name="pattern_lock_path_width">5dp</dimen>
+
+    <dimen name="grid_spacing">2dp</dimen>
+
+
+<!--    TABLE VIEW-->
+<!--    <dimen name="default_row_header_width">55dp</dimen>-->
+<!--    <dimen name="default_column_header_height">55dp</dimen>-->
+
+<!--    table view implementation -->
+    <dimen name="cell_height">40dp</dimen>
+    <dimen name="row_header_width">55dp</dimen>
+    <dimen name="text_size">12sp</dimen>
+    <dimen name="text_header_size">15sp</dimen>
+
+    <!-- Overriding the default values of the tableView -->
+    <dimen name="default_row_header_width">55dp</dimen>
+    <dimen name="default_column_header_height">40dp</dimen>
+
+
+
+<!--    Time table-->
+    <dimen name="weekday_header_dim">100dp</dimen>
+    <dimen name="weekday_value_width_dim">190dp</dimen>
+    <dimen name="weekday_value_height_dim">60dp</dimen>
+    <dimen name="break_with">50dp</dimen>
+    <dimen name="top_header_time">197dp</dimen>
+    <dimen name="timetable_text_size">10sp</dimen>
+
+
+</resources>

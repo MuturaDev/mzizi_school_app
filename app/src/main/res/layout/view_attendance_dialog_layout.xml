@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="10dp"
+    android:paddingTop="10dp"
+    android:paddingStart="10dp">
+
+    <TextView
+        android:id="@+id/txt_student_fullnames_ID"
+        android:textColor="@color/homeText"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:text="Course Name"
+            android:layout_weight="2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/txt_course_name_ID"
+            android:textSize="12sp"
+            android:textColor="@color/homeText"
+            android:text="Morning Sessions roll call"
+            android:gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_weight="2"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:gravity="start"
+            android:text="Attendance"
+            android:layout_weight="2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:gravity="start"
+            android:layout_marginStart="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/homeText"
+            android:id="@+id/txt_attendance_status_ID"
+            android:text=""
+            android:layout_weight="2"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_reason_for_absence_layout_ID"
+        android:visibility="visible"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:textSize="15sp"
+            android:text="Reason for Absence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_no_absent_reason_ID"
+                android:visibility="visible"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/horizontal_line_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/txt_reason_for_absence_ID"
+                android:gravity="start"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/homeText"
+                android:visibility="gone"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Morning Sessions roll call"
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:textSize="15sp"
+            android:text="Date Recorded"
+            android:layout_weight="2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:gravity="start"
+            android:layout_marginStart="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/homeText"
+            android:id="@+id/txt_date_recorded_ID"
+            android:text=""
+            android:layout_weight="2"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:text="Roll Call Session"
+            android:layout_weight="2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text=":"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:gravity="start"
+            android:layout_marginStart="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/homeText"
+            android:id="@+id/txt_roll_call_session_ID"
+            android:text=""
+            android:layout_weight="2"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

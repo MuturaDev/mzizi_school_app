@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/student_enquiry_layout_ID"
+    android:paddingTop="5dp">
+
+    <LinearLayout
+        android:id="@+id/ll_spinner_layout_ID"
+        android:elevation="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/spinner_bg"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp">
+
+            <RelativeLayout
+
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:background="@drawable/spinner_background"
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp">
+
+                <Spinner
+                    android:id="@+id/sp_class_stream_ID"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="25dp"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown"
+                    android:background="@android:color/transparent"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/spinner_dropdown_icon"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:background="@drawable/spinner_background"
+                android:orientation="horizontal"
+                >
+
+                <Spinner
+                    android:id="@+id/sp_student_name_ID"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="25dp"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown"
+                    android:background="@android:color/transparent"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/spinner_dropdown_icon"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="9dp"
+        android:elevation="20dp"
+        android:id="@+id/examhistory_atthistory_layout_ID"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="vertical"
+        android:layout_below="@+id/ll_spinner_layout_ID"
+        android:layout_alignStart="@+id/ll_spinner_layout_ID">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+
+
+            <LinearLayout
+                android:id="@+id/layout_selected_studentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <TextView
+                    android:visibility="visible"
+                    android:id="@+id/label_confirmation_message_ID"
+                    style="@style/Base.TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Select Class Stream and Student Name"
+                    android:textColor="@color/confirmation_failure" />
+
+                <TextView
+                    android:visibility="visible"
+                    android:id="@+id/txt_selected_studentName"
+                    style="@style/Base.TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:background="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/student_enquery_space_side_menu"
+            android:layout_marginRight="@dimen/student_enquery_space_side_menu"
+            android:elevation="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/btn_exam_history_ID"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/circle_bg"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/exam_image_click"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="50dp"
+                    android:src="@drawable/exam_icon_staff" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/exam_image_click"
+                    android:layout_centerHorizontal="true"
+                    android:text="Exam History"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_attendance_ID"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_marginLeft="@dimen/student_enquery_space_btn_menu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/circle_bg"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/attendance_image_click"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="50dp"
+                    android:src="@drawable/attendance_icon" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/attendance_image_click"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:layout_marginRight="15dp"
+                    android:text="Attendance History"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_disciplinary_cases_ID"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_marginLeft="@dimen/student_enquery_space_btn_menu"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/circle_bg"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/discipline_image_click"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/manage_discipline_icon"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:text="Disciplinary Cases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/discipline_image_click"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

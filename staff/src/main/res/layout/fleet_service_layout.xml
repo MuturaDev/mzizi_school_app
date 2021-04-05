@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true"
+    android:background="#f4f4f4f4"
+    android:fitsSystemWindows="true"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/spinner_bg"
+            android:elevation="5dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/label_license_plate_ID"
+                    android:layout_width="0dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Vehicle Plate "
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Service Type "
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:weightSum="4">
+
+
+                <RelativeLayout
+
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/spinner_background"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="10dp">
+
+                    <Spinner
+                        android:id="@+id/sp_vehicle_plate_ID"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="25dp"
+                        android:spinnerMode="dropdown"
+                        android:background="@android:color/transparent"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/image_vehicle_plate_sp_ID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/spinner_dropdown_icon"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        />
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/spinner_background"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="10dp">
+
+                    <Spinner
+                        android:id="@+id/sp_service_type_ID"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="25dp"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        android:background="@android:color/transparent"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/image_service_type_sp_ID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/spinner_dropdown_icon"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        />
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginRight="0dp"
+                    android:layout_weight="2"
+                    android:textColorHint="#000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_mileage_before_ID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Mileage at service"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+
+                        android:textSize="12sp" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textColorHint="#000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_nextservice_mileage_ID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:hint="Next Service Mileage"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:textSize="12sp" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:weightSum="4">
+
+                <TextView
+                    android:paddingTop="0dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_marginTop="20dp"
+                    android:text="Ksh."
+                    android:textSize="12sp"
+                    android:textColor="#000"
+                    android:layout_height="match_parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.4"
+                    android:textColorHint="#000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_servicecost_ID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Service Cost"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textSize="12sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:weightSum="4">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_marginRight="0dp"
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/date_background"
+                    >
+
+                    <TextView
+                        android:paddingTop="10dp"
+                        android:id="@+id/txt_dataserviced_ID"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="30dp"
+                        android:editable="false"
+                        android:text="Date Serviced"
+                        android:textAlignment="textStart"
+                        android:textColor="#000"
+                        android:textSize="12sp" />
+                    <ImageView
+                        android:layout_marginTop="0dp"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/date_image_dateserviced"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/date_icon"/>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/offence_bg"
+                android:paddingBottom="20dp"
+                android:paddingLeft="5dp"
+                android:layout_marginRight="8dp"
+                android:paddingTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <com.google.android.material.textfield.TextInputLayout
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#000">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_service_report_ID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Service Report"
+                        android:inputType="textMultiLine"
+                        android:textSize="12sp">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/txt_confirmation_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center_horizontal"
+                android:textColor="@color/confirmation_failure"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/round_alight"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp">
+
+
+                    <Button
+                        android:id="@+id/btn_save_ID"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="0dp"
+                        android:background="#ffffff"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:padding="0dp"
+                        android:text="Save"
+                        android:visibility="visible" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_fleet_service_progress"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:indeterminate="true"
+                        android:indeterminateTint="@android:color/holo_blue_dark"
+                        android:visibility="gone"
+                        tools:layout_editor_absoluteY="0dp" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

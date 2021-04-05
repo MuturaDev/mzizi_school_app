@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+
+    >
+
+    <!--<com.github.clans.fab.FloatingActionMenu-->
+        <!--android:id="@+id/menu"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--android:padding="11dp"-->
+
+        <!--app:layout_anchorGravity="bottom | end"-->
+
+        <!--fab:menu_animationDelayPerItem="55"-->
+        <!--fab:menu_backgroudColor="@android:color/transparent"-->
+
+
+        <!--&gt;-->
+    <!-- -->
+
+
+    <!--</com.github.clans.fab.FloatingActionMenu>-->
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

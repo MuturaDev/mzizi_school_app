@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <item-->
+<!--        android:title="Settings"-->
+<!--        android:id="@+id/settings_id"-->
+<!--        android:orderInCategory="100"-->
+<!--        app:showAsAction="never" />-->
+
+    <item
+        android:title="Logout"
+        android:id="@+id/logout_id"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+<!--    <item android:id="@+id/refresh_btn"-->
+<!--        android:icon="@drawable/refresh_icon_actionbar"-->
+<!--        android:title="Refresh"-->
+<!--        android:tooltipText="Refresh data"-->
+<!--        android:visible="true"-->
+<!--        android:alphabeticShortcut="r"-->
+<!--        android:orderInCategory="1"-->
+<!--        app:showAsAction="always"-->
+<!--        />-->
+
+
+
+    <item android:id="@+id/floating_chat_ID"
+        android:icon="@drawable/chat_sec_icon"
+        android:title="Chat"
+        android:alphabeticShortcut="r"
+        android:orderInCategory="1"
+        app:showAsAction="always"
+        />
+
+
+
+
+
+
+
+
+
+
+</menu>

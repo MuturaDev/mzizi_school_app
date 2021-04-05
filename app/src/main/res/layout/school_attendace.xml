@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/school_contacts"
+        android:orientation="vertical"
+    android:layout_height="match_parent"
+       android:gravity="center_vertical"
+    >
+
+
+
+
+    <LinearLayout
+        android:id="@+id/school_attendance_noContent"
+        android:visibility="invisible"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="15dp"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:text="No attendance detail to show."/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:src="@drawable/refresh_myaccount_24"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:text="Tap to update."
+                android:textSize="15dp"
+                android:textColor="@android:color/holo_green_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+<!--<ProgressBar-->
+<!--android:indeterminate="true"-->
+<!--android:indeterminateTint="@color/colorPrimary"-->
+<!--android:layout_marginTop="25dp"-->
+<!--android:backgroundTint="@color/colorPrimary"-->
+<!--android:id="@+id/notification_actionbar_progress"-->
+<!--style="?android:attr/progressBarStyleLarge"-->
+<!--android:layout_width="70dp"-->
+<!--app:layout_constraintTop_toTopOf="parent"-->
+<!--app:layout_constraintRight_toRightOf="parent"-->
+<!--app:layout_constraintLeft_toLeftOf="parent"-->
+<!--android:layout_height="70dp"-->
+<!--android:visibility="gone" />-->
+
+<!--was not here-->
+
+
+
+<!--was not here-->
+<!--The main content view where fragments are loaded-->
+<TextView
+
+    android:visibility="visible"
+    android:textColor="@android:color/holo_blue_dark"
+    android:textStyle="bold"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:textAlignment="center"
+    android:id="@+id/show_value"
+    android:textSize="100dp"
+    android:layout_height="wrap_content"
+    android:text=""/>
+
+
+
+
+
+
+
+</LinearLayout>
