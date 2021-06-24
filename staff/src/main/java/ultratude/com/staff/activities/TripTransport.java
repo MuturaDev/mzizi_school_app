@@ -51,7 +51,9 @@ import br.com.goncalves.pugnotification.interfaces.OnImageLoadingCompleted;
 import io.paperdb.Paper;
 import ultratude.com.staff.R;
 
+import ultratude.com.staff.activities.accesscontrolforactivities.HomeScreen;
 import ultratude.com.staff.spinnermodel.VehicleSpinner;
+import ultratude.com.staff.utils.UtilityFunctions;
 import ultratude.com.staff.webservice.DataAccessObjects.StaffDao;
 import ultratude.com.staff.webservice.DataAccessObjects.TripLatLongDAO;
 import ultratude.com.staff.webservice.DataAccessObjects.VehicleDAO;
@@ -111,6 +113,8 @@ public class TripTransport extends EasyLocationAppCompatActivity  implements Ima
 //                .recipients(Constants.CRASH_REPORT_EMAIL)
 //                .build();
         setContentView(R.layout.trip_transport_layout);
+
+        UtilityFunctions.activateQuickActions(this,  0, HomeScreen.CurrentScreenKey);
 
         txt_last_location_latlong_ID = findViewById(R.id.txt_last_location_latlong_ID);
         txt_last_location_time_ID = findViewById(R.id.txt_last_location_time_ID);

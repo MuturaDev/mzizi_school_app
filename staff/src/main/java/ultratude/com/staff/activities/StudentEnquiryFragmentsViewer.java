@@ -10,6 +10,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
+import ultratude.com.staff.activities.accesscontrolforactivities.HomeScreen;
 import ultratude.com.staff.constantclasses.DisplayContants;
 
 import ultratude.com.staff.fragments.FragTransaction;
@@ -17,6 +18,7 @@ import ultratude.com.staff.fragments.ViewClassAttendance;
 import ultratude.com.staff.fragments.ViewDisciplinaryCases;
 import ultratude.com.staff.fragments.ViewExamHistory;
 import ultratude.com.staff.R;
+import ultratude.com.staff.utils.UtilityFunctions;
 import ultratude.com.staff.webservice.ResponseModels.StudentRequest;
 
 /**
@@ -36,6 +38,10 @@ public class StudentEnquiryFragmentsViewer extends AppCompatActivity {
 //                .recipients(Constants.CRASH_REPORT_EMAIL)
 //                .build();
         setContentView(R.layout.student_enquiry_fragments_viewer_layout);
+
+
+        UtilityFunctions.activateQuickActions(this,  0, HomeScreen.CurrentScreenKey);
+
 
         ActionBar actionBar = (ActionBar) getSupportActionBar();
         if(actionBar != null){
@@ -57,19 +63,25 @@ public class StudentEnquiryFragmentsViewer extends AppCompatActivity {
         if(display.equalsIgnoreCase(DisplayContants.DISPLAY_CLASS_ATTENDANCE)){
 
             FragTransaction.dislayFragment(ViewClassAttendance.class, fragmentManager, studentRequest);
-            getSupportActionBar().setTitle("Class Attendance");
+            HomeScreen.CurrentScreenKey = "Class Attendance";
+            UtilityFunctions.activateQuickActions(this,  0, HomeScreen.CurrentScreenKey);
+            //getSupportActionBar().setTitle("Class Attendance");
 
         }else if(display.equalsIgnoreCase(DisplayContants.DISPLAY_DISCIPLINARY_CASES)){
 
 
             FragTransaction.dislayFragment(ViewDisciplinaryCases.class, fragmentManager, studentRequest);
-            getSupportActionBar().setTitle("Disciplinary Cases");
+            HomeScreen.CurrentScreenKey = "Disciplinary Cases";
+            UtilityFunctions.activateQuickActions(this,  0, HomeScreen.CurrentScreenKey);
+            //getSupportActionBar().setTitle("Disciplinary Cases");
 
         }else if(display.equalsIgnoreCase(DisplayContants.DISPLAY_EXAM_HISTORY)){
 
 
             FragTransaction.dislayFragment(ViewExamHistory.class, fragmentManager, studentRequest);
-            getSupportActionBar().setTitle("Exam History");
+            HomeScreen.CurrentScreenKey = "Exam History";
+            UtilityFunctions.activateQuickActions(this,  0, HomeScreen.CurrentScreenKey);
+            //getSupportActionBar().setTitle("Exam History");
 
         }
     }

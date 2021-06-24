@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryDark">@android:color/darker_gray</color>
-<!--    <color name="colorAccent">#FF4081</color>-->
-    <color name="colorAccent">#ffffff</color>
-    <color name="textColorPrimary">@android:color/black</color>
+
+    <color name="colorPrimary">#0FD9C8</color>
+    <color name="colorPrimaryDark">#0FD9C8</color>
+    <color name="colorAccent">#0FD9C8</color>
+    <color name="textColorPrimary">#0FD9C8</color>
+
+
+<!--    <color name="colorPrimary">#FFFFFF</color>-->
+<!--    <color name="colorPrimaryDark">@android:color/darker_gray</color>-->
+<!--&lt;!&ndash;    <color name="colorAccent">#FF4081</color>&ndash;&gt;-->
+<!--    <color name="colorAccent">#ffffff</color>-->
+<!--    <color name="textColorPrimary">@android:color/black</color>-->
     <color name="no_route">@android:color/holo_red_light</color>
 
     <color name="confirmation_failure">@android:color/holo_red_dark</color>
@@ -21,6 +28,8 @@
     <color name="colorTransparentWhite">#cccccc</color>
     <color  name="chip_saved">@android:color/white</color>
     <color name="chip_not_saved">@android:color/holo_blue_light</color>
+
+    <color name="light_black">#515151</color>
 
 
 <!--    Zing-->

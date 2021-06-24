@@ -4,13 +4,16 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
@@ -19,20 +22,27 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.DialogFragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
 
+import ultratude.com.staff.activities.accesscontrolforactivities.HomeScreen;
+import ultratude.com.staff.adapters.NewHomeScreenTopItemsAdapter;
 import ultratude.com.staff.datepickerfragments.DatePickeRFragment_DateServiced;
 import ultratude.com.staff.R;
+import ultratude.com.staff.model.HomeItem;
 import ultratude.com.staff.spinnermodel.ServiceTypeSpinner;
 import ultratude.com.staff.spinnermodel.VehicleSpinner;
+import ultratude.com.staff.utils.UtilityFunctions;
 import ultratude.com.staff.webservice.DataAccessObjects.StaffDao;
 import ultratude.com.staff.webservice.DataAccessObjects.VehicleDAO;
 import ultratude.com.staff.webservice.DataAccessObjects.VehicleServicingDAO;
@@ -47,7 +57,7 @@ public class ManageFleetServiceScreen extends AppCompatActivity implements View.
         DatePickeRFragment_DateServiced.DatePickerFragment_DateServiedInteractionListener {
 
 
-    private TextInputEditText txt_mileagebefore_ID,
+    private EditText txt_mileagebefore_ID,
                                 txt_nextservicemileage_ID,
                                 txt_servicecost_ID,
                                 txt_serviceReport_ID;
@@ -55,7 +65,7 @@ public class ManageFleetServiceScreen extends AppCompatActivity implements View.
     private Spinner sp_vehicle_plate_ID, sp_Service_type_ID;
 
 
-    private Button btn_save_ID;
+    private CardView btn_save_ID;
     private ProgressBar pb_fleetService_ID;
     private TextView txt_confirmation_message;
 
@@ -101,6 +111,7 @@ public class ManageFleetServiceScreen extends AppCompatActivity implements View.
     }
 
 
+
     private ImageView image_vehicle_plate_sp_ID, image_service_type_sp_ID;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -109,6 +120,10 @@ public class ManageFleetServiceScreen extends AppCompatActivity implements View.
 //                .recipients(Constants.CRASH_REPORT_EMAIL)
 //                .build();
         setContentView(R.layout.fleet_service_layout);
+
+        UtilityFunctions.activateQuickActions(this,  0, HomeScreen.CurrentScreenKey);
+
+
 
         ActionBar actionBar = (ActionBar) getSupportActionBar();
         if(actionBar != null){
@@ -145,6 +160,52 @@ public class ManageFleetServiceScreen extends AppCompatActivity implements View.
 
 
         txt_servicecost_ID  = findViewById(R.id.txt_servicecost_ID);
+        txt_servicecost_ID.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            private String current = "";
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String input = s.toString().trim().replaceAll("[Ksh,.]", "").replace(" ","");
+                if(!TextUtils.isEmpty(input))
+                if(!s.toString().trim().equals(current)){
+                    txt_servicecost_ID.removeTextChangedListener(this);
+
+                    String cleanString = s.toString().replaceAll("[Ksh,.]", "").trim();
+
+
+                    double parsed = Double.parseDouble(cleanString);
+                    //NOTE: THIS CANNNOT DELETE, also adds a dolla sign that is difficult to remove
+                    //String formatted = NumberFormat.getCurrencyInstance().format((parsed));
+                    String formatted =  UtilityFunctions.customFormat("Ksh ###,###.###", parsed);
+
+                    current = formatted;
+                    txt_servicecost_ID.setText(formatted.replace("$", "Ksh"));
+                    txt_servicecost_ID.setSelection(formatted.length());
+
+                    txt_servicecost_ID.addTextChangedListener(this);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(!TextUtils.isEmpty(s.toString())){
+//                    try {
+//                       double serviceCost =  Double.parseDouble(String.valueOf(s.toString().replace("Ksh ", "").replace(",","").trim()));
+//                       txt_servicecost_ID.setText(UtilityFunctions.customFormat("Ksh ###,###.###", serviceCost));
+//                    }catch (Exception e){
+//                        System.out.println(s.toString());
+//                    }
+                }
+
+
+
+            }
+        });
 
         final StringBuilder addPostfix = new StringBuilder();
 
@@ -276,7 +337,7 @@ public class ManageFleetServiceScreen extends AppCompatActivity implements View.
                 checkMileageBefore(mileageBefore) &&
                 checkNextServiceMilage(nextServiceMileage) &&
                 checkDateServiced(txt_dateserviced_ID.getText().toString()) &&
-                checkServiceCost(serviceCost) &&
+                checkServiceCost(serviceCost.replaceAll("[Ksh,]", "")) &&
                 checkServiceReport(serviceReport)){
 
             Staff staff = new StaffDao(ManageFleetServiceScreen.this).getUserThatSignedUp();

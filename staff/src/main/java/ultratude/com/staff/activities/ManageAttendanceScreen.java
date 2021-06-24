@@ -40,10 +40,12 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import ultratude.com.staff.activities.accesscontrolforactivities.HomeScreen;
 import ultratude.com.staff.chips.MarkAttendanceChip;
 import ultratude.com.staff.R;
 import ultratude.com.staff.spinnermodel.AttendanceRollCallSessionSpinner;
 import ultratude.com.staff.spinnermodel.ClassStreamSpinner;
+import ultratude.com.staff.utils.UtilityFunctions;
 import ultratude.com.staff.webservice.DataAccessObjects.ClassStreamDAO;
 import ultratude.com.staff.webservice.DataAccessObjects.MarkRegisterDAO;
 import ultratude.com.staff.webservice.DataAccessObjects.RollCallSessonsDAO;
@@ -232,6 +234,8 @@ public class ManageAttendanceScreen extends AppCompatActivity implements  View.O
 //                .build();
         setContentView(R.layout.manage_attendance_layout);
 
+
+        UtilityFunctions.activateQuickActions(this,  0, HomeScreen.CurrentScreenKey);
 
         txt_replace_sp_ID  = findViewById(R.id.txt_replace_sp_ID);
         image_session_sp_ID = findViewById(R.id.image_session_sp_ID);

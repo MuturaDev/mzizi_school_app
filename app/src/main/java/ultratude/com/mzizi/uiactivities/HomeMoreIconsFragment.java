@@ -1,8 +1,11 @@
 package ultratude.com.mzizi.uiactivities;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
@@ -14,6 +17,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
@@ -230,6 +234,34 @@ public class HomeMoreIconsFragment extends Fragment {
                 break;
             case "School Trip":
                 FragTransaction.dislayFragment(SchoolTripFragment.class, "",fragmentManager);
+                break;
+            case "Moodle" :
+                //String url =”selphone://post_detail?post_id=10";
+
+                try{
+                    String url = "moodlemobile://link=https://lms.mzizi.co.ke";
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(intent);
+                }catch (Exception ex){
+                   // Toast.makeText(getActivity(), "Sorry, Kindly install the Moodle Mobile App", Toast.LENGTH_SHORT).show();
+                    new AlertDialog.Builder(getActivity())
+                            .setTitle("Not Found")
+                            .setMessage("Moodle App is not available, you can click Install")
+                            .setPositiveButton("Install", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + "com.moodle.moodlemobile")));
+                                }
+                            })
+                            .setNegativeButton("Later", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            }).show();
+                }
+
                 break;
 
         }

@@ -27,10 +27,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import ultratude.com.staff.activities.accesscontrolforactivities.HomeScreen;
 import ultratude.com.staff.constantclasses.DisplayContants;
 import ultratude.com.staff.R;
 
 import ultratude.com.staff.spinnermodel.StudentSpinner;
+import ultratude.com.staff.utils.UtilityFunctions;
 import ultratude.com.staff.webservice.DataAccessObjects.StaffDao;
 import ultratude.com.staff.webservice.DataAccessObjects.StudentDAO;
 import ultratude.com.staff.webservice.ResponseModels.Staff;
@@ -70,6 +72,8 @@ public class StudentEnquiry extends AppCompatActivity {
 //                .recipients(Constants.CRASH_REPORT_EMAIL)
 //                .build();
         setContentView(R.layout.student_enquiry_layout);
+
+        UtilityFunctions.activateQuickActions(this,  0, HomeScreen.CurrentScreenKey);
 
 
 

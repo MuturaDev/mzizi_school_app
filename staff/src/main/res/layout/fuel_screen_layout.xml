@@ -1,76 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:animateLayoutChanges="true"
     android:layout_height="match_parent"
-
     android:isScrollContainer="true"
-    android:background="#f4f4f4f4"
+    android:background="@color/white"
     android:fitsSystemWindows="true"
     >
 
-
     <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_marginTop="@dimen/quick_action_size_expand_cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="20dp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/spinner_bg"
+            android:layout_marginTop="5dp"
             android:elevation="10dp"
             android:orientation="vertical"
             android:paddingLeft="10dp">
 
 
-            <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <TextView
                 android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-                android:weightSum="4">
-
-                <TextView
-                    android:id="@+id/label_license_plate_ID"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="Vehicle Plate "
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold"
-                    android:textSize="15sp" />
-
-
-                <!--<TextView-->
-                    <!--android:id="@+id/label_mileage_before_ID"-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_weight="2"-->
-                    <!--android:text="Fuel Type "-->
-                    <!--android:textColor="@android:color/black"-->
-                    <!--android:textSize="15sp"-->
-                    <!--android:textStyle="bold"/>-->
-
-
-            </LinearLayout>
-
-            <LinearLayout
+                android:id="@+id/label_license_plate_ID"
                 android:layout_width="match_parent"
+                android:textStyle="bold"
                 android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Vehicle Plate "
+                android:textColor="@color/libraryColorPrimary"
+                android:textSize="15sp" />
 
-                android:weightSum="4">
 
-                <RelativeLayout
+            <RelativeLayout
                     android:layout_weight="2"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="40dp"
                     android:background="@drawable/spinner_background"
                     android:orientation="horizontal"
                     android:layout_marginRight="10dp">
@@ -78,201 +52,213 @@
                     <Spinner
                         android:id="@+id/sp_license_plate_ID"
                         android:layout_width="match_parent"
-                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="40dp"
                         android:layout_height="match_parent"
                         android:spinnerMode="dropdown"
-                        android:background="@android:color/transparent"
+                        android:background="@drawable/round_alight"
                         android:layout_centerVertical="true"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:layout_marginLeft="5dp"
                         />
 
                     <ImageView
                         android:id="@+id/image_vehicle_plate_sp_ID"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/spinner_dropdown_icon"
-                        android:layout_alignParentRight="true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_down_light_green"
+                        android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
                         android:layout_gravity="center"
                         />
 
                 </RelativeLayout>
-                <!--<RelativeLayout-->
-                    <!--android:layout_weight="2"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:background="@drawable/spinner_background_app"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:layout_marginRight="10dp">-->
-
-                    <!--<Spinner-->
-                        <!--android:id="@+id/txt_fuel_type_ID"-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_marginRight="25dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:spinnerMode="dropdown"-->
-                        <!--android:background="@android:color/transparent"-->
-                        <!--android:layout_centerVertical="true"-->
-                        <!--android:layout_gravity="center"-->
-                        <!--android:gravity="center"-->
-                        <!--android:layout_marginLeft="5dp"-->
-                        <!--/>-->
-
-                    <!--<ImageView-->
-                        <!--android:id="@+id/image_fuel_type_sp_ID"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:src="@drawable/spinner_dropdown_icon"-->
-                        <!--android:layout_alignParentRight="true"-->
-                        <!--android:layout_centerVertical="true"-->
-                        <!--android:layout_gravity="center"-->
-                        <!--/>-->
-
-                <!--</RelativeLayout>-->
 
 
-
-
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:weightSum="4">
-
-
-                <com.google.android.material.textfield.TextInputLayout
-
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-
-                    android:layout_weight="2"
-                    android:textColorHint="#000">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txt_quantity_ID"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Quantity (litres)"
-                        android:inputType="numberDecimal"
-                        android:maxLines="1"
-                        android:layout_marginRight="10dp"
-                        android:textSize="12sp" />
-
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-
-
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:textColorHint="#000">
-
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txt_mileage_before_ID"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Mileage at fueling"
-                        android:inputType="numberDecimal"
-                        android:maxLines="1"
-
-                        android:textSize="12sp">
-
-                    </com.google.android.material.textfield.TextInputEditText>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-            </LinearLayout>
+            <TextView
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Price per litre "
+            android:textColor="@color/libraryColorPrimary"
+            android:textSize="15sp" />
 
             <RelativeLayout
-
+                android:layout_weight="2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                >
+                android:background="@drawable/spinner_background"
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp">
 
-                <TextView
-                    android:id="@+id/txt_ksh_symbol"
-                    android:layout_marginTop="20dp"
-                    android:layout_width="wrap_content"
-                    android:layout_weight="0.6"
-                    android:text="Ksh."
-                    android:textSize="12sp"
-                    android:layout_marginRight="20dp"
-                    android:textColor="#000"
-                    android:layout_height="30dp" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_toRightOf="@+id/txt_ksh_symbol"
-                    android:gravity="bottom"
+                <EditText
+                    android:id="@+id/txt_price_per_l_ID"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3.4"
-                    android:textColorHint="#000">
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:paddingLeft="5dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/round_alight"
+                    android:textColor="@color/libraryColorPrimary"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:text="" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txt_price_per_l_ID"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Price per litre"
-                        android:inputType="number"
-                        android:maxLines="1"
-                        android:textSize="12sp" />
-                </com.google.android.material.textfield.TextInputLayout>
-
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_paper_money_lightgreen"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    />
 
             </RelativeLayout>
 
-            <LinearLayout
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Quantity (litres) "
+                android:textColor="@color/libraryColorPrimary"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_weight="2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:weightSum="4">
+                android:background="@drawable/spinner_background"
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp">
 
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="4"
-                    android:layout_marginRight="0dp"
+                <EditText
+                    android:id="@+id/txt_quantity_ID"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/date_background"
-                    >
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/round_alight"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:text=""
+                    android:textColor="@color/libraryColorPrimary"
+                    android:textSize="15sp" />
 
-                    <TextView
-                        android:paddingTop="10dp"
-                        android:id="@+id/txt_datafueled_ID"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="30dp"
-                        android:editable="false"
-                        android:text="Date Fueled"
-                        android:textAlignment="textStart"
-                        android:textColor="#000"
-                        android:textSize="12sp"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentStart="true" />
-                    <ImageView
-                        android:layout_marginTop="0dp"
-                        android:layout_alignParentRight="true"
-                        android:id="@+id/date_image_ID"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/date_icon"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_numbers_light_green"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    />
+
+            </RelativeLayout>
 
 
-                </RelativeLayout>
-            </LinearLayout>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Mileage at fueling "
+                android:textColor="@color/libraryColorPrimary"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_background"
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp">
+
+                <EditText
+                    android:id="@+id/txt_mileage_before_ID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/round_alight"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:text=""
+                    android:textColor="@color/libraryColorPrimary"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_numbers_light_green"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Date Fueled "
+                android:textColor="@color/libraryColorPrimary"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_background"
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp">
+
+
+                <TextView
+                    android:paddingTop="10dp"
+                    android:id="@+id/txt_datafueled_ID"
+                    android:editable="false"
+                    android:textAlignment="textStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="5dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@drawable/round_alight"
+                    android:textColor="@color/libraryColorPrimary"
+                    android:textSize="15sp"
+                    android:text=""
+                    />
+
+                <ImageView
+                    android:layout_marginTop="0dp"
+                    android:id="@+id/date_image_ID"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_google_calendar_lightgreen"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"/>
+
+
+
+
+            </RelativeLayout>
 
 
             <TextView
@@ -287,43 +273,41 @@
                 android:text=""/>
 
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+            <androidx.cardview.widget.CardView
+                app:cardElevation="2dp"
                 android:gravity="end"
-                android:orientation="horizontal">
+                android:id="@+id/btn_save_ID"
+                app:cardCornerRadius="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="center_vertical"
 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <RelativeLayout
                     android:foreground="?android:attr/selectableItemBackground"
-                   android:clickable="true"
-                    android:layout_width="110dp"
-                    android:layout_height="30dp"
-                    android:paddingBottom="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:paddingTop="5dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="0dp"
-                    android:background="@drawable/round_alight"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingBottom="0dp"
+                    android:background="@color/libraryColorPrimary"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
                     android:gravity="center">
 
 
-                    <Button
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_margin="0dp"
-                        android:padding="0dp"
+                    <TextView
+
                         android:visibility="visible"
-                        android:id="@+id/btn_save_ID"
-                        android:background="#ffffff"
-                        android:layout_width="130dp"
-                        android:layout_height="40dp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_bold"
+                        android:background="@color/libraryColorPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:text="Save" />
+                        android:text="Save Details" />
 
                     <ProgressBar
                         android:visibility="gone"
@@ -335,28 +319,24 @@
                         style="?android:attr/progressBarStyleLarge"
                         android:layout_width="30dp"
                         android:layout_height="wrap_content"
-                        tools:layout_editor_absoluteY="0dp" />
-
-
+                        />
 
 
                 </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
 
-
-
-            </LinearLayout>
-
+            <View android:layout_height="50dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"/>
 
         </LinearLayout>
 
     </ScrollView>
 
+    <include layout="@layout/quick_actions_layout"/>
 
     <!---->
     <!--&lt;!&ndash;//Bottom Sheet&ndash;&gt;-->
 
-
-
-
-</LinearLayout>
+</RelativeLayout>

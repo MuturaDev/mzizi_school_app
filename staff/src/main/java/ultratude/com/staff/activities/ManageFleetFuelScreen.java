@@ -12,6 +12,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
@@ -20,7 +21,9 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.DialogFragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.shashank.sony.fancytoastlib.FancyToast;
@@ -30,10 +33,14 @@ import java.util.ArrayList;
 import java.util.Date;
 
 
+import ultratude.com.staff.activities.accesscontrolforactivities.HomeScreen;
+import ultratude.com.staff.adapters.NewHomeScreenTopItemsAdapter;
 import ultratude.com.staff.datepickerfragments.DatePickerFragment_DateFueled;
 import ultratude.com.staff.R;
+import ultratude.com.staff.model.HomeItem;
 import ultratude.com.staff.spinnermodel.FuelTypeSpinner;
 import ultratude.com.staff.spinnermodel.VehicleSpinner;
+import ultratude.com.staff.utils.UtilityFunctions;
 import ultratude.com.staff.webservice.DataAccessObjects.StaffDao;
 import ultratude.com.staff.webservice.DataAccessObjects.VehicleDAO;
 import ultratude.com.staff.webservice.DataAccessObjects.VehicleFuelingDAO;
@@ -47,9 +54,9 @@ import ultratude.com.staff.webservice.ResponseModels.VehicleFueling;
 public class ManageFleetFuelScreen extends AppCompatActivity implements View.OnClickListener, DatePickerFragment_DateFueled.DatePickerFragment_DateFueledInteractionListener {
 
 
-    private TextInputEditText txt_quantity, txt_mileageBefore, txt_pricePerLitre;
+    private EditText txt_quantity, txt_mileageBefore, txt_pricePerLitre;
     private TextView txt_dateFueled;
-    private Button btn_save;
+    private CardView btn_save;
 
     private Spinner sp_licensePlate;
     //private Spinner sp_fuelType;
@@ -98,6 +105,8 @@ public class ManageFleetFuelScreen extends AppCompatActivity implements View.OnC
     //private ImageView image_fuel_type_sp_ID;
     private ImageView image_vehicle_plate_sp_ID;
 
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,6 +114,10 @@ public class ManageFleetFuelScreen extends AppCompatActivity implements View.OnC
 //                .recipients(Constants.CRASH_REPORT_EMAIL)
 //                .build();
         setContentView(R.layout.fuel_screen_layout);
+
+        UtilityFunctions.activateQuickActions(this,  0, HomeScreen.CurrentScreenKey);
+
+
 
         ActionBar actionBar = (ActionBar) getSupportActionBar();
         if(actionBar != null){

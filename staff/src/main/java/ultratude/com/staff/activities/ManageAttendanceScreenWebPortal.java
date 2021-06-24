@@ -42,6 +42,8 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.annotations.SerializedName;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
+import ultratude.com.staff.activities.accesscontrolforactivities.HomeScreen;
+import ultratude.com.staff.utils.UtilityFunctions;
 import ultratude.com.staff.webservice.ResponseModels.SubRequestModels.*;
 
 import java.text.SimpleDateFormat;
@@ -184,7 +186,7 @@ public class ManageAttendanceScreenWebPortal extends AppCompatActivity implement
             return true;
         } else if (item.getItemId() == R.id.upload_attendance_btn) {
 
-            onDismissDialog(false);
+            //onDismissDialog(false);
 
             AlertDialog.Builder alert = new AlertDialog.Builder(ManageAttendanceScreenWebPortal.this);
             alert.setTitle("Upload Confirmation");
@@ -412,6 +414,9 @@ public class ManageAttendanceScreenWebPortal extends AppCompatActivity implement
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.manage_attendance_layout_webportal);
+
+        UtilityFunctions.activateQuickActions(this,  0, HomeScreen.CurrentScreenKey);
+
         floatingActionButton = findViewById(R.id.fab);
         pb_attendance_progress = findViewById(R.id.pb_attendance_progress);
         pb_attendance_progress.setVisibility(View.VISIBLE);
@@ -903,27 +908,33 @@ public class ManageAttendanceScreenWebPortal extends AppCompatActivity implement
             @Override
             public void onResponse(Call<PortalClassStreamTeacherStaffAllocationsResponse> call, Response<PortalClassStreamTeacherStaffAllocationsResponse> response) {
 
-//                if(sp_school_ID.getSelectedItem() != null)
+                if(response.body() == null){
 
-                if (/*sp_school_ID.getSelectedItemId() == 0 || sp_school_ID.getSelectedItem().toString().contains("Select") ||*/ spinner == null) {
+                }else{
+                    //if(sp_school_ID.getSelectedItem() != null)
 
-                    sp_school_ID.setAdapter(response.body().getGetSchools() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetSchools()));
-                    sp_batch_ID.setAdapter(response.body().getGetBatchsResponse() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetBatchsResponse()));
-                    sp_class_ID.setAdapter(response.body().getGetClasses() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetClasses()));
-                    sp_term_id_ID.setAdapter(response.body().getGetTermsResponse() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetTermsResponse()));
-                    sp_stream_ID.setAdapter(response.body().getGetStreams() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetStreams()));
-                    sp_unit_ID.setAdapter(response.body().getGetUnits() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetUnits()));
-                    sp_lesson_period.setAdapter(response.body().getGetLessonsPeriods() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetLessonsPeriods()));
-                    sp_student_list_ID.setAdapter(response.body().getGetStudentList() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetStudentList()));
-                    sp_session_ID.setAdapter(response.body().getGetRollCallSessionsList() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetRollCallSessionsList()));
-                    sp_study_session_ID.setAdapter(response.body().getGetStudySessions() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetStudySessions()));
-                    sp_activity_ID.setAdapter(response.body().getGetActivities() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetActivities()));
+                        if (/*sp_school_ID.getSelectedItemId() == 0 || sp_school_ID.getSelectedItem().toString().contains("Select") ||*/ spinner == null) {
 
-                    showSpinnerProgress(progress, false);
-                    //showSpinnerProgress(null, false);
-                } else {
-                    populateDropDowns(spinner, progress, response);
+
+                            sp_school_ID.setAdapter(response.body().getGetSchools() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetSchools()));
+                            sp_batch_ID.setAdapter(response.body().getGetBatchsResponse() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetBatchsResponse()));
+                            sp_class_ID.setAdapter(response.body().getGetClasses() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetClasses()));
+                            sp_term_id_ID.setAdapter(response.body().getGetTermsResponse() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetTermsResponse()));
+                            sp_stream_ID.setAdapter(response.body().getGetStreams() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetStreams()));
+                            sp_unit_ID.setAdapter(response.body().getGetUnits() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetUnits()));
+                            sp_lesson_period.setAdapter(response.body().getGetLessonsPeriods() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetLessonsPeriods()));
+                            sp_student_list_ID.setAdapter(response.body().getGetStudentList() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetStudentList()));
+                            sp_session_ID.setAdapter(response.body().getGetRollCallSessionsList() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetRollCallSessionsList()));
+                            sp_study_session_ID.setAdapter(response.body().getGetStudySessions() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetStudySessions()));
+                            sp_activity_ID.setAdapter(response.body().getGetActivities() == null ? new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, new ArrayList()) :new ArrayAdapter<>(ManageAttendanceScreenWebPortal.this, android.R.layout.simple_spinner_dropdown_item, response.body().getGetActivities()));
+
+                            showSpinnerProgress(progress, false);
+                            //showSpinnerProgress(null, false);
+                        } else {
+                            populateDropDowns(spinner, progress, response);
+                        }
                 }
+//
 
             }
 
@@ -1144,7 +1155,8 @@ public class ManageAttendanceScreenWebPortal extends AppCompatActivity implement
             public class ViewHolder extends RecyclerView.ViewHolder {
 
                 private TextView label_confirmation_message_viewHolder, label_student_number;
-                private TextInputEditText txt_studentName_ID, txt_reason_ID;
+                private TextInputEditText txt_studentName_ID;
+                private EditText   txt_reason_ID;
                 private RadioButton rb_present_ID, rb_absent_ID;
                 private EditText edit_late_by;
                 private RadioGroup radioGroup;

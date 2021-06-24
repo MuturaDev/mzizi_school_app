@@ -17,6 +17,7 @@ import com.shashank.sony.fancytoastlib.FancyToast;
 import java.util.List;
 
 import ultratude.com.staff.R;
+import ultratude.com.staff.activities.DutyRosterScreen;
 import ultratude.com.staff.webservice.ResponseModels.DutyRoster;
 
 /**
@@ -26,10 +27,10 @@ import ultratude.com.staff.webservice.ResponseModels.DutyRoster;
 public class DutyRosterRecyclerAdapter  extends RecyclerView.Adapter<DutyRosterRecyclerAdapter.ViewHolder> {
 
     private List<DutyRoster> dutyRosterList;
-    private Context mContext;
+    private DutyRosterScreen activity;
 
-    public DutyRosterRecyclerAdapter(Context mContext, List<DutyRoster> dutyRosterList){
-        this.mContext = mContext;
+    public DutyRosterRecyclerAdapter(DutyRosterScreen activity, List<DutyRoster> dutyRosterList){
+        this.activity = activity;
         this.dutyRosterList = dutyRosterList;
     }
 
@@ -74,11 +75,12 @@ public class DutyRosterRecyclerAdapter  extends RecyclerView.Adapter<DutyRosterR
                         //does not require CALL_PHONE permission
                         Intent intent = new Intent(Intent.ACTION_DIAL);//show the dailer with the number already entered, but allows the user to decide  whether to actually make a call or not
                         intent.setData(Uri.parse(uri));
-                        mContext.getApplicationContext().startActivity(intent);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        activity.getApplicationContext().startActivity(intent);
                     }
                     catch (android.content.ActivityNotFoundException e){
-                        FancyToast.makeText(mContext, "App Failed", FancyToast.LENGTH_LONG,FancyToast.ERROR,true).show();
-                       // Toast.makeText(mContext,"App failed",Toast.LENGTH_LONG).show();
+                        FancyToast.makeText(activity, "App Failed", FancyToast.LENGTH_LONG,FancyToast.ERROR,true).show();
+                       // Toast.makeText(activity,"App failed",Toast.LENGTH_LONG).show();
                     }
 
                 }

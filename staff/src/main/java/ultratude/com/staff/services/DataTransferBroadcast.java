@@ -67,6 +67,7 @@ public class DataTransferBroadcast extends BroadcastReceiver {
 
         // MessageRequest messageRequest =  new MessageRequest(intent.getExtras().getString("StudentID"),intent.getExtras().getString("NoteLastID"),intent.getExtras().getString("appcode"));
 
+        if(ACTION_ALARM != null)
         if(ACTION_ALARM.equals(intent.getAction())) {
             StaffRequest staffRequest = new StaffRequest(
                     intent.getExtras().getString("StaffID") ,
@@ -225,6 +226,7 @@ public class DataTransferBroadcast extends BroadcastReceiver {
                             @Override
                             public void onResponse(Call<String> call, Response<String> response) {
                                 if (response.isSuccessful()) {
+                                    if(response.body() != null)
                                     if (response.body().equalsIgnoreCase("true")) {
                                         AsyncTask asyncTask = new AsyncTask() {
                                             @Override
@@ -268,6 +270,7 @@ public class DataTransferBroadcast extends BroadcastReceiver {
                                              public void onResponse(Call<String> call, Response<String> response) {
                                                  if (response.isSuccessful()) {
                                                      // Toast.makeText(context, "DisciplinaryCaseSaved: " + response.body(), Toast.LENGTH_SHORT).show();
+                                                     if(response.body() != null)
                                                      if (response.body().equals("true")) {
                                                          AsyncTask asynctask = new AsyncTask() {
                                                              @Override
@@ -316,6 +319,7 @@ public class DataTransferBroadcast extends BroadcastReceiver {
                                                  if (response.isSuccessful()) {
                                                      // Toast.makeText(context, "VehicleFuelingSaved: " + response.body(), Toast.LENGTH_SHORT).show();
                                                      if(response.code() == 200){
+                                                         if(response.body() != null)
                                                         if (response.body().equals("true")) {
                                                             AsyncTask asyncTask = new AsyncTask() {
                                                                 @Override
@@ -363,6 +367,7 @@ public class DataTransferBroadcast extends BroadcastReceiver {
                                              public void onResponse(Call<String> call, Response<String> response) {
                                                  if (response.isSuccessful()) {
                                                      //  Toast.makeText(context, "VehicleServicingSaved: " + response.body(), Toast.LENGTH_SHORT).show();
+                                                     if(response.body() != null)
                                                      if (response.body().equals("true")) {
                                                          AsyncTask asyncTask = new AsyncTask() {
                                                              @Override
@@ -410,6 +415,7 @@ public class DataTransferBroadcast extends BroadcastReceiver {
                                              public void onResponse(Call<String> call, Response<String> response) {
                                                  if (response.isSuccessful()) {
                                                      //   Toast.makeText(context, "MarkRegisterSaved: " + response.body(), Toast.LENGTH_SHORT).show();
+                                                     if(response.body() != null)
                                                      if (response.body().equals("true")) {
                                                          AsyncTask asyncTask = new AsyncTask() {
                                                              @Override
@@ -459,6 +465,7 @@ public class DataTransferBroadcast extends BroadcastReceiver {
                                              public void onResponse(Call<String> call, Response<String> response) {
                                                  //
                                                  if(response.isSuccessful()){
+                                                     if(response.body() != null)
                                                      if(response.body().equals("true")){
                                                          AsyncTask asynctask = new AsyncTask() {
                                                              @Override

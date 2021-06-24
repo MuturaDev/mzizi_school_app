@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/item_layout_click"
+   >
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_marginEnd="10dp"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:background="@drawable/circle_bg_white"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp">
+                    <ImageView
+                        android:id="@+id/img_item"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_tasks_light_green"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_item_notification_count"
+                android:layout_alignParentEnd="true"
+                android:layout_width="18dp"
+                android:background="@drawable/circle_bg_color"
+                android:layout_height="18dp"
+                android:text="10"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_regular"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_item_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Tasks"
+            android:layout_marginRight="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -228,7 +228,7 @@ public class VehicleDAO {
     public  ArrayList<ServiceTypeSpinner> getServiceTypeList(){
         ArrayList<ServiceTypeSpinner> spinnerArrayList = new ArrayList<>();
 
-        ServiceTypeSpinner serviceTypeSpinner0 = new ServiceTypeSpinner(0, "Select a Service Type");
+        ServiceTypeSpinner serviceTypeSpinner0 = new ServiceTypeSpinner(0, "Select Type");
         spinnerArrayList.add(serviceTypeSpinner0);
 
         ServiceTypeSpinner serviceTypeValues1 = new ServiceTypeSpinner(1,"Major Service");

@@ -845,97 +845,97 @@ public class SettingsFragment extends Fragment {
 
     private void sendRequestForChangeOfPassword(View view, final String overridePassword){
 
-        final ProgressBar pb_login_progress = view.findViewById(R.id.pb_change_passord_progress);
-
-        AsyncTask asyncTask = new AsyncTask() {
-
-            @Override
-            protected void onPreExecute() {
-                pb_login_progress.setVisibility(View.VISIBLE);
-                super.onPreExecute();
-            }
-
-            @Override
-            protected void onPostExecute(Object o) {
-
-                List<String> list = (List<String>) o;
-
-                if (list.size() == 4) {
-
-                    String studentID = list.get(0);
-                    String appcode = list.get(1);
-                    String organization = list.get(2);
-                    String schoolID = list.get(3);
-
-                    APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);//used to instantiate the APIClient.
-
-                    StudentChangePasswordRequest studentChangePassword = new StudentChangePasswordRequest(studentID,organization,overridePassword,schoolID, appcode);
-
-
-                    Call<Boolean> userCall = apiInterface.requestStudentChangePassword(studentChangePassword);
-                    userCall.enqueue(new Callback<Boolean>() {
-                        @Override
-                        public void onResponse(Call<Boolean> call, final Response<Boolean> response) {
-                            if (response.code() == 200) {
-                                pb_login_progress.setVisibility(View.GONE);
-                                    AlertDialog.Builder alert = new AlertDialog.Builder(getContext());
-                                    alert.setCancelable(false);
-                                    alert.setTitle("Success");
-                                    alert.setMessage("Password changed successfully.");
-                                    alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                                        @Override
-                                        public void onClick(DialogInterface dialogInterface, int i) {
-                                            dialogInterface.cancel();
-                                        }
-                                    });
-                                    alert.show();
-                            }else if(response.code() == 500){
-                                pb_login_progress.setVisibility(View.GONE);
-                                AlertDialog.Builder alert = new AlertDialog.Builder(getContext());
-                                alert.setCancelable(false);
-                                alert.setTitle("Failure");
-                                alert.setMessage("Password change operation unsuccessful.");
-                                alert.setPositiveButton("try again", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialogInterface, int i) {
-                                        dialogInterface.cancel();
-                                    }
-                                });
-                                alert.show();
-                            }
-                        }
-
-                        @Override
-                        public void onFailure(Call<Boolean> call, Throwable t) {
-                            pb_login_progress.setVisibility(View.GONE);
-                        }
-                    });
-                }
-
-
-                super.onPostExecute(o);
-            }
-
-            @Override
-            protected Object doInBackground(Object[] objects) {
-
-                    ParentMziziDatabase db = ParentMziziDatabase.getInstance(getActivity());
-
-                    List<AuthenticateUserResponse> authenticateUserResponse = db.getAuthenticateUserResponseDao().getAuthenticateUserResponse();
-
-                    List<String> list = new ArrayList<>();
-                    if(authenticateUserResponse.size() > 0){
-                        list.add(authenticateUserResponse.get(0).getUserID());//0 = studentid
-                        list.add(authenticateUserResponse.get(0).getAppcode());//1 = appcode
-                        list.add(authenticateUserResponse.get(0).getOrganizationID());//2=organizationID
-                        list.add(db.getPortalSiblingsDao().getSchoolIDFromPortalSibling(authenticateUserResponse.get(0).getUserID()));//3
-                    }
-
-
-                    return list;
-                }
-        };
-        asyncTask.execute();
+//        final ProgressBar pb_login_progress = view.findViewById(R.id.pb_change_passord_progress);
+//
+//        AsyncTask asyncTask = new AsyncTask() {
+//
+//            @Override
+//            protected void onPreExecute() {
+//                pb_login_progress.setVisibility(View.VISIBLE);
+//                super.onPreExecute();
+//            }
+//
+//            @Override
+//            protected void onPostExecute(Object o) {
+//
+//                List<String> list = (List<String>) o;
+//
+//                if (list.size() == 4) {
+//
+//                    String studentID = list.get(0);
+//                    String appcode = list.get(1);
+//                    String organization = list.get(2);
+//                    String schoolID = list.get(3);
+//
+//                    APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);//used to instantiate the APIClient.
+//
+//                    StudentChangePasswordRequest studentChangePassword = new StudentChangePasswordRequest(studentID,organization,overridePassword,schoolID, appcode);
+//
+//
+//                    Call<Boolean> userCall = apiInterface.requestStudentChangePassword(studentChangePassword);
+//                    userCall.enqueue(new Callback<Boolean>() {
+//                        @Override
+//                        public void onResponse(Call<Boolean> call, final Response<Boolean> response) {
+//                            if (response.code() == 200) {
+//                                pb_login_progress.setVisibility(View.GONE);
+//                                    AlertDialog.Builder alert = new AlertDialog.Builder(getContext());
+//                                    alert.setCancelable(false);
+//                                    alert.setTitle("Success");
+//                                    alert.setMessage("Password changed successfully.");
+//                                    alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//                                        @Override
+//                                        public void onClick(DialogInterface dialogInterface, int i) {
+//                                            dialogInterface.cancel();
+//                                        }
+//                                    });
+//                                    alert.show();
+//                            }else if(response.code() == 500){
+//                                pb_login_progress.setVisibility(View.GONE);
+//                                AlertDialog.Builder alert = new AlertDialog.Builder(getContext());
+//                                alert.setCancelable(false);
+//                                alert.setTitle("Failure");
+//                                alert.setMessage("Password change operation unsuccessful.");
+//                                alert.setPositiveButton("try again", new DialogInterface.OnClickListener() {
+//                                    @Override
+//                                    public void onClick(DialogInterface dialogInterface, int i) {
+//                                        dialogInterface.cancel();
+//                                    }
+//                                });
+//                                alert.show();
+//                            }
+//                        }
+//
+//                        @Override
+//                        public void onFailure(Call<Boolean> call, Throwable t) {
+//                            pb_login_progress.setVisibility(View.GONE);
+//                        }
+//                    });
+//                }
+//
+//
+//                super.onPostExecute(o);
+//            }
+//
+//            @Override
+//            protected Object doInBackground(Object[] objects) {
+//
+//                    ParentMziziDatabase db = ParentMziziDatabase.getInstance(getActivity());
+//
+//                    List<AuthenticateUserResponse> authenticateUserResponse = db.getAuthenticateUserResponseDao().getAuthenticateUserResponse();
+//
+//                    List<String> list = new ArrayList<>();
+//                    if(authenticateUserResponse.size() > 0){
+//                        list.add(authenticateUserResponse.get(0).getUserID());//0 = studentid
+//                        list.add(authenticateUserResponse.get(0).getAppcode());//1 = appcode
+//                        list.add(authenticateUserResponse.get(0).getOrganizationID());//2=organizationID
+//                        list.add(db.getPortalSiblingsDao().getSchoolIDFromPortalSibling(authenticateUserResponse.get(0).getUserID()));//3
+//                    }
+//
+//
+//                    return list;
+//                }
+//        };
+//        asyncTask.execute();
 
 
     }

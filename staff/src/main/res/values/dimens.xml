@@ -32,6 +32,15 @@
     <dimen name="_5sdp">5dp</dimen>
 
 
+    <dimen name="quick_action_size_expand_framelayout">195dp</dimen>
+    <dimen name="quick_action_size_expand_cardview">170dp</dimen>
+
+
+
+    <dimen name="quick_action_size_collapse_framelayout">90dp</dimen>
+    <dimen name="quick_action_size_collapse_cardview">65dp</dimen>
+
+
 
 
 

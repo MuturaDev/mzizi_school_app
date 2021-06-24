@@ -90,7 +90,7 @@
             android:label="Home"
             android:icon="@drawable/home_icon"
             android:screenOrientation="portrait"
-            android:theme="@style/MyAction"
+            android:theme="@style/CustomerSupportTheme"
            >
 
 
@@ -112,7 +112,7 @@
         <activity
             android:name=".activities.DailyTransport"
             android:label="Select actions below"
-            android:theme="@style/MyAction"
+            android:theme="@style/CustomerSupportTheme"
             android:screenOrientation="portrait"
             >
             <intent-filter>
@@ -126,7 +126,7 @@
         <activity
             android:label="Fuel Consumption"
             android:name=".activities.ManageFleetFuelScreen"
-            android:theme="@style/MyAction"
+            android:theme="@style/CustomerSupportTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"
             >
@@ -141,7 +141,7 @@
         <activity
             android:label="App Rating"
             android:name=".apprating.CustomAppRating"
-            android:theme="@style/MyAction"
+            android:theme="@style/CustomerSupportTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"
             >
@@ -157,7 +157,7 @@
         <activity
             android:label="Disciplinary Action"
             android:name=".activities.ManageDisciplineSreen"
-            android:theme="@style/MyAction"
+            android:theme="@style/CustomerSupportTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"
             >
@@ -172,7 +172,7 @@
         <activity
             android:label="Fleet Maintenance"
             android:name=".activities.ManageFleetServiceScreen"
-            android:theme="@style/MyAction"
+            android:theme="@style/CustomerSupportTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"
             >
@@ -186,7 +186,7 @@
         <activity
             android:label="Apply for Leave"
             android:name=".activities.ManageLeaveApplicationScreen"
-            android:theme="@style/MyAction"
+            android:theme="@style/CustomerSupportTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"
             >
@@ -199,7 +199,7 @@
         <activity
             android:label="Class Register"
             android:name=".activities.ManageAttendanceScreen"
-            android:theme="@style/MyAction"
+            android:theme="@style/CustomerSupportTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -212,7 +212,7 @@
         <activity
             android:label="Class Register"
             android:name=".activities.ManageAttendanceScreenWebPortal"
-            android:theme="@style/MyAction"
+            android:theme="@style/CustomerSupportTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -228,7 +228,7 @@
         <activity
             android:label="Duty Roster"
             android:name=".activities.DutyRosterScreen"
-            android:theme="@style/MyAction"
+            android:theme="@style/CustomerSupportTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"
             >
@@ -240,7 +240,7 @@
 
         <activity
         android:name=".activities.StudentEnquiryFragmentsViewer"
-        android:theme="@style/MyAction"
+        android:theme="@style/CustomerSupportTheme"
         android:screenOrientation="portrait"
         android:windowSoftInputMode="adjustResize"
         >
@@ -253,7 +253,7 @@
         <activity
             android:label="Student Enquiry"
             android:name=".activities.StudentEnquiry"
-            android:theme="@style/MyAction"
+            android:theme="@style/CustomerSupportTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"
             >
@@ -267,7 +267,7 @@
         <activity
         android:label="Trip Transport"
         android:name=".activities.TripTransport"
-        android:theme="@style/MyAction"
+        android:theme="@style/CustomerSupportTheme"
             android:turnScreenOn="true"
         android:screenOrientation="portrait"
         android:windowSoftInputMode="adjustResize"
@@ -278,24 +278,24 @@
 
     </activity>
 
-        <activity
-            android:label="Fleet Location"
-            android:name=".activities.accesscontrolforactivities.ManageTransportScreen"
-            android:theme="@style/MyAction"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"
-            >
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
+<!--        <activity-->
+<!--            android:label="Fleet Location"-->
+<!--            android:name=".activities.accesscontrolforactivities.ManageTransportScreen"-->
+<!--            android:theme="@style/CustomerSupportTheme"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:windowSoftInputMode="adjustResize"-->
+<!--            >-->
+<!--            <intent-filter>-->
+<!--                <category android:name="android.intent.category.DEFAULT"/>-->
+<!--            </intent-filter>-->
 
-        </activity>
+<!--        </activity>-->
 
 
         <activity
             android:label="Need help? find it here"
             android:name=".activities.mziziapptutorial.TapToGetHelpActivity"
-            android:theme="@style/MyAction.NoActionBar"
+            android:theme="@style/CustomerSupportTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"
             >
@@ -308,7 +308,7 @@
         <activity
             android:label="Need help? find it here"
             android:name=".activities.mziziapptutorial.TutorialActivity"
-            android:theme="@style/MyAction.NoActionBar"
+            android:theme="@style/CustomerSupportTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"
             >
@@ -323,7 +323,7 @@
         <activity
             android:name=".activities.AssetTrackingScreen"
             android:label="Asset Tracking"
-            android:theme="@style/MyAction"
+            android:theme="@style/CustomerSupportTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -334,7 +334,7 @@
 
         <activity
             android:name=".activities.MziziVersionControlActivity"
-            android:theme="@style/MyAction.NoActionBar"
+            android:theme="@style/CustomerSupportTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -345,7 +345,7 @@
 
         <activity
             android:name=".activities.EnrollActivityScan"
-            android:theme="@style/MyAction.NoActionBar"
+            android:theme="@style/CustomerSupportTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -356,7 +356,7 @@
 
         <activity
             android:name=".activities.MziziParentWebPortal"
-            android:theme="@style/MyAction.NoActionBar"
+            android:theme="@style/CustomerSupportTheme"
             android:screenOrientation="landscape"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -367,7 +367,7 @@
 
         <activity
             android:name=".barcodescanner.CustomViewFinderScannerActivity"
-            android:theme="@style/MyAction.NoActionBar"
+            android:theme="@style/CustomerSupportTheme"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -418,11 +418,15 @@
             android:name=".customer_support.CustomerSupportTestActivity"
             android:theme="@style/CustomerSupportTheme" />
 
+        <activity
+            android:name=".activities.TestLayoutActivity"
+            android:theme="@style/CustomerSupportTheme" />
+
 
 
 <!--        <activity android:name=".CatchoReportActivity"-->
 <!--            android:label="MziziApp Crash Reporter"-->
-<!--            android:theme="@style/MyAction.NoActionBar"/>-->
+<!--            android:theme="@style/CustomerSupportTheme.NoActionBar"/>-->
 
 
 

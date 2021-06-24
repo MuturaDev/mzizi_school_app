@@ -48,7 +48,9 @@ import java.util.Calendar;
 import java.util.List;
 
 import ultratude.com.staff.R;
+import ultratude.com.staff.activities.accesscontrolforactivities.HomeScreen;
 import ultratude.com.staff.barcodescanner.CustomViewFinderScannerActivity;
+import ultratude.com.staff.utils.UtilityFunctions;
 import ultratude.com.staff.webservice.DataAccessObjects.AssetItemDAO;
 import ultratude.com.staff.webservice.DataAccessObjects.AssetRegisterDAO;
 import ultratude.com.staff.webservice.DataAccessObjects.LatLongDAO;
@@ -125,8 +127,8 @@ public class AssetTrackingScreen extends AppCompatActivity implements  com.googl
             //AppCompatTextView (id 0) - title
             //AppCompatTextView (id 2) - subtitle
             //https://stackoverflow.com/questions/24344007/get-actionbar-textview-title-in-android/24344024
-            Toolbar toolbar = (Toolbar) findViewById(R.id.action_bar);
-            TextView textView = (TextView) toolbar.getChildAt(0);
+            //Toolbar toolbar = (Toolbar) findViewById(R.id.action_bar);
+            TextView textView = findViewById(R.id.back_label);
             textView.setText("Asset Tracking: GPS Active...");
             textView.clearAnimation();
             Animation anim = AnimationUtils.loadAnimation(AssetTrackingScreen.this.getApplicationContext(), R.anim.anim_blink);
@@ -183,11 +185,13 @@ public class AssetTrackingScreen extends AppCompatActivity implements  com.googl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.asset_tracking_layout);
 
-        ActionBar actionBar = (ActionBar) getSupportActionBar();
-        if(actionBar != null){
-            actionBar.setHomeAsUpIndicator(R.drawable.back_icon3);
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+//        ActionBar actionBar = (ActionBar) getSupportActionBar();
+//        if(actionBar != null){
+//            actionBar.setHomeAsUpIndicator(R.drawable.back_icon3);
+//            actionBar.setDisplayHomeAsUpEnabled(true);
+//        }
+
+        UtilityFunctions.activateQuickActions(this,  0, HomeScreen.CurrentScreenKey);
 
         FloatingActionButton floatingActionButton = findViewById(R.id.floating_action_button);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
@@ -197,16 +201,17 @@ public class AssetTrackingScreen extends AppCompatActivity implements  com.googl
             }
         });
 
-        ToolTipsManager toolTipsManager = new ToolTipsManager(this);
-        //Tooltip
-        //https://github.com/tomergoldst/tooltips
-        ToolTip.Builder builder = new ToolTip.Builder(this, floatingActionButton, (CoordinatorLayout)findViewById(R.id.asset_tracking_layout), "Tap to scan an asset item", ToolTip.POSITION_LEFT_TO);
-       // builder.setAlign(ToolTip.ALIGN_LEFT);
-        builder.setBackgroundColor(getResources().getColor(R.color.new_attendance_register));
-        builder.setGravity(ToolTip.GRAVITY_RIGHT);
-        builder.setTextAppearance(R.style.TooltipTextAppearance); // from `styles.xml`
-       // builder.setTypeface(mCustomFontTypeface);
-        toolTipsManager.show(builder.build());
+        //DOESN'T WORK
+//        ToolTipsManager toolTipsManager = new ToolTipsManager(this);
+//        //Tooltip
+//        //https://github.com/tomergoldst/tooltips
+//        ToolTip.Builder builder = new ToolTip.Builder(this, floatingActionButton, (LinearLayout)findViewById(R.id.asset_tracking_layout), "Tap to scan an asset item", ToolTip.POSITION_LEFT_TO);
+//       // builder.setAlign(ToolTip.ALIGN_LEFT);
+//        builder.setBackgroundColor(getResources().getColor(R.color.new_attendance_register));
+//        builder.setGravity(ToolTip.GRAVITY_RIGHT);
+//        builder.setTextAppearance(R.style.TooltipTextAppearance); // from `styles.xml`
+//       // builder.setTypeface(mCustomFontTypeface);
+//        toolTipsManager.show(builder.build());
 
         populateCustAdapWithData(null);
 
@@ -251,6 +256,48 @@ public class AssetTrackingScreen extends AppCompatActivity implements  com.googl
         }
     }
 
+
+    private void save(String barcode,LatLong latLong, boolean next){
+        String barcodeNumber = barcode;
+        //String assetType = sp_asset_type.getSelectedItem().toString();
+        String comment = multitxt_comment.getText().toString().trim();
+
+//                if(assetType.equals("Select Asset Type")){
+//                    Toast.makeText(AssetTrackingScreen.this, "Select Asset Type", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+
+
+        alert.dismiss();
+
+        //TODO: ADD TO DATABASE
+        List<AssetItem> saveList = new ArrayList<>();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd MMM YYYY HH:mm:ss");
+        AssetItem assetItem = new AssetItem(
+                barcodeNumber,
+                assetType[0],
+                String.valueOf(latLong.getLatitude()),
+                String.valueOf(latLong.getLongitude()),
+                new StaffDao(AssetTrackingScreen.this).getUserThatSignedUp().getStaff_ID(),
+                simpleDateFormat.format(Calendar.getInstance().getTime()),
+                comment
+        );
+        saveList.add(assetItem);
+
+        new AssetItemDAO(AssetTrackingScreen.this).saveAssetItemDAO(saveList);
+
+
+        populateCustAdapWithData(null);
+
+        if(next)
+        startScan();
+    }
+
+     EditText multitxt_comment;
+     Button btn_save;
+     Button btn_cancel;
+    final String[] assetType = {""};
+
     private void onBarcodeCapture(final String barcode, final LatLong latLong){
 
         builder = new AlertDialog.Builder(this);
@@ -265,19 +312,21 @@ public class AssetTrackingScreen extends AppCompatActivity implements  com.googl
         final TextView txt_assset_description = view.findViewById(R.id.txt_assset_description);
         final TextView txt_asset_type = view.findViewById(R.id.txt_asset_type);
 
-        final String[] assetType = {""};
+
 
         AsyncTask asyncTask = new AsyncTask() {
             @Override
             protected void onPostExecute(Object o) {
                 AssetRegisterResponse assetRegisterResponse  = (AssetRegisterResponse)o;
 
-                txt_assset_name.setText(assetRegisterResponse.getAssetName());
-                txt_assset_serialnumber.setText(assetRegisterResponse.getAssetSerialNumber());
-                txt_assset_description.setText(assetRegisterResponse.getAssetDescription());
-                txt_asset_type.setText(assetRegisterResponse.getAssetTypeName());
+                if(assetRegisterResponse != null){
+                    txt_assset_name.setText(assetRegisterResponse.getAssetName());
+                    txt_assset_serialnumber.setText(assetRegisterResponse.getAssetSerialNumber());
+                    txt_assset_description.setText(assetRegisterResponse.getAssetDescription());
+                    txt_asset_type.setText(assetRegisterResponse.getAssetTypeName());
 
-                assetType[0] = assetRegisterResponse.getAssetTypeID();
+                    assetType[0] = assetRegisterResponse.getAssetTypeID();
+                }
 
                 super.onPostExecute(o);
             }
@@ -289,9 +338,9 @@ public class AssetTrackingScreen extends AppCompatActivity implements  com.googl
         };
         asyncTask.execute();
 
-        final EditText multitxt_comment = view.findViewById(R.id.multitxt_comment);
-        final Button btn_save = view.findViewById(R.id.btn_save);
-        final Button btn_cancel = view.findViewById(R.id.btn_cancel);
+         multitxt_comment = view.findViewById(R.id.multitxt_comment);
+         btn_save = view.findViewById(R.id.btn_save);
+         btn_cancel = view.findViewById(R.id.btn_cancel);
         builder.setView(view);
 
         builder.setCancelable(true);
@@ -304,46 +353,14 @@ public class AssetTrackingScreen extends AppCompatActivity implements  com.googl
             @Override
             public void onClick(View v) {
                 alert.dismiss();
+                save(barcode, latLong, false);
             }
         });
 
         btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-
-                String barcodeNumber = barcode;
-                //String assetType = sp_asset_type.getSelectedItem().toString();
-                String comment = multitxt_comment.getText().toString().trim();
-
-//                if(assetType.equals("Select Asset Type")){
-//                    Toast.makeText(AssetTrackingScreen.this, "Select Asset Type", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-
-
-                alert.dismiss();
-
-                //TODO: ADD TO DATABASE
-                List<AssetItem> saveList = new ArrayList<>();
-                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd MMM YYYY HH:mm:ss");
-                AssetItem assetItem = new AssetItem(
-                        barcodeNumber,
-                        assetType[0],
-                        String.valueOf(latLong.getLatitude()),
-                        String.valueOf(latLong.getLongitude()),
-                        new StaffDao(AssetTrackingScreen.this).getUserThatSignedUp().getStaff_ID(),
-                        simpleDateFormat.format(Calendar.getInstance().getTime()),
-                        comment
-                );
-                saveList.add(assetItem);
-
-                new AssetItemDAO(AssetTrackingScreen.this).saveAssetItemDAO(saveList);
-
-
-               // populateCustAdapWithData(null);
-                startScan();
+            save(barcode, latLong, true);
             }
         });
         //builder.show();//throws an error,

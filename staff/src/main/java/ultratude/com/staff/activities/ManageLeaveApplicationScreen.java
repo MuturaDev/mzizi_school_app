@@ -16,6 +16,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -28,7 +29,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.DialogFragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.shashank.sony.fancytoastlib.FancyToast;
@@ -42,15 +45,19 @@ import java.util.LinkedHashMap;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import ultratude.com.staff.activities.accesscontrolforactivities.HomeScreen;
 import ultratude.com.staff.adapters.CustomAdapter;
+import ultratude.com.staff.adapters.NewHomeScreenTopItemsAdapter;
 import ultratude.com.staff.datepickerfragments.DatePickerFragment_DateFrom;
 import ultratude.com.staff.datepickerfragments.DatePickerFragment_DateTo;
 import ultratude.com.staff.datepickerfragments.DatePickerFragment_LeaveDurationDates;
 import ultratude.com.staff.expandablelist.ChildInfo;
 import ultratude.com.staff.expandablelist.GroupInfo;
 import ultratude.com.staff.R;
+import ultratude.com.staff.model.HomeItem;
 import ultratude.com.staff.spinnermodel.LeaveTypeSpinner;
 import ultratude.com.staff.spinnermodel.StaffNameSpinner;
+import ultratude.com.staff.utils.UtilityFunctions;
 import ultratude.com.staff.webservice.DataAccessObjects.AllStaffDAO;
 import ultratude.com.staff.webservice.DataAccessObjects.LeaveTypeDAO;
 import ultratude.com.staff.webservice.DataAccessObjects.StaffDao;
@@ -72,9 +79,9 @@ public class ManageLeaveApplicationScreen extends AppCompatActivity implements V
 
 
     private Spinner sp_leaveType_ID, sp_delegateTo_ID;
-    private TextInputEditText txt_daysApplied_ID;
+    private EditText txt_daysApplied_ID;
     private TextView txt_dateFrom_ID, txt_dateTo_ID;
-    private Button btn_save_ID;
+    private CardView btn_save_ID;
 
     private TextView txt_confirmation_message;
     private ProgressBar pb_progressbar_ID;
@@ -104,7 +111,7 @@ public class ManageLeaveApplicationScreen extends AppCompatActivity implements V
    // private ExpandableListView expand_list_view_entitlements_ID;
     private LinearLayout pb_leave_progress_layout;
 
-    private TextInputEditText txt_contact_name_ID,txt_contact_phone_ID,txt_contact_email_ID;
+    private EditText txt_contact_name_ID,txt_contact_phone_ID,txt_contact_email_ID;
     private Spinner sp_relation_ID;
     private ImageView image_contact_relation_sp_ID;
 
@@ -134,6 +141,7 @@ public class ManageLeaveApplicationScreen extends AppCompatActivity implements V
 
     private TextView no_leave_entitlement_ID;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -141,6 +149,10 @@ public class ManageLeaveApplicationScreen extends AppCompatActivity implements V
 //                .recipients(Constants.CRASH_REPORT_EMAIL)
 //                .build();
         setContentView(R.layout.leave_application_layout);
+
+        UtilityFunctions.activateQuickActions(this,  0, HomeScreen.CurrentScreenKey);
+
+
 
         ActionBar actionBar = (ActionBar) getSupportActionBar();
         if(actionBar != null){
@@ -699,7 +711,7 @@ public class ManageLeaveApplicationScreen extends AppCompatActivity implements V
 
             if(dateBefore){
                 showBtnProgress(false);
-                txt_dateFrom_ID.setText("From");
+                txt_dateFrom_ID.setText("");
                 txt_confirmation_message.setText("Please enter a later date.");
             }else{
 

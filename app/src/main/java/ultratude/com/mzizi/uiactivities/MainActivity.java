@@ -15,6 +15,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -79,6 +80,7 @@ import jp.co.recruit_lifestyle.android.floatingview.FloatingViewManager;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import ultratude.com.mzizi.BaseActivity;
 import ultratude.com.mzizi.R;
 import ultratude.com.mzizi.Utils.UtilityFunctions;
 import ultratude.com.mzizi.backgroundtasks.DeleteThisStudentData;
@@ -912,7 +914,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    protected void onStart() {
+    public void onStart() {
 
         //VERSION CHECKING
         Paper.init(this);
@@ -1712,6 +1714,8 @@ public class MainActivity extends AppCompatActivity
 //
 //
 //    }
+
+
 
 
 

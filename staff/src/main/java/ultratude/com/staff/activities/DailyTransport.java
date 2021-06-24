@@ -57,6 +57,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.paperdb.Paper;
+import ultratude.com.staff.activities.accesscontrolforactivities.HomeScreen;
 import ultratude.com.staff.adapters.UltraDataAdapter;
 import ultratude.com.staff.R;
 
@@ -264,6 +265,8 @@ public class DailyTransport extends AppCompatActivity implements View.OnClickLis
 //                .recipients(Constants.CRASH_REPORT_EMAIL)
 //                .build();
         setContentView(R.layout.daily_transport_layout);
+
+        UtilityFunctions.activateQuickActions(this,  0, HomeScreen.CurrentScreenKey);
 
         ActionBar actionBar = (ActionBar) getSupportActionBar();
         if(actionBar != null){
@@ -521,7 +524,7 @@ public class DailyTransport extends AppCompatActivity implements View.OnClickLis
     private void myOnClick(View view, boolean continueScanning, String busActivity, int session, final int busTrip){
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.action_bar);
-        final TextView titleTextView = (TextView) toolbar.getChildAt(0);
+        final TextView titleTextView = (TextView) findViewById(R.id.back_label);
 
             //BOARDIING
         if(view.getId() == R.id.btn_board_ID) {
@@ -535,13 +538,11 @@ public class DailyTransport extends AppCompatActivity implements View.OnClickLis
                 if (vehiclePlateValueSelected != null) {
 
                     if (continueScanning) {
-
                         startScan(
                                 busActivity,
                                 session,
                                 busTrip
                                 );
-
                     } else {
 
                        // Toast.makeText(this, "Should ask to scan: " + String.valueOf(true), Toast.LENGTH_SHORT).show();
@@ -911,9 +912,10 @@ public class DailyTransport extends AppCompatActivity implements View.OnClickLis
 
             //setTitle(latlong.getLatitude() + " : " + latlong.getLongitude());
 
-            Toolbar toolbar = (Toolbar) findViewById(R.id.action_bar);
-           final TextView titleTextView = (TextView) toolbar.getChildAt(0);
-            titleTextView.setText("Daily Transport: GPS Active...");
+           // Toolbar toolbar = (Toolbar) findViewById(R.id.action_bar);
+           //final TextView titleTextView = (TextView) toolbar.getChildAt(0);
+            final TextView titleTextView = findViewById(R.id.back_label);
+            titleTextView.setText( "Daily Transport" + ": GPS Active...");
             titleTextView.clearAnimation();
             Animation anim = AnimationUtils.loadAnimation(DailyTransport.this.getApplicationContext(), R.anim.anim_blink);
             titleTextView.startAnimation(anim);

@@ -17,6 +17,7 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 import ultratude.com.staff.R;
 import ultratude.com.staff.activities.accesscontrolforactivities.HomeScreen;
 import ultratude.com.staff.barcodescanner.CustomViewFinderScannerActivity;
+import ultratude.com.staff.utils.UtilityFunctions;
 
 public class EnrollActivityScan extends AppCompatActivity{
 
@@ -25,7 +26,7 @@ public class EnrollActivityScan extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.enroll_activity_scan_layout);
 
-
+        UtilityFunctions.activateQuickActions(this,  0, HomeScreen.CurrentScreenKey);
 
         Button btn = findViewById(R.id.btn);
         btn.setOnClickListener(new View.OnClickListener() {

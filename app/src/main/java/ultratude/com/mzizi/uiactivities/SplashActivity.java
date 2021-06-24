@@ -36,6 +36,7 @@ import ultratude.com.mzizi.roomdatabaseclasses.ParentMziziDatabase;
 import ultratude.com.mzizi.roomdatabaseclasses.RoomModel.AuthenticateUserResponse;
 import ultratude.com.mzizi.roomdatabaseclasses.RoomModel.PortalStudentInfo;
 import ultratude.com.mzizi.roomdatabaseclasses.Util.Constants;
+import ultratude.com.staff.activities.TestLayoutActivity;
 import ultratude.com.staff.activities.accesscontrolforactivities.HomeScreen;
 import ultratude.com.staff.webservice.DataAccessObjects.StaffDao;
 import ultratude.com.staff.webservice.ResponseModels.Staff;
@@ -85,10 +86,7 @@ public class SplashActivity extends AppCompatActivity {
 //
 //        }
 
-
-        new GetLoginUser().execute();
-
-
+      new GetLoginUser().execute();
 
     }
 
@@ -108,6 +106,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onStart();
         //animate the image at the splash screen layout
 
+        if(findViewById(R.id.splashimage) != null)
         findViewById(R.id.splashimage).startAnimation(AnimationUtils.loadAnimation(this, R.anim.anim));
         AsyncTask asyncTask = new AsyncTask() {
 

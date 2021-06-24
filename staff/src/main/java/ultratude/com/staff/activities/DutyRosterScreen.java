@@ -3,8 +3,10 @@ package ultratude.com.staff.activities;
 import android.os.Bundle;
 
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -14,12 +16,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import ultratude.com.staff.activities.accesscontrolforactivities.HomeScreen;
 import ultratude.com.staff.adapters.DutyRosterRecyclerAdapter;
 import ultratude.com.staff.R;
 
+import ultratude.com.staff.utils.UtilityFunctions;
 import ultratude.com.staff.webservice.DataAccessObjects.DutyRosterDAO;
 import ultratude.com.staff.webservice.ResponseModels.DutyRoster;
 
@@ -47,6 +52,10 @@ public class DutyRosterScreen extends AppCompatActivity {
 //                .build();
         setContentView(R.layout.dutyroster_layout);
 
+        UtilityFunctions.activateQuickActions(this,  0, HomeScreen.CurrentScreenKey);
+
+
+
         ActionBar actionBar = (ActionBar) getSupportActionBar();
         if(actionBar != null){
             actionBar.setHomeAsUpIndicator(R.drawable.back_icon3);
@@ -73,7 +82,7 @@ public class DutyRosterScreen extends AppCompatActivity {
 
 
 
-        List<DutyRoster> dutyRosterList = (List<DutyRoster>) new DutyRosterDAO(this).getDutyRosterList().get(0);
+       // List<DutyRoster> dutyRosterList = (List<DutyRoster>) new DutyRosterDAO(this).getDutyRosterList().get(0);
 
             //TESTING
 //        AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -81,46 +90,18 @@ public class DutyRosterScreen extends AppCompatActivity {
 //        alert.setMessage(currentWeek);
 //        alert.show();
 
-
-
-
-
-
-
         //List<Object> objectList = new DutyRosterDAO(this).getDutyRosterList();
         //List<DutyRoster> dutyRosterList = (List<DutyRoster>) objectList.get(0);
 
-        //SHOULD BE CHANGED TO GET DATA FROM TEHD DATABASE
-        //Dummy DATA
-//        List<DutyRoster> dutyRosterList = new ArrayList<>();
-//        DutyRoster dutyRoster1 = new DutyRoster(
-//                "Millie Collins",
-//                "2019",
-//                "Term 3",
-//                "4"
-//
-//        );
-//        dutyRosterList.add(dutyRoster1);
-//        DutyRoster dutyRoster2 = new DutyRoster(
-//                "Millie Collins",
-//                "2019",
-//                "Term 3",
-//                "5"
-//
-//        );
-//        dutyRosterList.add(dutyRoster1);
-//        DutyRoster dutyRoster3 = new DutyRoster(
-//                "Millie Collins",
-//                "2019",
-//                "Term 3",
-//                "6"
-//
-//        );
-//        dutyRosterList.add(dutyRoster1);
 
         //ACTUAL DATA
-        List<Object> list = new DutyRosterDAO(this).getDutyRosterList();
-        List<DutyRoster> dutyRosterArrayList = (List<DutyRoster>) list.get(0);
+        //List<Object> list = new DutyRosterDAO(this).getDutyRosterList();
+       // List<DutyRoster> dutyRosterArrayList = (List<DutyRoster>) list.get(0);
+
+        //DUMMY
+        //SHOULD BE CHANGED TO GET DATA FROM TEHD DATABASE
+        //Dummy DATA
+        List<DutyRoster> dutyRosterArrayList = UtilityFunctions.dutyRosterDummyData();
 
 
         if(dutyRosterArrayList.size() > 0){

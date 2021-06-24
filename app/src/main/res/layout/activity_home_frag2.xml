@@ -721,7 +721,7 @@
                                         android:layout_centerVertical="true"
                                         android:text="Assignments/Communications "
                                         android:textColor="@color/white"
-                                        android:textSize="12sp"
+
                                         android:textStyle="bold" />
 
                                     <ToggleButton

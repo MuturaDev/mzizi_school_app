@@ -1,222 +1,296 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@color/white"
     >
 
     <include
         android:visibility="gone"
         layout="@layout/no_internet_connection_layout"/>
 
-    <LinearLayout
-        android:id="@+id/inner_leave_application_layout_ID"
-        android:visibility="visible"
-        android:orientation="vertical"
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_marginTop="@dimen/quick_action_size_expand_cardview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:isScrollContainer="true"
-        android:background="#f4f4f4f4"
-        android:fitsSystemWindows="true">
-
-        <RelativeLayout
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="75dp">
-
-            <ExpandableListView
-                android:visibility="invisible"
-                android:id="@+id/expand_list_view_entitlements_ID"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/no_leave_entitlement_ID"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:textColor="@color/dark_blue"
-                android:textSize="15dp"
-                android:visibility="invisible"
-                android:gravity="center_horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:textAlignment="center"
-                android:text="No leave entitlements to show."/>
-
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/pb_leave_progress_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:visibility="visible">
-
-                <ProgressBar
-                    style="?android:attr/progressBarStyleLarge"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="10dp"
-                    android:indeterminate="true"
-                    android:indeterminateTint="@android:color/holo_blue_dark" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="10dp"
-                    android:text="Loading..."
-                    android:textColor="@android:color/holo_blue_dark"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-
-        </RelativeLayout>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="20dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp">
-
-
-
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginLeft="10dp"
+                android:text="Leave Entitlement "
+                android:textColor="@color/libraryColorPrimary"
+                android:textSize="15sp" />
 
             <LinearLayout
+                android:id="@+id/inner_leave_application_layout_ID"
+                android:visibility="visible"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/spinner_bg"
-                android:elevation="10dp"
-                android:orientation="vertical"
-                android:paddingLeft="10dp">
+                android:isScrollContainer="true"
+                android:background="@color/white"
+                android:fitsSystemWindows="true">
 
+                <RelativeLayout
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp">
 
+                    <ExpandableListView
+                        android:visibility="invisible"
+                        android:id="@+id/expand_list_view_entitlements_ID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
 
-                <LinearLayout
+                    <TextView
+                        android:id="@+id/no_leave_entitlement_ID"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="15dp"
+                        android:visibility="invisible"
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:textAlignment="center"
+                        android:text="No leave entitlements to show."/>
 
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/pb_leave_progress_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleLarge"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:indeterminate="true"
+                            android:indeterminateTint="@android:color/holo_blue_dark" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:text="Loading..."
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal"
-                    android:weightSum="4">
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="20dp">
 
 
                     <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight="2"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:elevation="10dp"
                         android:orientation="vertical"
-                        >
+                        android:paddingLeft="10dp">
+
 
                         <TextView
-                            android:paddingLeft="10dp"
-                            android:layout_marginBottom="5dp"
-                            android:id="@+id/label_license_plate_ID"
+                            android:id="@+id/label_classstream_ID"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
                             android:layout_weight="2"
-                            android:text="Leave Type "
-                            android:textStyle="bold"
-                            android:textColor="@android:color/black"
-                            android:textSize="15sp" />
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Leave Type"
+                            android:textColor="@color/libraryColorPrimary"
+                            android:textSize="15sp"
+                            />
 
                         <RelativeLayout
-
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="2"
                             android:background="@drawable/spinner_background"
-                            android:orientation="horizontal"
-                            android:layout_marginRight="10dp">
+                            android:orientation="horizontal">
 
                             <Spinner
                                 android:id="@+id/sp_leaveType_ID"
                                 android:layout_width="match_parent"
-                                android:layout_marginRight="25dp"
                                 android:layout_height="match_parent"
-                                android:spinnerMode="dropdown"
-                                android:background="@android:color/transparent"
                                 android:layout_centerVertical="true"
                                 android:layout_gravity="center"
+                                android:layout_marginLeft="40dp"
+                                android:background="@drawable/round_alight"
                                 android:gravity="center"
-                                android:layout_marginLeft="5dp"
-                                />
+                                android:spinnerMode="dropdown" />
 
                             <ImageView
                                 android:id="@+id/image_leave_type_sp_ID"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_weight="0.5"
-                                android:src="@drawable/spinner_dropdown_icon"
-                                android:layout_alignParentRight="true"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
                                 android:layout_centerVertical="true"
                                 android:layout_gravity="center"
-                                />
+                                android:padding="10dp"
+                                android:src="@drawable/ic_down_light_green" />
 
                         </RelativeLayout>
 
 
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_weight="2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginTop="0dp"
-                        >
-
                         <TextView
-                            android:paddingLeft="10dp"
-                            android:layout_marginBottom="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
                             android:layout_weight="2"
+                            android:fontFamily="@font/poppins_regular"
                             android:text="Delegate To"
-                            android:textColor="@android:color/black"
+                            android:textColor="@color/libraryColorPrimary"
                             android:textSize="15sp"
-                            android:textStyle="bold"
-                            />
+                             />
 
                         <RelativeLayout
-
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="2"
                             android:background="@drawable/spinner_background"
-                            android:orientation="horizontal"
-                            android:layout_marginRight="10dp">
+                            android:orientation="horizontal">
 
                             <Spinner
                                 android:id="@+id/sp_delegateTo_ID"
                                 android:layout_width="match_parent"
-                                android:layout_marginRight="25dp"
                                 android:layout_height="match_parent"
-                                android:spinnerMode="dropdown"
-                                android:background="@android:color/transparent"
                                 android:layout_centerVertical="true"
                                 android:layout_gravity="center"
+                                android:layout_marginLeft="40dp"
+                                android:background="@drawable/round_alight"
                                 android:gravity="center"
-                                android:layout_marginLeft="5dp"
-                                />
+                                android:spinnerMode="dropdown" />
 
                             <ImageView
                                 android:id="@+id/image_delegate_to_sp_ID"
-                                android:layout_width="wrap_content"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:padding="10dp"
+                                android:src="@drawable/ic_down_light_green" />
+
+                        </RelativeLayout>
+
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Relation"
+                            android:textColor="@color/libraryColorPrimary"
+                            android:textSize="15sp"
+                            />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/spinner_background"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/sp_relation_ID"
+                                android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.5"
-                                android:src="@drawable/spinner_dropdown_icon"
-                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="40dp"
+                                android:background="@drawable/round_alight"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown" />
+
+                            <ImageView
+                                android:id="@+id/image_contact_relation_sp_ID"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:padding="10dp"
+                                android:src="@drawable/ic_down_light_green" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Contact Name "
+                            android:textColor="@color/libraryColorPrimary"
+                            android:textSize="15sp" />
+
+                        <RelativeLayout
+                            android:layout_weight="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_background"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="10dp">
+
+
+                            <EditText
+                                android:id="@+id/txt_contact_name_ID"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:ems="10"
+                                android:paddingLeft="5dp"
+                                android:layout_marginLeft="40dp"
+                                android:background="@drawable/round_alight"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp"
+                                android:inputType="text"
+                                android:text=""
+                                />
+
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+
+                                android:padding="10dp"
+                                android:src="@drawable/ic_pencil_light_green"
+                                android:layout_alignParentLeft="true"
                                 android:layout_centerVertical="true"
                                 android:layout_gravity="center"
                                 />
@@ -224,324 +298,334 @@
                         </RelativeLayout>
 
 
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Contact Phone "
+                            android:textColor="@color/libraryColorPrimary"
+                            android:textSize="15sp" />
+
+                        <RelativeLayout
+                            android:layout_weight="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_background"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="10dp">
+
+
+                            <EditText
+                                android:id="@+id/txt_contact_phone_ID"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:ems="10"
+                                android:paddingLeft="5dp"
+                                android:layout_marginLeft="40dp"
+                                android:background="@drawable/round_alight"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp"
+                                android:inputType="phone"
+                                android:text=""
+                                />
+
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+
+                                android:padding="10dp"
+                                android:src="@drawable/ic_phone_lightgreen"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                />
+
+                        </RelativeLayout>
+
+
+
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Contact Email "
+                            android:textColor="@color/libraryColorPrimary"
+                            android:textSize="15sp" />
+
+                        <RelativeLayout
+                            android:layout_weight="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_background"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="10dp">
+
+
+                            <EditText
+                                android:id="@+id/txt_contact_email_ID"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:ems="10"
+                                android:paddingLeft="5dp"
+                                android:layout_marginLeft="40dp"
+                                android:background="@drawable/round_alight"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp"
+                                android:inputType="textEmailAddress"
+                                android:text=""
+                                />
+
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+
+                                android:padding="10dp"
+                                android:src="@drawable/ic_email_lightgreen"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Days Applied "
+                            android:textColor="@color/libraryColorPrimary"
+                            android:textSize="15sp" />
+
+                        <RelativeLayout
+                            android:layout_weight="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_background"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="10dp">
+
+
+                            <EditText
+                                android:id="@+id/txt_daysApplied_ID"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:ems="10"
+                                android:paddingLeft="5dp"
+                                android:layout_marginLeft="40dp"
+                                android:background="@drawable/round_alight"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp"
+                                android:inputType="number"
+                                android:text=""
+                                />
+
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+
+                                android:padding="10dp"
+                                android:src="@drawable/ic_numbers_light_green"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                />
+
+                        </RelativeLayout>
+
+
+
+
+
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="From "
+                            android:textColor="@color/libraryColorPrimary"
+                            android:textSize="15sp" />
+
+                        <RelativeLayout
+                            android:layout_weight="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_background"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="10dp">
+
+
+                            <TextView
+                                android:id="@+id/txt_dateFrom_ID"
+                                android:paddingLeft="5dp"
+                                android:layout_marginLeft="40dp"
+                                android:background="@drawable/round_alight"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp"
+                                android:gravity="center_vertical"
+                                android:text=""
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:editable="false"
+                                />
+
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:id="@+id/date_image_from_ID"
+                                android:padding="10dp"
+                                android:src="@drawable/ic_google_calendar_lightgreen"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="To "
+                            android:textColor="@color/libraryColorPrimary"
+                            android:textSize="15sp" />
+
+                        <RelativeLayout
+                            android:layout_weight="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_background"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="10dp">
+
+
+                            <TextView
+                                android:id="@+id/txt_dateTo_ID"
+                                android:paddingLeft="5dp"
+                                android:layout_marginLeft="40dp"
+                                android:background="@drawable/round_alight"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp"
+                                android:gravity="center_vertical"
+                                android:text=""
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:editable="false"
+                                />
+
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+
+                                android:padding="10dp"
+                                android:src="@drawable/ic_google_calendar_lightgreen"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/txt_confirmation_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_horizontal"
+                            android:inputType="textMultiLine"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@color/confirmation_failure"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <androidx.cardview.widget.CardView
+                            app:cardElevation="2dp"
+                            android:gravity="end"
+                            android:id="@+id/btn_save_ID"
+                            app:cardCornerRadius="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:paddingBottom="0dp"
+                                android:background="@color/libraryColorPrimary"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:gravity="center">
+
+
+                                <TextView
+
+                                    android:visibility="visible"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:background="@color/libraryColorPrimary"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="Save Details" />
+
+                                <ProgressBar
+                                    android:visibility="gone"
+                                    android:layout_centerHorizontal="true"
+                                    android:indeterminate="true"
+                                    android:indeterminateTint="@android:color/holo_blue_dark"
+                                    android:layout_gravity="center_horizontal"
+                                    android:id="@+id/pb_leave_application_progress"
+                                    style="?android:attr/progressBarStyleLarge"
+                                    android:layout_width="30dp"
+                                    android:layout_height="wrap_content"
+                                    />
+
+
+
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <!--                <View android:layout_height="50dp"-->
+                        <!--                    android:background="@color/white"-->
+                        <!--                    android:layout_width="match_parent"/>-->
+
+
                     </LinearLayout>
 
-
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                android:baselineAligned="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:weightSum="4">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:visibility="visible"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:textColorHint="#000">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txt_contact_name_ID"
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Contact Name"
-                        android:inputType="textPersonName"
-
-                        android:maxLines="1"
-                        android:textSize="12sp" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:visibility="visible"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:textColorHint="#000">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/txt_contact_phone_ID"
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Contact Phone"
-                        android:inputType="phone"
-
-                        android:maxLines="1"
-                        android:textSize="12dp" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-
+                </ScrollView>
 
 
             </LinearLayout>
-                <LinearLayout
-                    android:baselineAligned="false"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:orientation="horizontal"
-                    android:weightSum="4">
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:visibility="visible"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:textColorHint="#000">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txt_contact_email_ID"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="Contact Email"
-                            android:inputType="textEmailAddress"
-
-                            android:maxLines="1"
-                            android:textSize="12sp" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <RelativeLayout
-
-                        android:layout_width="0dp"
-                        android:layout_weight="2"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/spinner_background"
-                        android:orientation="horizontal"
-                        android:layout_marginRight="10dp">
-
-                        <Spinner
-                            android:id="@+id/sp_relation_ID"
-                            android:layout_width="match_parent"
-                            android:layout_marginRight="25dp"
-                            android:layout_height="match_parent"
-                            android:spinnerMode="dropdown"
-                            android:background="@android:color/transparent"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:layout_marginLeft="5dp"
-                            />
-
-                        <ImageView
-                            android:id="@+id/image_contact_relation_sp_ID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.5"
-                            android:src="@drawable/spinner_dropdown_icon"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="center"
-                            />
-
-                    </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
 
 
+    <include layout="@layout/quick_actions_layout"/>
 
-
-                </LinearLayout>
-
-
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:weightSum="4">
-
-                    <com.google.android.material.textfield.TextInputLayout
-
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="4"
-                        android:textColorHint="#000">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txt_daysApplied_ID"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="Days Applied"
-                            android:maxLines="1"
-                            android:inputType="number"
-                            android:textSize="12sp" />
-
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:visibility="gone"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:textColorHint="#000">
-
-                        <com.google.android.material.textfield.TextInputEditText
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="Service Cost"
-                            android:inputType="numberDecimal"
-
-                            android:maxLines="1"
-                            android:textSize="20sp" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:weightSum="4">
-
-
-                    <RelativeLayout
-                        android:layout_width="0dp"
-                        android:layout_weight="2"
-                        android:layout_marginRight="5dp"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/date_background"
-                        >
-
-                        <TextView
-                            android:gravity="start|center_vertical"
-                            android:id="@+id/txt_dateFrom_ID"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_alignParentLeft="true"
-                            android:layout_marginRight="30dp"
-                            android:editable="false"
-                            android:text=""
-                            android:hint="From"
-                            android:textAlignment="textStart"
-                            android:textColor="#000"
-                            android:textSize="12sp" />
-
-                        <ImageView
-                            android:layout_marginTop="0dp"
-                            android:layout_alignParentRight="true"
-                            android:id="@+id/date_image_from_ID"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/date_icon"/>
-
-
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:layout_width="0dp"
-                        android:layout_weight="2"
-                        android:layout_marginLeft="5dp"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/date_background"
-                        >
-
-                        <TextView
-                            android:gravity="start|center_vertical"
-                            android:id="@+id/txt_dateTo_ID"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_alignParentLeft="true"
-                            android:layout_marginRight="10dp"
-                            android:editable="false"
-                            android:hint="To"
-                            android:textAlignment="textStart"
-                            android:textColor="#000"
-                            android:textSize="12sp" />
-
-
-
-                    </RelativeLayout>
-
-
-                </LinearLayout>
-
-
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:visibility="visible"
-                    android:id="@+id/txt_confirmation_message"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:gravity="center_horizontal"
-                    android:textAlignment="center"
-                    android:inputType="textMultiLine"
-                    android:textColor="@color/confirmation_failure"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text=""/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="end"
-                    android:orientation="horizontal">
-
-                    <RelativeLayout
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:layout_width="110dp"
-                        android:layout_height="30dp"
-                        android:paddingBottom="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:paddingTop="5dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/round_alight"
-                        android:paddingLeft="5dp"
-                        android:paddingRight="5dp"
-                        android:gravity="center">
-
-
-                        <Button
-                            android:foreground="?android:attr/selectableItemBackground"
-                            android:clickable="true"
-                            android:layout_margin="0dp"
-                            android:padding="0dp"
-                            android:visibility="visible"
-                            android:id="@+id/btn_save_ID"
-                            android:background="#ffffff"
-                            android:layout_width="130dp"
-                            android:layout_height="40dp"
-                            android:layout_centerInParent="true"
-                            android:text="Apply" />
-
-                        <ProgressBar
-                            android:visibility="gone"
-                            android:layout_centerHorizontal="true"
-                            android:indeterminate="true"
-                            android:indeterminateTint="@android:color/holo_blue_dark"
-                            android:layout_gravity="center_horizontal"
-                            android:id="@+id/pb_leave_application_progress"
-                            style="?android:attr/progressBarStyleLarge"
-                            android:layout_width="30dp"
-                            android:layout_height="wrap_content"
-                            tools:layout_editor_absoluteY="0dp" />
-
-
-
-
-                    </RelativeLayout>
-
-
-
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-        </ScrollView>
-
-
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

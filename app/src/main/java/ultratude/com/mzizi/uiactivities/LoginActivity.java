@@ -570,9 +570,31 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
 
+    int count = 0;
 
     @Override
     public void onClick(final View v) {
+
+
+
+        if(findViewById(R.id.qr_code_layout).getVisibility() == View.GONE){
+            count++;
+
+            if(count == 7){
+                findViewById(R.id.qr_code_layout).setVisibility(View.VISIBLE);
+            }
+        }
+
+
+        if(findViewById(R.id.qr_code_layout).getVisibility() == View.VISIBLE){
+            count--;
+
+            if(count == 0){
+                findViewById(R.id.qr_code_layout).setVisibility(View.GONE);
+            }
+        }
+
+
         String username = usernametext.getText().toString().trim();
         String password = passwordtext.getText().toString().trim();
         String appcode = appcodetext.getText().toString().trim();

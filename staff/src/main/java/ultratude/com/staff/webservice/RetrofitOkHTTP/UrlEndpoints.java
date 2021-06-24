@@ -12,7 +12,7 @@ public class UrlEndpoints {
 
 
   //FIXME: REMOVE THIS AFTER TESTING
-   public static final String BASE_URL = "https://androidv2.mzizi.co.ke";//"https://2b881e212251.ngrok.io";//
+   public static final String BASE_URL = "https://androidv2.mzizi.co.ke";//"https://75d1cbb01032.ngrok.io";//
 
    public static final String ULTRABUS_ENDPOINT = BASE_URL +"/api/Ultrabus";
 

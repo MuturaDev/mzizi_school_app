@@ -20,6 +20,8 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.shashank.sony.fancytoastlib.FancyToast;
 
@@ -28,7 +30,11 @@ import java.util.List;
 
 import ultratude.com.staff.R;
 
+import ultratude.com.staff.activities.accesscontrolforactivities.HomeScreen;
+import ultratude.com.staff.adapters.NewHomeScreenTopItemsAdapter;
+import ultratude.com.staff.model.HomeItem;
 import ultratude.com.staff.spinnermodel.StudentSpinner;
+import ultratude.com.staff.utils.UtilityFunctions;
 import ultratude.com.staff.webservice.DataAccessObjects.DisciplineCaseDAO;
 import ultratude.com.staff.webservice.DataAccessObjects.StaffDao;
 import ultratude.com.staff.webservice.DataAccessObjects.StudentDAO;
@@ -42,7 +48,7 @@ import ultratude.com.staff.webservice.ResponseModels.Staff;
 public class ManageDisciplineSreen extends AppCompatActivity implements View.OnClickListener {
 
 
-    private Button btn_save;
+    private CardView btn_save;
     private EditText txt_offence, txt_penalty;
     private Spinner sp_class, sp_StudentName;
     private TextView label_confrimation_message;
@@ -82,6 +88,8 @@ public class ManageDisciplineSreen extends AppCompatActivity implements View.OnC
 //                .recipients(Constants.CRASH_REPORT_EMAIL)
 //                .build();
         setContentView(R.layout.discipline_layout);
+
+        UtilityFunctions.activateQuickActions(this,  0, HomeScreen.CurrentScreenKey);
 
         ActionBar actionBar = (ActionBar) getSupportActionBar();
         if(actionBar != null){
